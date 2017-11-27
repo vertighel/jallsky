@@ -23,14 +23,22 @@ var db_obs= require('./db_obs.js');    /// DB functions
 //jall.launch_exposure({exptime:2,imagetyp:'light',frametyp:'crop'})
     
     exports.launch = function(params,cb){
-	
-	jall.launch_exposure(params,function(){
+
+	try{
 	    
-	    db_obs.enter(params,function(){
-		cb("*********** done! ***************");		
-	    })
+	    jall.launch_exposure(params,function(){
+		
+		db_obs.enter(params,function(){
+		    cb("*********** done! ***************");		
+		})
+		
+	    }); /// jall.launch_exposure
+	}
+	catch ( error) {
+
+	    console.log("Schedule error : launch exposure : " + error);
 	    
-	}) /// jall.launch_exposure
+	}
 
     }
 
