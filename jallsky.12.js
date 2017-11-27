@@ -43,18 +43,21 @@ var allsky_mod=require("./allsky_drv.js");
     var cam = new allsky_mod.allsky();
 
     cam.on('open', function(){
+	return;
 	this.heater_on().catch(function(e){
 	    console.log("Heater on error : " + e);
 	});
     });
 
     cam.on('close', function(){
+	return;
 	this.heater_off().catch(function(e){
 	    console.log("Heater off error : " + e);
 	});
     });
 
     cam.on('error', function(){
+	return;
 	this.heater_on().catch(function(e){
 	    console.log("Allsky camera error event : " + e);
 	});
