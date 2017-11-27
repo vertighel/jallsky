@@ -206,7 +206,11 @@ var allsky_mod=require("./allsky_drv.js");
 
 	console.log("Camera opened! Testing...");
 
-	await cam.send_test();
+	await cam.send_test().then(function(msg){
+	    console.log("Test message : " + msg);
+	}).catch(function(err){
+	    console.log("Test error : " + err);
+	});
 	
 	
 	/*
