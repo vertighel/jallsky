@@ -201,7 +201,9 @@ var allsky_mod=require("./allsky_drv.js");
 	
 	await cam.open();
 
-	console.log("Camera opened!");
+	console.log("Camera opened! Testing...");
+
+	cam.send_test();
 	
 	await cam.define_subframe(params);
 	console.log("Subframe defined !");
