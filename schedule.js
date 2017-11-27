@@ -24,15 +24,13 @@ var db_obs= require('./db_obs.js');    /// DB functions
     
     exports.launch = function(params,cb){
 
-	jall.launch_exposure(params,function(){
-	    
-	    db_obs.enter(params,function(){
-		cb("*********** done! ***************");		
-	    })
-	    
-	})
+	jall.launch_exposure(params)
 	    .then(function(){
 		console.log("schedule: launch expo done OK!");
+		db_obs.enter(params,function(){
+		    cb("*********** done! ***************");		
+		})
+		
 	    })
 	    .catch (function(error) {
 		
