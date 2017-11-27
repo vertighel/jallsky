@@ -206,14 +206,9 @@ var allsky_mod=require("./allsky_drv.js");
 
 	console.log("Camera opened! Testing...");
 
-	await cam.send_test().then(function(msg){
-	    console.log("Test message : " + msg);
-	}).catch(function(err){
-	    console.log("Test error : " + err);
-	});
+	await cam.send_test();
 	
 	
-	/*
 	await cam.define_subframe(params);
 	console.log("Subframe defined !");
 
@@ -241,7 +236,6 @@ var allsky_mod=require("./allsky_drv.js");
 	});		    
 
 	await cam.close_shutter();
-	*/
 
 	await cam.close();
 	

@@ -190,10 +190,14 @@ class allsky{
 	console.log("Sending test command...");
 	var data = await this.send_command('E',2);
 	console.log("Got test answer !");
-	if(data=='O')
+	if(data=='O'){
+	    console.log("Test passed !");
 	    return "Test passed.";
-	else
+	}
+	else{
+	    console.log("Test didn't passed! Answer should be 'O', received data : " + data);
 	    throw "Test didn't passed! Answer should be 'O', received data : " + data;
+	}
     }
 
     async get_firmware_version(){
