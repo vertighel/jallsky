@@ -87,7 +87,10 @@ class allsky{
 	return new Promise(function(ok, fail){
 	    sky.sp.write(buffer, function(err){
 		if(err) fail(err);
-		else ok();
+		else{
+		    console.log("write: data written! ");
+		    ok();
+		}
 	    }); 
 	});
     }
