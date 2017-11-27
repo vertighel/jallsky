@@ -15,6 +15,8 @@
 var serialport = require('serialport');    /// Camera communication,
 var config     = require('./config.json'); /// Configuration file.
 
+var allsky_this=null;
+
 class allsky{
 
     constructor(options){
@@ -40,6 +42,8 @@ class allsky{
 	this.sp.on('data',  this.sp_data);
 
 	this.data_listener_func=null;
+
+	allsky_this=this;
 	
     }
     
@@ -60,18 +64,18 @@ class allsky{
     }
 
     sp_open(evt){
-	for(var p in this) console.log("class property " + p);
-	this.signal("open",evt);
+//	for(var p in this) console.log("class property " + p);
+	allsky_this.signal("open",evt);
     }
-    sp_close(evt){ this.signal("close",evt); }
-    sp_disconnect(evt){ this.signal("disconnect",evt); }
-    sp_error(evt){ this.signal("error",evt); }
+    sp_close(evt){ allsky_this.signal("close",evt); }
+    sp_disconnect(evt){ allsky_this.signal("disconnect",evt); }
+    sp_error(evt){ allsky_this.signal("error",evt); }
 
     sp_data(evt){
 	console.log("SP Received data !");
-	if(this.data_listener_func!==null)
-	    this.data_listener_func(evt);
-	this.signal("data",evt);
+	if(allsky_this.data_listener_func!==null)
+	    allsky_this.data_listener_func(evt);
+	allsky_this.signal("data",evt);
     }
     
     /// Open serialport communication
