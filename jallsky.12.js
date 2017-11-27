@@ -235,6 +235,7 @@ var allsky_mod=require("./allsky_drv.js");
 	await cam.close_shutter();
 	*/
 
+	await cam.close();
 	
     } /// launch_exposure
 

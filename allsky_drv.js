@@ -90,6 +90,19 @@ class allsky{
 	});
     }
 
+    /// Close serialport communication
+    close(){
+	var sky=this;
+	return new Promise(function(ok, fail){
+	    console.log("Open....");
+	    sky.sp.close(function(err){
+		if(err) fail(err);
+		else ok();
+	    }); 
+	});
+    }
+
+    
     write(buffer){
 	var sky=this;
 	return new Promise(function(ok, fail){
