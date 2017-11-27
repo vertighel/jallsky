@@ -1,4 +1,3 @@
-
 ## Synopsis
 
 **jallsky** is a `node.js` system control for the **SBIG AllSky 340M Camera**.
@@ -117,3 +116,5 @@ Pierre Sprimont
 ## License
 
 This program is free software.
+=======
+# jallsky-test
