@@ -158,7 +158,9 @@ class allsky{
 		}else ok();
 	    }
 	    
-	    sky.write(cmd).catch(fail);
+	    sky.write(cmd).then(function(){
+		console.log("send_command: write command on sp ok !");
+	    }).catch(fail);
 	    
 	});
     }
