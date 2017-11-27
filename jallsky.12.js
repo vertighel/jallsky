@@ -200,8 +200,15 @@ var allsky_mod=require("./allsky_drv.js");
     async function launch_exposure(params){
 	
 	await cam.open();
+
+	console.log("Camera opened!");
+	
 	await cam.define_subframe(params);
+	console.log("Subframe defined !");
+
 	await cam.open_shutter();
+	
+	console.log("Shutter opened!");
 
 	var image_data = await cam.get_image(params , function(message){ //progress callback
 	    ws.send(JSON.stringify(message),function(err,res){
