@@ -1,0 +1,178 @@
+<!doctype html>
+
+<title>OARPAF AllSky Camera</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- bootstrap.css, jquery, popper, bootstrap.js -->
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- d3 -->
+<script src="./node_modules/d3/build/d3.min.js"></script>
+
+<style>
+  /* Generated using sass --watch page.3.scss:page.3.css */
+  @import url("./page.3.css");
+</style>
+
+<body lang="en">
+
+  <main>
+
+    <article>
+      
+      <section id="image">
+	<hgroup>
+	  <h2>date</h2>
+	  <h3>hour</h3>
+	</hgroup>
+
+	  
+	<figure>
+	  <img>
+	  <figcaption>
+	    <strong>JD:</strong> <var id="image-jd"></var>d<br>
+	    <strong>Exp. time:</strong> <var id="image-exptime"></var>s
+	  </figcaption>
+	</figure>
+
+	<div>Exposure
+	  <output for="exposure_progress" id="exposure_output">0</output>%
+	</div>
+
+	<div class="progress">
+	  <div role="progressbar" id="exposure_progress" aria-valuenow="0"
+               aria-valuemin="0" aria-valuemax="100"></div>
+	</div>
+
+	<div>Transfer
+	  <output for="transfer_progress" id="transfer_output">0</output>%
+	</div>
+
+	<div class="progress">
+	  <div role="progressbar" id="transfer_progress" aria-valuenow="0"
+	       aria-valuemin="0" aria-valuemax="100"></div>
+	</div>
+
+      </section>
+
+
+
+      <section id="histogram">
+	<hgroup>
+	  <h2>histogram</h2>
+	  <h3>max: <var id="maxist"></var></h3>
+	</hgroup>
+
+	<figure>
+	  <figcaption>
+	    <strong>start:</strong> <var id="mincuts"></var><br>
+	    <strong>step:</strong> <var id="maxcuts"></var>
+	  </figcaption>
+	</figure>
+	
+	<label id="linlog" for="log">
+	  <input type="checkbox" id="log">
+	  <em></em>
+	  <span>lin/log</span>
+	</label>
+
+      </section>
+
+
+
+      <section id="input-parameters">
+	<hgroup>
+	  <h2>input parameters</h2>
+	  <h3></h3>
+	</hgroup>
+
+	<form>
+	    
+	  <div>
+	    <label for="imagetyp">Type</label>
+	    <div>
+              <select id="imagetyp" name="imagetyp">
+		<option value="auto">Light-Dark</option>
+		<option value="light">Light</option>
+		<option value="dark">Dark</option>
+              </select>
+	    </div>
+	  </div>
+
+	  <div>
+	    <label for="exptime">Exptime</label>
+	    <div>
+              <input type="number" value="0.01" min="0.01" max="600"
+		     step="0.01" id="exptime" name="exptime">
+	    </div>
+	  </div>
+
+	  <div>
+	    <label for="nexp">N. exp</label>
+	    <div>
+              <input type="number" value="3" min="1" max="300"
+		     step="1" id="nexp" name="nexp">
+	    </div>
+	  </div>
+
+	  <div>
+	    <label for="frametyp">Frame</label>
+	    <div>
+              <select id="frametyp" name="frametyp" disabled>
+		<option value="crop">Crop</option>
+		<option value="full">Full</option>
+		<option value="custom">Custom</option>
+              </select>
+	    </div>
+	  </div>
+
+	  <div>
+	    <label for="size">Size</label>
+	    <div>
+              <input type="number" value="120" min="1" max="127"
+		     step="1" id="size" name="size" disabled>
+	    </div>
+	  </div>
+	  
+	  <div>
+	    <span>Start X,Y</span>
+	    <label for="x_start" class="sr-only">x</label>
+	    <div class="col-md-4">
+              <input type="number" value="260"  min="0" max="639"
+	  	     step="1" id="x_start" name="x_start" disabled>
+	    </div>
+
+	    <label for="y_start" class="sr-only">Y</label>
+	    <div class="col-md-4">
+              <input type="number" value="180" min="0" max="479"
+	  	     step="1" id="y_start" name="y_start" disabled>
+	    </div>
+	  </div>
+
+
+	  <div>
+	    <label><span id="iteration">0</span>/<span id="total_exp">1</span></label>
+	    <div class="col-md-4">
+              <button type="submit" class="btn-primary">Expose</button>
+	    </div>	    
+	    <div class="col-md-4">
+              <button type="button" class="btn-secondary" id="abort">Abort</button>
+	    </div>
+
+	  </div>
+
+	  <script src="./form-params.js"></script>
+	  
+	</form>
+
+      </section>
+
+    </article>
+
+    <script src="./client.js"></script>
+    
+  </main>

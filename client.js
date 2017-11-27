@@ -68,8 +68,11 @@ var ws = new WebSocket('ws://'+config.ws.ip+':'+config.ws.port, 'echo-protocol')
  * Creating the barchart for the histogram value using d3.js
  */
 
-var w = {min:"5",max:"300"}
-var h = {min:"5",max:"100"}
+var vmax = 640
+var hmax = 480
+
+var w = {min: 5 ,max: vmax }
+var h = {min: 5 ,max: hmax }
 var widthrange = [w.min,w.max]
 var heightrange = [h.min,h.max]
 var colorrange = ["#000","#eee"]
@@ -82,10 +85,10 @@ var clin = d3.scaleLinear()  /// Creates a log scale for the histogram color.
     .range(colorrange)
 
 var svg = d3.select("#histogram figure") /// Selects the The html tag. 
-    .append("svg")
-    .attr("viewBox", "0 0 300 100")   /// Dynamically resizes the svg image.
-    .attr("class", "img-fluid")       /// Dynamically resizes the svg image.
-    .attr("width", "100%")            /// Dynamically resizes the svg image.
+    .insert("svg",'figcaption')       /// Append svg
+    .attr("viewBox", "0 0 "+vmax+" "+hmax)/// Dynamically resizes the svg image.
+    // .attr("class", "img-fluid")        /// Dynamically resizes the svg image.
+    // .attr("width", "100%")             /// Dynamically resizes the svg image.
 
 /// Creates an event listener for server messages.
 ws.addEventListener("message", function(e) {
@@ -111,11 +114,11 @@ ws.addEventListener("message", function(e) {
 	// if(obj.histo) update_histogram()
 	
 	/// Changing min max values and color cuts.
-	$("#maxist").text(Math.max(...obj.histo.data))
-	$("#minist").text(Math.min(...obj.histo.data))
-	
 	$("#mincuts").text(obj.histo.start)
 	$("#maxcuts").text(obj.histo.step)
+
+	$("#maxist").text(Math.max(...obj.histo.data))
+	// $("#minist").text(Math.min(...obj.histo.data))	
 	
 	$("#iteration").text(obj.iteration)
 	$("#total_exp").text(obj.nexp)
@@ -125,11 +128,12 @@ ws.addEventListener("message", function(e) {
 	/// Filling tags with data
 	var datearr=obj.dateobs.split('T') /// 2017-04-21T18:44:22
 	$("#image h2").text(datearr[0])
-	$("#image h4").text(datearr[1]+" UT")
+	$("#image h3").text(datearr[1])
 	
 	$("#image img").attr("src",obj.pngname)
 	$("#image img").attr("alt",obj.dateobs)
-	$("#image span").html("<strong>JD: </strong>"+obj.jd+" &nbsp; - &nbsp; <strong>Exposure time: </strong>"+obj.exptime+"s")
+	$("#image-jd").text(obj.jd)
+	$("#image-exptime").text(obj.exptime)
 	
 	//    $("video source").attr("src",'./mnt/output.mp4')
 	
@@ -198,7 +202,7 @@ ws.addEventListener("message", function(e) {
     		.attr("x", (d,i) => i * (w.max / dataset.length) )
 		.attr("y", d =>  h.max-hscale(d) - 16  )
 		.attr("font-family", "sans-serif")
-		.attr("font-size", "0.5em")
+		.attr("font-size", "1.3em")
 		.attr("fill", "steelblue");
 	    
 	    labs
@@ -210,7 +214,3 @@ ws.addEventListener("message", function(e) {
     } /// if obj
     
 }); /// ws.addEventListener
-
-
-
-
