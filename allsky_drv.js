@@ -59,10 +59,10 @@ class allsky{
 	return data;
     }
 
-    sp_open(evt){ () => this.signal("open",evt); }
-    sp_close(evt){ () => this.signal("close",evt); }
-    sp_disconnect(evt){ () => this.signal("disconnect",evt); }
-    sp_error(evt){ () => this.signal("error",evt); }
+    sp_open(evt){ this.signal("open",evt); }
+    sp_close(evt){ this.signal("close",evt); }
+    sp_disconnect(evt){ this.signal("disconnect",evt); }
+    sp_error(evt){ this.signal("error",evt); }
 
     sp_data(evt){
 	console.log("SP Received data !");
