@@ -64,10 +64,11 @@ class allsky{
     sp_disconnect(evt){ () => this.signal("disconnect",evt); }
     sp_error(evt){ () => this.signal("error",evt); }
 
-    sp_data(evt){ 
+    sp_data(evt){
+	console.log("SP Received data !");
 	if(this.data_listener_func!==null)
-	    () => this.data_listener_func(evt);
-	 () => this.signal("data",evt);
+	    this.data_listener_func(evt);
+	this.signal("data",evt);
     }
     
     /// Open serialport communication
@@ -159,7 +160,7 @@ class allsky{
 	    }
 	    
 	    sky.write(cmd).then(function(){
-		console.log("send_command: write command on sp ok !");
+		console.log("send_command: write command ["+command+"] on sp ok !");
 	    }).catch(fail);
 	    
 	});
