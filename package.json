@@ -1,0 +1,31 @@
+{
+  "name": "jallsky-test",
+  "version": "0.0.1",
+  "description": "A node code for AllSky Cameras",
+  "main": "./server.2.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "d3": "^4.8.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "jquery": "^3.2.1",
+    "julian": "^0.1.0",
+    "mongodb": "^2.2.26",
+    "serialport": "^4.0.7",
+    "websocket": "^1.0.24",
+    "ws": "^2.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": " No test file provided "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vertighel/jallsky-test.git"
+  },
+  "author": "Davide Ricci, Pierre Sprimont",
+  "license": "CC",
+  "bugs": {
+    "url": "https://github.com/vertighel/jallsky-test/issues"
+  },
+  "homepage": "https://github.com/vertighel/jallsky-test#readme"
+}

@@ -1,0 +1,78 @@
+[
+    { "key"     : "ORIGIN",
+      "value"   : "UNIGE",
+      "comment" : "Universita' di Genova"},
+
+    { "key"     : "OBSERVAT",
+      "value"   : "OARPAF",
+      "comment" : "Oss. Astronomico Regionale Parco Antola, Fascia"},
+
+    { "key"     : "TELESCOP",
+      "value"   : "ANT-Allsky",
+      "comment" : "AllSky Camera"},
+
+    { "key"     : "INSTRUME",
+      "value"   : "SBIG-Allsky340",
+      "comment" : "AllSky Camera"},
+
+    { "key"     : "OBJECT",
+      "value"   : "Night sky",
+      "comment" : "Name of the observed object"},
+
+    { "key"     : "AUTHOR",
+      "value"   : "Davide Ricci",
+      "comment" : "Compiled header info"},
+
+    { "key"     : "LATITUDE",
+      "value"   : 44.591307,
+      "comment" : "44 35 28.7052 N"},
+
+    { "key"     : "LONGITUD",
+      "value"   : 9.203467,
+      "comment" : "09 12 12.4806 W"},
+
+    { "key"     : "ALTITUDE",
+      "value"   : 1460,
+      "comment" : "Meters"},
+
+    { "key"     : "TIMEZONE",
+      "value"   : 1,
+      "comment" : "Time Zone"},
+    
+    { "key"     : "EPOCH",
+      "value"   : 2000.0,
+      "comment" : "Equinox of celestial coordinate system"},
+
+    { "key"     : "OBSERVER",
+      "value"   : "A-Team",
+      "comment" : "Author of the observation"},
+
+    { "key"     : "IMAGETYP",
+      "value"   : "",
+      "comment" : "Light; Dark; Light-Dark (only binning 2x2)"},
+
+    { "key"     : "BINNING",
+      "value"   : null,
+      "comment" : "Binning factor"},
+
+    { "key"     : "FRAMETYP",
+      "value"   : "",
+      "comment" : "full=[640,480] crop=[512,480] binned=[320,240]"},
+
+    { "key"     : "SUBFRAME",
+      "value"   : "",
+      "comment" : "custom=[x_start,y_start,size]. Size < 127px"},
+
+    { "key"     : "DATE-OBS",
+      "value"   : "",
+      "comment" : "Obs. date from laptop, synchronized with NTP"},
+    
+    { "key"     : "JD",
+      "value"   : null,
+      "comment" : "Julian Date from laptop, synchronized with NTP"},
+
+    { "key"     : "EXPTIME",
+      "value"   : null,
+      "comment" : "Exposure time in seconds"}
+
+]
