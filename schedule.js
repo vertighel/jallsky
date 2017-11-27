@@ -24,22 +24,21 @@ var db_obs= require('./db_obs.js');    /// DB functions
     
     exports.launch = function(params,cb){
 
-	try{
+	jall.launch_exposure(params,function(){
 	    
-	    jall.launch_exposure(params,function(){
-		
-		db_obs.enter(params,function(){
-		    cb("*********** done! ***************");		
-		})
-		
-	    }); /// jall.launch_exposure
-	}
-	catch ( error) {
-
-	    console.log("Schedule error : launch exposure : " + error);
+	    db_obs.enter(params,function(){
+		cb("*********** done! ***************");		
+	    })
 	    
-	}
-
+	})
+	    .then(function(){
+		console.log("schedule: launch expo done OK!");
+	    })
+	    .catch (function(error) {
+		
+		console.log("Schedule error : launch exposure : " + error);
+	    });  /// jall.launch_exposure
+	
     }
 
     
