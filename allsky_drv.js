@@ -129,6 +129,7 @@ class allsky{
 	    console.log("Sending command ["+command+"]");
 	    
 	    function on_data(buf){
+		console.log("Received data from SP! " + buf.byteLength);
 		var received_cs=buf.readUInt8(0);
 		var received_data=buf.slice(1); /// cut the first element
 		
@@ -160,7 +161,9 @@ class allsky{
     }
 
     async send_test(){
+	console.log("Sending test command...");
 	var data = await this.send_command('E',2);
+	console.log("Got test answer !");
 	if(data=='O')
 	    return "Test passed.";
 	else
