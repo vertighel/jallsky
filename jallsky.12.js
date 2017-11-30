@@ -184,7 +184,7 @@ var allsky_mod=require("./allsky_drv.js");
 	    ? "["+[params.x_start, params.y_start, params.size].toString()+"]" : ''
 
 	/// Filling fixed header keys.
-	console.log("Setting fits header : " + JSON.stringify(h));
+	// console.log("Setting fits header : " + JSON.stringify(h));
 	fifi.set_header_key(h, err => {if(err!==undefined) console.log("Error setting fits header: "+err);});
 	
 	var post  = {jd:jd, dateobs:dateobs, exptime:params.exptime, fitsname:fitsname };
@@ -223,10 +223,11 @@ var allsky_mod=require("./allsky_drv.js");
 	    //console.log("Progress ! "  + JSON.stringify(message));
 	    ws.send(JSON.stringify(message),function(err,res){
 	   	if(err !=null) console.log("Websocket error sending message: "+err);
-		//console.log("******************************sending post to server.js");
-	   });
-	});
+//		console.log("******************************sending post to server.js");
 		
+	    });
+	});
+	
 	console.log("Got image!");
 
 
@@ -238,12 +239,12 @@ var allsky_mod=require("./allsky_drv.js");
 
 	ws.send(JSON.stringify(params),function(err,res){
 	    if(err !=null) console.log("Websocket error sending message: "+err);
-	    //console.log("******************************sending post to server.js");
+//	    console.log("******************************sending post to server.js");
 	});		    
-
+	
 
 	await cam.close_shutter();
-
+	
 	await cam.close();
 
 	console.log("Camera closed!");
