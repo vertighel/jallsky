@@ -220,10 +220,10 @@ var allsky_mod=require("./allsky_drv.js");
 
 
 	var image_data = await cam.get_image(params , function(message){ //progress callback
-	    console.log("Progress ! "  + JSON.stringify(message));
+	    //console.log("Progress ! "  + JSON.stringify(message));
 	    ws.send(JSON.stringify(message),function(err,res){
 	   	if(err !=null) console.log("Websocket error sending message: "+err);
-		console.log("******************************sending post to server.js");
+		//console.log("******************************sending post to server.js");
 	   });
 	});
 		
@@ -238,7 +238,7 @@ var allsky_mod=require("./allsky_drv.js");
 
 	ws.send(JSON.stringify(params),function(err,res){
 	    if(err !=null) console.log("Websocket error sending message: "+err);
-	    console.log("******************************sending post to server.js");
+	    //console.log("******************************sending post to server.js");
 	});		    
 
 
