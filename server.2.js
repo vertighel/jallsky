@@ -14,7 +14,7 @@
 
 //var wsserver = require('websocket').server;
 
-var ws_mod=require("./ws_protocol_layer/node/ws_server.js");
+var ws_mod=require("./ws_protocol_layer/lib/node/ws_server.js");
 var http = require('http');    
 
 var config= require('./config.json')   /// Configuration file.
