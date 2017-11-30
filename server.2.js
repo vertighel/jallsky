@@ -10,7 +10,7 @@
  * 
  */
 
-// "use strict"
+"use strict"
 
 //var wsserver = require('websocket').server;
 
@@ -24,9 +24,6 @@ var schedule =require('./schedule.js') /// Launches observations.
 /// 1) Create http server and listening.
 var server = http.createServer(function(request, response) {});
 
-server.listen(config.ws.port, function(){   /// Same port as client side.
-    console.log((new Date()) + ': Server is listening on port '+config.ws.port);
-});
 
 /// 2) Creates a websocket server.
 //ws = new wsserver( { httpServer: server } );
@@ -68,6 +65,9 @@ var mod_pack={
     }
 };
 
+ws.install_mod(mod_pack);
+
+
 ws.on("client_event", function(evt){
     if(evt.type=="join"){
 	db_obs.last_entry(function(data){
@@ -85,3 +85,6 @@ ws.on("client_message", function(evt){ //Event sent on each client's incoming me
     ws.broadcast(evt.cmd,evt.data);
 });
 
+server.listen(config.ws.port, function(){   /// Same port as client side.
+    console.log((new Date()) + ': Server is listening on port '+config.ws.port);
+});
