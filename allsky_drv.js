@@ -105,24 +105,25 @@ class allsky{
     
     write(buffer){
 
-	
 	var sky=this;
-	return sky.sp.write(buffer);
-
 	
-	// return new Promise(function(ok, fail){
-	//     console.log("writing to SP NB=" + buffer.length);
-	//     sky.sp.write(buffer, function(err){
-	// 	if(err){
-	// 	    console.log("write FAIL!: " + err);
-	// 	    fail(err);
-	// 	}
-	// 	else{
-	// 	    console.log("write: data written! ");
-	// 	    ok();
-	// 	}
-	//     }); 
-	// });
+	return new Promise(function(ok, fail){
+	    console.log("writing to SP NB=" + buffer.length);
+	    sky.sp.write(buffer, function(){
+		console.log("Drain SP...");
+		sky.sp.drain(function(err){
+
+		    if(err){
+			console.log("write FAIL!: " + err);
+			fail(err);
+		    }
+		    else{
+			console.log("write: data written! ");
+			ok();
+		    }
+		});
+	    }); 
+	});
     }
     
     /// The checksum is calculated by complementing the byte, clearing
