@@ -354,7 +354,7 @@ class allsky{
 	    combuf[4]=params.frcode;
 	    combuf[5]=params.imcode;
 	    
-	    checksum_buf(combuf);
+	    sky.checksum_buf(combuf);
 	    
 	    var com=combuf;
 	    var cmd_checksum=combuf.readUInt8(6);
