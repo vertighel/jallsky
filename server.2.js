@@ -12,7 +12,9 @@
 
 // "use strict"
 
-var wsserver = require('websocket').server;
+//var wsserver = require('websocket').server;
+
+var ws_mod=require("./ws_protocol_layer/node/ws_server.js");
 var http = require('http');    
 
 var config= require('./config.json')   /// Configuration file.
@@ -27,88 +29,59 @@ server.listen(config.ws.port, function(){   /// Same port as client side.
 });
 
 /// 2) Creates a websocket server.
-ws = new wsserver( { httpServer: server } );
+//ws = new wsserver( { httpServer: server } );
+
+var ws=new ws_mod.server(server);
 
 /// 3) Creates a listener for connections.
-var count = 0;                  /// Resets clients counter.
-var clients = {};               /// Stores connected client.
+var count = 0;                  /// Resets clients counter. -----------> clients have random string ids assigned as cli.id
+//var clients = {};               /// Stores connected client. -----------> ==ws.clients array if you need it!!
 
-ws.on('request', function(r){   /// Listens connections.
-    var connection = r.accept('echo-protocol', r.origin); /// Accepts the connection.
-    var client_id = count++;    /// Set an  id for this client & increment counts,
-    clients[client_id] = connection; /// Stores the connection method
-                                     /// so that we can loop through &
-                                     /// contact all clients.
 
-    console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' connected. It\'s client n°: '+client_id);
-    
-    /// 3a) Retrieves the most recent entry from the database (to show something).
-    
-    db_obs.last_entry(function(data){
-	connection.send(JSON.stringify(data)); /// Sends the string to the client.
-    })
-    
-    /// 3b) Listens for incoming messages and broadcast.
-    connection.on('message', function(message){ /// Creates event listener.
+var mod_pack={
+
+    abort : function(msg, reply){
+	schedule.abort(msg.data); 
+    },
+    client : function(msg, reply){
+	var msgjson=msg.data;
 	
-	var msgString = message.utf8Data; /// The string message that was sent to us.
-	var msgjson = JSON.parse(msgString)
+	var ntrucs=msgjson.nexp;
 	
-	msgjson.id=client_id
+	function do_something(cb){
+	    schedule.launch(msgjson, connection, cb)
+	} /// do something	    
 	
-	if(msgjson.whoami=='abort'){   /// Calls the scheduler to abort the command.
-	    	schedule.abort(msgjson) 
-	}
-	
-	if(msgjson.whoami=='client'){
-	  	    
-	    /**
-	     * This should be replaced by an async function
-	     * 
-	     */
-	    
-	    var ntrucs=msgjson.nexp;
-	    
-	    function do_something(cb){
-	    	schedule.launch(msgjson, connection, cb)
-	    } /// do something	    
-	    
-	    function done_cb(){
-	    	ntrucs--;
-	    	if(ntrucs>0){
-	    	    do_something(done_cb);
-	     	    msgjson.iteration=parseFloat(ntrucs)
-	    	    console.log("==== Iteration "+msgjson.iteration+" complete ====");
-	    	}else{
-	    	    console.log("==== Done all iterations! ====");
-	    	}
+	function done_cb(){
+	    ntrucs--;
+	    if(ntrucs>0){
+	    	do_something(done_cb);
+	     	msgjson.iteration=parseFloat(ntrucs)
+	    	console.log("==== Iteration "+msgjson.iteration+" complete ====");
+	    }else{
+	    	console.log("==== Done all iterations! ====");
 	    }
-	    
-	    do_something(done_cb);
-	  	    
-	    /**
-	     * This is the async function. Can't find the bug.
-	     * 
-	     */
+	    }
+	
+	do_something(done_cb);
 
-	    // async function times(n, f) { while (n-- > 0) await f(n); }
-	    // times(msgjson.nexp, (nn)=>schedule.launch(msgjson, function(){return nn}) )
-	    
-	} /// if msgjson
+    }
+};
+
+ws.on("client_event", function(evt){
+    if(evt.type=="join"){
+	db_obs.last_entry(function(data){
+	    evt.client.send(data); /// Sends the string to the client.
+	});
 	
-	/// Showing in the server console all the message.
-    	console.log(msgjson);		    
-	
-	/// Dispatching the message to each connected client.
-	for(var i in clients)
-	    clients[i].sendUTF(JSON.stringify(msgjson)); 
-	
-    }); /// connection.on
+	count++;
+    }
     
-    /// 3b) Listening for client disconnection.
-    connection.on('close', function(reasonCode, description){ /// Creates an event listener.
-	delete clients[client_id];
-	console.log((new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected.');		
-    });
-    
-}); /// ws.on
+    if(evt.type=="leave"){
+    }
+});
+
+ws.on("client_message", function(evt){ //Event sent on each client's incoming message
+    ws.broadcast(evt.cmd,evt.data);
+});
+
