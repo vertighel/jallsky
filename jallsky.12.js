@@ -130,8 +130,9 @@ var allsky_mod=require("./allsky_drv.js");
 					var out = fs.createWriteStream(pngname);
 					out.write(image.tile( { tile_coord :  [0,0], zoom :  0, tile_size : [image.width(),image.height()], type : "png" }));
 					out.end();
-
+					
 					console.log("create_png: written")
+					ok();
 					
 				    }
 				});
@@ -232,10 +233,12 @@ var allsky_mod=require("./allsky_drv.js");
 
 
 	await write_fits(image_data, params)
+
+	params.whoami="create_png";
 	
 	await create_png(params);
 
-	params.whoami="create_png";
+	
 
 
 	console.log("Closing shutter....");
