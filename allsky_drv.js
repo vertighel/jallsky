@@ -94,7 +94,7 @@ class allsky{
     close(){
 	var sky=this;
 	return new Promise(function(ok, fail){
-	    console.log("Close....");
+	    console.log("Closing SP....");
 	    sky.sp.close(function(err){
 		if(err) fail(err);
 		else ok();
