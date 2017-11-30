@@ -14,21 +14,35 @@
 
 //var wsserver = require('websocket').server;
 
+
+console.log("Server.2 starting!");
+
 var ws_mod=require("./ws_protocol_layer/lib/node/ws_server.js");
+
+
+console.log("Require ws_server done!");
+
 var http = require('http');    
 
 var config= require('./config.json')   /// Configuration file.
 var db_obs= require('./db_obs.js');    /// DB functions.
 var schedule =require('./schedule.js') /// Launches observations.
 
+
+console.log("All requires done!");
+
 /// 1) Create http server and listening.
 var server = http.createServer(function(request, response) {});
 
+console.log("HTTP server created!");
 
 /// 2) Creates a websocket server.
 //ws = new wsserver( { httpServer: server } );
 
 var ws=new ws_mod.server(server);
+
+
+console.log("WS server created!");
 
 console.log("Created WS server!");
 
