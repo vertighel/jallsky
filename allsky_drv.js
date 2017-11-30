@@ -72,7 +72,7 @@ class allsky{
     sp_error(evt){ allsky_this.signal("error",evt); }
 
     sp_data(evt){
-	console.log("SP Received data !");
+//	console.log("SP Received data !");
 	if(allsky_this.data_listener_func!==null)
 	    allsky_this.data_listener_func(evt);
 	allsky_this.signal("data",evt);
