@@ -185,7 +185,7 @@ var allsky_mod=require("./allsky_drv.js");
 
 	/// Filling fixed header keys.
 	console.log("Setting fits header : " + JSON.stringify(h));
-	fifi.set_header_key(h, err => console.log("Error setting fits header: "+err))
+	fifi.set_header_key(h, err => {if(err!==undefined) console.log("Error setting fits header: "+err);});
 	
 	var post  = {jd:jd, dateobs:dateobs, exptime:params.exptime, fitsname:fitsname };
 
@@ -245,6 +245,8 @@ var allsky_mod=require("./allsky_drv.js");
 	await cam.close_shutter();
 
 	await cam.close();
+
+	console.log("Camera closed!");
 	
     } /// launch_exposure
 
