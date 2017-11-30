@@ -13,7 +13,7 @@
 "use strict"
 
 var config = require('./config.json');
-var message = require('./message.js'); ///
+//var message = require('./message.js'); ///
 
 var mongo = require('mongodb');
 var db = new mongo.Db(config.mongo.database, new mongo.Server(config.mongo.ip, config.mongo.port, {}), {});
