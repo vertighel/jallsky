@@ -11,6 +11,9 @@
 
 
 /// Retrieves the configuration file
+
+var ws=new ws_web.server(); 
+
 var config = (function() {
     var config = null;
     $.ajax({
@@ -25,6 +28,23 @@ var config = (function() {
     return config;
 })();
 
+
+var wsc=ws.create_client({
+    path : "", /// need a path for accessing our websocket server?
+    port : config.ws.port, /// defaults to same as web server we are connected to
+    host : config.ws.ip /// defaults to same as web server host 
+});
+
+wsc.on("error",function(e){
+    console.log("WS Error=" +e + " DBG: " + e);
+});
+
+wsc.on("open", function(){
+    console.log("ws opened to " +  wsc.peer.url);
+});
+
+
+
 /// Retrives form data
 $("form").on("submit",function(event){
     event.preventDefault();                  /// Avoids the page to reload on click.
@@ -36,9 +56,12 @@ $("form").on("submit",function(event){
 	compactdata[this.name] = this.value; /// the name is the value.
     });
     
-    compactdata.whoami="client" /// This tells the websocket who's sending the event.
+//    compactdata.whoami="client" /// This tells the websocket who's sending the event.
     console.log(JSON.stringify(compactdata,undefined,2))    
-    ws.send(JSON.stringify(compactdata)); /// Sends the string to the server.
+ //   ws.send(JSON.stringify(compactdata)); /// Sends the string to the server.
+
+    wsc.send("client", compactdata);
+
     
 });
 
@@ -46,11 +69,12 @@ $("form").on("submit",function(event){
 $("#abort").on("click",function(event){
     
     var compactdata = {}
-    compactdata.whoami="abort" 
-    compactdata.action="abort"     
+//    compactdata.whoami="abort" 
+//    compactdata.action="abort"     
     console.log(JSON.stringify(compactdata,undefined,2))    
-    ws.send(JSON.stringify(compactdata)); /// Sends the string to the server         
-    
+//    ws.send(JSON.stringify(compactdata)); /// Sends the string to the server         
+
+    wsc.send("abort", compactdata);
 });
 
 
@@ -62,7 +86,7 @@ $("#abort").on("click",function(event){
  * 
  */
 
-var ws = new WebSocket('ws://'+config.ws.ip+':'+config.ws.port, 'echo-protocol');
+//var ws = new WebSocket('ws://'+config.ws.ip+':'+config.ws.port, 'echo-protocol');
 
 /**
  * Creating the barchart for the histogram value using d3.js
@@ -91,126 +115,139 @@ var svg = d3.select("#histogram figure") /// Selects the The html tag.
     // .attr("width", "100%")             /// Dynamically resizes the svg image.
 
 /// Creates an event listener for server messages.
-ws.addEventListener("message", function(e) {
-    var obj=$.parseJSON(e.data)
-    
-    /// Messages are arriving from the AllSkyCam or from the client.
-    
-    if(obj.whoami=="get_bytes"){
-	$("#transfer_progress").val(obj.percent)
-	$("#transfer_output").text(obj.percent)
-    }
-    
-    if(obj.whoami=="image_data_func"){
-	$("#exposure_progress").val(obj.percent)
-	$("#exposure_output").text(obj.percent)
-    }
-    
-    /// Messages are arriving from the database or the function creating the png
-    if(obj.whoami=="database" || obj.whoami=="create_png"){
-	
-	if(obj.histo) update_barchart()
-	
-	// if(obj.histo) update_histogram()
-	
-	/// Changing min max values and color cuts.
-	$("#mincuts").text(obj.histo.start)
-	$("#maxcuts").text(obj.histo.step)
 
-	$("#maxist").text(Math.max(...obj.histo.data))
-	// $("#minist").text(Math.min(...obj.histo.data))	
-	
-	$("#iteration").text(obj.iteration)
-	$("#total_exp").text(obj.nexp)
-	
+
+function update_image(obj){
+    if(obj.histo) update_barchart()
+    
+    // if(obj.histo) update_histogram()
+    
+    /// Changing min max values and color cuts.
+    $("#mincuts").text(obj.histo.start)
+    $("#maxcuts").text(obj.histo.step)
+    
+    $("#maxist").text(Math.max(...obj.histo.data))
+    // $("#minist").text(Math.min(...obj.histo.data))	
+    
+    $("#iteration").text(obj.iteration)
+    $("#total_exp").text(obj.nexp)
+    
 	// $("#image h2").text(obj.dateobs)
-	
-	/// Filling tags with data
-	var datearr=obj.dateobs.split('T') /// 2017-04-21T18:44:22
-	$("#image h2").text(datearr[0])
-	$("#image h3").text(datearr[1])
-	
-	$("#image img").attr("src",obj.pngname)
-	$("#image img").attr("alt",obj.dateobs)
-	$("#image-jd").text(obj.jd)
-	$("#image-exptime").text(obj.exptime)
-	
-	//    $("video source").attr("src",'./mnt/output.mp4')
-	
-	$("a.fits").attr("href",obj.fitsname)
-	$("a.png").attr("href",obj.pngname)
-	
-	//	$("pre code").text(JSON.stringify(obj, undefined, 2))
-	
-	d3.selectAll("input").on("change",update_barchart)
-	
-	update_barchart()
-	
-	function update_barchart(){
-	    console.log("called")
-	    
-	    var dataset=obj.histo.data
-	    dataset = dataset.map(x => x+1) /// Avoids logscale issues.
-	    
-	    var dom=d3.extent(dataset)
-	    
-	    var hscale = d3.select("#log").property("checked") 
-		? hlog.domain(dom) : hlin.domain(dom)
-	    
-	    var cscale = clin.domain([0,dataset.length-1])
-	    
-	    // var aspect = w.max / h.max,
-	    // 	chart = d3.select('#chart');
-	    // d3.select(window)
-	    // 	.on("resize", function() {
-	    // 	    var targetWidth = chart.node().getBoundingClientRect().width;
-	    // 	    chart.attr("width", targetWidth);
-	    // 	    chart.attr("height", targetWidth / aspect);
-	    // 	});
-	    
-	    
-	    /// Adding a rectangle (bar) for each histogram value
-	    var elem = svg.selectAll("rect")
-		.data(dataset)
-	    
-	    elem
-		.enter()
-		.append("rect") 
-	    
-	    elem
-    		.attr("x", (d,i) => i * (w.max / dataset.length) )
-		.attr("y", d =>  h.max-hscale(d)+1 ) 
-		.attr("width", w.max / dataset.length )
-		.attr("height", d => hscale(d)+1 )
-		.attr("fill", (d,i) => cscale(i) )
-	    
-	    elem
-		.exit()
-		.remove()
-	    
-	    /// Adding Labels
-	    var labs = svg.selectAll("text")
-		.data(dataset)
-	    
-	    labs
-		.enter()
-		.append("text")
-	    
-	    labs
-		.text( (d,i) => i % (dataset.length/10) == 4  ? d : null )
-		.attr("text-anchor", "middle")
-    		.attr("x", (d,i) => i * (w.max / dataset.length) )
-		.attr("y", d =>  h.max-hscale(d) - 16  )
-		.attr("font-family", "sans-serif")
-		.attr("font-size", "1.3em")
-		.attr("fill", "steelblue");
-	    
-	    labs
-		.exit()
-		.remove()
-
-	} /// update_barchart
-	
-    } /// if obj
     
-}); /// ws.addEventListener
+    /// Filling tags with data
+    var datearr=obj.dateobs.split('T') /// 2017-04-21T18:44:22
+    $("#image h2").text(datearr[0])
+    $("#image h3").text(datearr[1])
+    
+    $("#image img").attr("src",obj.pngname)
+    $("#image img").attr("alt",obj.dateobs)
+    $("#image-jd").text(obj.jd)
+    $("#image-exptime").text(obj.exptime)
+    
+    //    $("video source").attr("src",'./mnt/output.mp4')
+    
+    $("a.fits").attr("href",obj.fitsname)
+    $("a.png").attr("href",obj.pngname)
+    
+    //	$("pre code").text(JSON.stringify(obj, undefined, 2))
+	
+    d3.selectAll("input").on("change",update_barchart)
+    
+    update_barchart()
+    
+    function update_barchart(){
+	console.log("called")
+	
+	var dataset=obj.histo.data
+	dataset = dataset.map(x => x+1) /// Avoids logscale issues.
+	
+	var dom=d3.extent(dataset)
+	
+	var hscale = d3.select("#log").property("checked") 
+	    ? hlog.domain(dom) : hlin.domain(dom)
+	
+	var cscale = clin.domain([0,dataset.length-1])
+	
+	// var aspect = w.max / h.max,
+	// 	chart = d3.select('#chart');
+	// d3.select(window)
+	// 	.on("resize", function() {
+	// 	    var targetWidth = chart.node().getBoundingClientRect().width;
+	// 	    chart.attr("width", targetWidth);
+	// 	    chart.attr("height", targetWidth / aspect);
+	// 	});
+	
+	
+	/// Adding a rectangle (bar) for each histogram value
+	var elem = svg.selectAll("rect")
+	    .data(dataset)
+	
+	elem
+	    .enter()
+	    .append("rect") 
+	
+	elem
+    	    .attr("x", (d,i) => i * (w.max / dataset.length) )
+	    .attr("y", d =>  h.max-hscale(d)+1 ) 
+	    .attr("width", w.max / dataset.length )
+	    .attr("height", d => hscale(d)+1 )
+	    .attr("fill", (d,i) => cscale(i) )
+	
+	elem
+	    .exit()
+	    .remove()
+	
+	/// Adding Labels
+	var labs = svg.selectAll("text")
+	    .data(dataset)
+	
+	labs
+	    .enter()
+	    .append("text")
+	
+	labs
+	    .text( (d,i) => i % (dataset.length/10) == 4  ? d : null )
+	    .attr("text-anchor", "middle")
+    	    .attr("x", (d,i) => i * (w.max / dataset.length) )
+	    .attr("y", d =>  h.max-hscale(d) - 16  )
+	    .attr("font-family", "sans-serif")
+	    .attr("font-size", "1.3em")
+	    .attr("fill", "steelblue");
+	
+	labs
+	    .exit()
+	    .remove()
+	
+    } /// update_barchart
+    
+    
+}
+
+
+ws.install_mod({
+    get_bytes : function(msg, /*reply*/){
+	//reply({ tu : " veux quoi?"});
+	$("#transfer_progress").val(msg.data.percent)
+	$("#transfer_output").text(msg.data.percent)
+
+    },
+    image_data_func : function(msg){
+	$("#exposure_progress").val(msg.data.percent)
+	$("#exposure_output").text(msg.data.percent)
+    },
+    database : function(msg){
+	update_image(msg.data);
+    },
+    create_png : function(msg){
+	update_image(msg.data);
+    }
+});
+
+
+wsc.connect()
+    .then(function(){})
+    .catch(function(e){
+	console.log("WS connect error : " + e);
+    });
+
+
