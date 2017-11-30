@@ -41,9 +41,7 @@ var db_obs= require('./db_obs.js');    /// DB functions
 
     
     exports.abort = function(params,cb){	
-	jall.cam.abort(params,function(){	    
-	    cb("Image aborted");		
-	})
+	jall.cam.abort().then(cb);
     }
 
 	
