@@ -200,7 +200,7 @@ var allsky_mod=require("./allsky_drv.js");
      * 
      * @return 
      */
-    async function launch_exposure(params){
+    async function launch_exposure(params, ws){
 	
 	await cam.open();
 
@@ -220,9 +220,9 @@ var allsky_mod=require("./allsky_drv.js");
 
 	var image_data = await cam.get_image(params , function(message){ //progress callback
 	    console.log("Progress ! "  + JSON.stringify(message));
-	    //ws.send(JSON.stringify(message),function(err,res){
-	   // 	if(err !=null) console.log("Websocket error sending message: "+err);
-	   // });
+	    ws.send(JSON.stringify(message),function(err,res){
+	   	if(err !=null) console.log("Websocket error sending message: "+err);
+	   });
 	});
 		
 	console.log("Got image!");
@@ -234,10 +234,10 @@ var allsky_mod=require("./allsky_drv.js");
 
 	params.whoami="create_png";
 
-	// ws.send(JSON.stringify(params),function(err,res){
-	//     if(err !=null) console.log("Websocket error sending message: "+err);
-	//     console.log("sending post to server.js");
-	// });		    
+	ws.send(JSON.stringify(params),function(err,res){
+	    if(err !=null) console.log("Websocket error sending message: "+err);
+	    console.log("sending post to server.js");
+	});		    
 
 
 	await cam.close_shutter();

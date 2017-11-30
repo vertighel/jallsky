@@ -70,7 +70,7 @@ ws.on('request', function(r){   /// Listens connections.
 	    var ntrucs=msgjson.nexp;
 	    
 	    function do_something(cb){
-	    	schedule.launch(msgjson,cb)
+	    	schedule.launch(msgjson, connection, cb)
 	    } /// do something	    
 	    
 	    function done_cb(){

@@ -22,9 +22,9 @@ var db_obs= require('./db_obs.js');    /// DB functions
 
 //jall.launch_exposure({exptime:2,imagetyp:'light',frametyp:'crop'})
     
-    exports.launch = function(params,cb){
+    exports.launch = function(params,ws, cb){
 
-	jall.launch_exposure(params)
+	jall.launch_exposure(params, ws)
 	    .then(function(){
 		console.log("schedule: launch expo done OK!");
 		db_obs.enter(params,function(){
