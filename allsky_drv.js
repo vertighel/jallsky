@@ -139,7 +139,7 @@ class allsky{
 	    cs = cs ^ csb;
 	}
 	com.writeUInt8(cs,cl-1);
-	return cs;
+	return String.fromCharCode(cs);
 	//console.log("Checksum buf: ["+com.writeUInt8(cs,cl-1)+"]");
     }
     
