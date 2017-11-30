@@ -43,21 +43,18 @@ var allsky_mod=require("./allsky_drv.js");
     var cam = new allsky_mod.allsky();
 
     cam.on('open', function(){
-	return;
 	this.heater_on().catch(function(e){
 	    console.log("Heater on error : " + e);
 	});
     });
 
     cam.on('close', function(){
-	return;
 	this.heater_off().catch(function(e){
 	    console.log("Heater off error : " + e);
 	});
     });
 
     cam.on('error', function(){
-	return;
 	this.heater_on().catch(function(e){
 	    console.log("Allsky camera error event : " + e);
 	});
@@ -130,9 +127,8 @@ var allsky_mod=require("./allsky_drv.js");
 					var out = fs.createWriteStream(pngname);
 					out.write(image.tile( { tile_coord :  [0,0], zoom :  0, tile_size : [image.width(),image.height()], type : "png" }));
 					out.end();
-					
+
 					console.log("create_png: written")
-					ok();
 					
 				    }
 				});
@@ -185,8 +181,7 @@ var allsky_mod=require("./allsky_drv.js");
 	    ? "["+[params.x_start, params.y_start, params.size].toString()+"]" : ''
 
 	/// Filling fixed header keys.
-	// console.log("Setting fits header : " + JSON.stringify(h));
-	fifi.set_header_key(h, err => {if(err!==undefined) console.log("Error setting fits header: "+err);});
+	fifi.set_header_key(h, err => console.log("Error setting fits header: "+err))
 	
 	var post  = {jd:jd, dateobs:dateobs, exptime:params.exptime, fitsname:fitsname };
 
@@ -202,59 +197,33 @@ var allsky_mod=require("./allsky_drv.js");
      * 
      * @return 
      */
-    async function launch_exposure(params, ws){
+    async function launch_exposure(params){
 	
 	await cam.open();
-
-	console.log("Camera opened! Testing...");
-
-	await cam.send_test();
-	
-	
 	await cam.define_subframe(params);
-	console.log("Subframe defined !");
-
-	console.log("Opening shutter...");
 	await cam.open_shutter();
-	
-	console.log("Shutter opened!");
-
 
 	var image_data = await cam.get_image(params , function(message){ //progress callback
-	    //console.log("Progress ! "  + JSON.stringify(message));
 	    ws.send(JSON.stringify(message),function(err,res){
-	   	if(err !=null) console.log("Websocket error sending message: "+err);
-//		console.log("******************************sending post to server.js");
-		
+	    	if(err !=null) console.log("Websocket error sending message: "+err);
 	    });
 	});
-	
+		
 	console.log("Got image!");
-
-
+	    
 	await write_fits(image_data, params)
-
-	params.whoami="create_png";
 	
 	await create_png(params);
 
-	
-
-
-	console.log("Closing shutter....");
-	await cam.close_shutter();
-
-	console.log("Closing camera SP....");
-	await cam.close();
-	
-	console.log("Camera closed!");
+	params.whoami="create_png";
 
 	ws.send(JSON.stringify(params),function(err,res){
 	    if(err !=null) console.log("Websocket error sending message: "+err);
-//	    console.log("******************************sending post to server.js");
+	    console.log("sending post to server.js");
 	});		    
-	
 
+	await cam.close_shutter();
+	
     } /// launch_exposure
 
     
