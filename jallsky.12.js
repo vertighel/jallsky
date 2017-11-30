@@ -243,10 +243,12 @@ var allsky_mod=require("./allsky_drv.js");
 	});		    
 	
 
+	console.log("Closing shutter....");
 	await cam.close_shutter();
-	
-	await cam.close();
 
+	console.log("Closing camera SP....");
+	await cam.close();
+	
 	console.log("Camera closed!");
 	
     } /// launch_exposure
