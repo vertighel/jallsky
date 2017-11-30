@@ -18,7 +18,7 @@ var fs=require("fs")                /// File stream for node-fits.
 
 var fits = require('./node-fits/build/Release/fits'); /// Manages fits files.
 var config= require('./config.json')   /// Configuration file.
-var message = require('./message.js'); /// Websocket meessage functions.
+//var message = require('./message.js'); /// Websocket meessage functions.
 
 var allsky_mod=require("./allsky_drv.js");
 

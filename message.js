@@ -12,7 +12,7 @@
 
 "use strict"
 
-var WebSocket = require('ws')    
+//var WebSocket = require('ws')    
 var config= require('./config.json')   /// Configuration file
 
 var ws = new WebSocket('ws://'+config.ws.hostname+':'+config.ws.port, 'echo-protocol'); /// Same port on the server and the client.
