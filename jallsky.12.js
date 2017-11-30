@@ -237,11 +237,6 @@ var allsky_mod=require("./allsky_drv.js");
 
 	params.whoami="create_png";
 
-	ws.send(JSON.stringify(params),function(err,res){
-	    if(err !=null) console.log("Websocket error sending message: "+err);
-//	    console.log("******************************sending post to server.js");
-	});		    
-	
 
 	console.log("Closing shutter....");
 	await cam.close_shutter();
@@ -250,7 +245,13 @@ var allsky_mod=require("./allsky_drv.js");
 	await cam.close();
 	
 	console.log("Camera closed!");
+
+	ws.send(JSON.stringify(params),function(err,res){
+	    if(err !=null) console.log("Websocket error sending message: "+err);
+//	    console.log("******************************sending post to server.js");
+	});		    
 	
+
     } /// launch_exposure
 
     
