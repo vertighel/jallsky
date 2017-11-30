@@ -11,7 +11,7 @@
     "julian": "^0.1.0",
     "mongodb": "^2.2.26",
     "popper.js": "^1.13.0",
-    "serialport": "^4.0.7",
+    "serialport": "^6.0.4",
     "websocket": "^1.0.24",
     "ws": "^2.3.1"
   },
