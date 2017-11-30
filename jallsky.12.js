@@ -217,6 +217,7 @@ var allsky_mod=require("./allsky_drv.js");
 	
 	console.log("Shutter opened!");
 
+	/*
 	var image_data = await cam.get_image(params , function(message){ //progress callback
 	    ws.send(JSON.stringify(message),function(err,res){
 	    	if(err !=null) console.log("Websocket error sending message: "+err);
@@ -235,6 +236,7 @@ var allsky_mod=require("./allsky_drv.js");
 	    if(err !=null) console.log("Websocket error sending message: "+err);
 	    console.log("sending post to server.js");
 	});		    
+	*/
 
 	await cam.close_shutter();
 
