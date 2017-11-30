@@ -57,6 +57,8 @@ var mod_pack={
 	schedule.abort(msg.data); 
     },
     client : function(msg, reply){
+
+	var connection = this;
 	var msgjson=msg.data;
 	
 	var ntrucs=msgjson.nexp;

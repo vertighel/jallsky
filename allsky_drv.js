@@ -416,7 +416,6 @@ class allsky{
 		    
 		    if(progress_callback!==undefined)
 			progress_callback({
-			    whoami:"image_data_func",
 	    		    exposure_time : params.exptime, 
 	    		    time_elapsed   : time_elapsed,
 	    		    percent        : ((time_elapsed/params.exptime)*100).toFixed(0)
