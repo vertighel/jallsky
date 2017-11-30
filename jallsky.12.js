@@ -184,6 +184,7 @@ var allsky_mod=require("./allsky_drv.js");
 	    ? "["+[params.x_start, params.y_start, params.size].toString()+"]" : ''
 
 	/// Filling fixed header keys.
+	console.log("Setting fits header : " + JSON.stringify(h));
 	fifi.set_header_key(h, err => console.log("Error setting fits header: "+err))
 	
 	var post  = {jd:jd, dateobs:dateobs, exptime:params.exptime, fitsname:fitsname };
