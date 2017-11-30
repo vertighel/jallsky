@@ -210,8 +210,8 @@ var allsky_mod=require("./allsky_drv.js");
 	await cam.send_test();
 	
 	
-//	await cam.define_subframe(params);
-//	console.log("Subframe defined !");
+	await cam.define_subframe(params);
+	console.log("Subframe defined !");
 
 	console.log("Opening shutter...");
 	await cam.open_shutter();

@@ -118,7 +118,7 @@ class allsky{
 			fail(err);
 		    }
 		    else{
-			console.log("write: data written! ");
+			//console.log("write: data written! ");
 			ok();
 		    }
 		});
@@ -138,7 +138,8 @@ class allsky{
 	    var csb = ~by & 0x7F;
 	    cs = cs ^ csb;
 	}
-	return com.writeUInt8(cs,cl-1);
+	com.writeUInt8(cs,cl-1);
+	return cs;
 	//console.log("Checksum buf: ["+com.writeUInt8(cs,cl-1)+"]");
     }
     
@@ -284,27 +285,47 @@ class allsky{
     /// maximum size of the sub- frame is 127 pixels. 
     
     define_subframe(params){
-	var x=Buffer.alloc(4);
-	x.writeInt32LE(params.x_start);    
-	var y=Buffer.alloc(4);
-	y.writeInt32LE(params.y_start);
-	var s=Buffer.alloc(4);
-	s.writeInt32LE(params.size);
+	var sky=this;
 	
-	var combuf =Buffer.alloc(7); 
-	combuf[0]='S'.charCodeAt(0);
-	combuf[1]=x[1];
-	combuf[2]=x[0];
-	combuf[3]=y[1];
-	combuf[4]=y[0];
-	combuf[5]=s[0];
-	
-	this.checksum_buf(combuf);
+	return new Promise(function(ok, fail){
+	    var x=Buffer.alloc(4);
+	    x.writeInt32LE(params.x_start);    
+	    var y=Buffer.alloc(4);
+	    y.writeInt32LE(params.y_start);
+	    var s=Buffer.alloc(4);
+	    s.writeInt32LE(params.size);
 	    
-	//var com=combuf;
-	//var cmd_checksum=combuf.readUInt8(6);	
+	    var combuf =Buffer.alloc(7); 
+	    combuf[0]='S'.charCodeAt(0);
+	    combuf[1]=x[1];
+	    combuf[2]=x[0];
+	    combuf[3]=y[1];
+	    combuf[4]=y[0];
+	    combuf[5]=s[0];
+	    
+	    var cs=sky.checksum_buf(combuf);
+	    
+	    //var com=combuf;
+	    //var cmd_checksum=combuf.readUInt8(6);	
+	    
+	    sky.data_listener_func=function (buf){
+		//console.log("Received data from SP! " + buf.byteLength);
+		var received_cs=buf.readUInt8(0);
+		var received_data=buf.slice(1); /// cut the first element
+		
+		if(received_cs!==cs.charCodeAt(0)){  /// checksum matching
+		    console.log("Define subframe checksum error ! Sent = " + cs.charCodeAt(0) + " received=" + received_cs );
+		    fail("Define subframe checksum error ! Sent = " + cs.charCodeAt(0) + " received=" + received_cs);
+		}else{
+		    //  console.log("Checksum OK  ! sent = " + cs.charCodeAt(0) + " received=" + received_cs );
+		}
+		
+		ok(received_data);
+	    } /// on_data
+
+	    sky.write(combuf).then(function(){}).catch(fail);
+	});
 	
-	return this.write(combuf);
     }
         
     /** 
