@@ -108,9 +108,9 @@ class allsky{
 	var sky=this;
 	
 	return new Promise(function(ok, fail){
-	    console.log("writing to SP NB=" + buffer.length);
+	    //console.log("writing to SP NB=" + buffer.length);
 	    sky.sp.write(buffer, function(){
-		console.log("Drain SP...");
+		//console.log("Drain SP...");
 		sky.sp.drain(function(err){
 
 		    if(err){
@@ -139,7 +139,7 @@ class allsky{
 	    cs = cs ^ csb;
 	}
 	return com.writeUInt8(cs,cl-1);
-	console.log("Checksum buf: ["+com.writeUInt8(cs,cl-1)+"]");
+	//console.log("Checksum buf: ["+com.writeUInt8(cs,cl-1)+"]");
     }
     
     checksum(com){
@@ -149,7 +149,7 @@ class allsky{
             cs = cs ^ csb;
 	}
 	return String.fromCharCode(cs);
-	console.log("Checksum: ["+String.fromCharCode(cs)+"]");
+	//console.log("Checksum: ["+String.fromCharCode(cs)+"]");
     }
 
     send_command(command, arg) {
@@ -160,17 +160,17 @@ class allsky{
 	    
 	    var cmd=command+cs;
 	    //	console.log("Sending command ["+command+"]; checksum ["+cs.charCodeAt(0)+"]; length="+cmd.length+" number of bytes="+nb);
-	    console.log("Sending command ["+command+"]");
+	    //console.log("Sending command ["+command+"]");
 	    
 	    function on_data(buf){
-		console.log("Received data from SP! " + buf.byteLength);
+		//console.log("Received data from SP! " + buf.byteLength);
 		var received_cs=buf.readUInt8(0);
 		var received_data=buf.slice(1); /// cut the first element
 		
 		if(received_cs!==cs.charCodeAt(0)){  /// checksum matching
 		    console.log("Checksum ERR ! sent = " + cs.charCodeAt(0) + " received=" + received_cs );
 		}else{
-		    console.log("Checksum OK  ! sent = " + cs.charCodeAt(0) + " received=" + received_cs );
+		  //  console.log("Checksum OK  ! sent = " + cs.charCodeAt(0) + " received=" + received_cs );
 		}
 	    
 		ok(received_data);
@@ -190,18 +190,18 @@ class allsky{
 	    }
 	    
 	    sky.write(cmd).then(function(){
-		console.log("send_command: write command ["+command+"] on sp ok !");
+		//console.log("send_command: write command ["+command+"] on sp ok !");
 	    }).catch(fail);
 	    
 	});
     }
 
     async send_test(){
-	console.log("Sending test command...");
+	//console.log("Sending test command...");
 	var data = await this.send_command('E',2);
 	console.log("Got test answer !");
 	if(data=='O'){
-	    console.log("Test passed !");
+	  //  console.log("Test passed !");
 	    return "Test passed.";
 	}
 	else{
@@ -258,9 +258,9 @@ class allsky{
 	
 	this.data_listener_func=function(data){
 	    if(nt===0 && skip!==undefined){
-		console.log("Skipping checksum byte...");
+		//console.log("Skipping checksum byte...");
 		if(data.length>1){
-		    console.log("Skipping checksum byte... and we got more data " + data.length);
+		   // console.log("Skipping checksum byte... and we got more data " + data.length);
 		    data.copy(buf,nr,1);
 		    nr+=(data.length-1);
 		}
@@ -365,8 +365,8 @@ class allsky{
 	    var com=combuf;
 	    var cmd_checksum=combuf.readUInt8(6);
 	
-	    console.log("Take image checksum is " + cmd_checksum);
-	    console.log("Length of com=" + com.length + " should be 7?");
+	   // console.log("Take image checksum is " + cmd_checksum);
+	   // console.log("Length of com=" + com.length + " should be 7?");
 	    
 	    var timestamp = new Date();
 	    timestamp = timestamp.toISOString();
@@ -384,11 +384,11 @@ class allsky{
 		    
 		    if(cmd_checksum !== firstchar){
 			console.log("Image_data_func Checksum error !!");
-		    }else
-			console.log("Image_data_func Checksum match !");
+		    }//else console.log("Image_data_func Checksum match !");
+			
 		}
 		else{
-		    console.log("GetImage received progress data ["+in_data.toString('ascii')+"]");
+		  //  console.log("GetImage received progress data ["+in_data.toString('ascii')+"]");
 
 		    var mid_time = new Date().getTime(); //in ms
 		    var time_elapsed = ((mid_time-start_time)/1000).toFixed(3); /// in s
@@ -451,7 +451,7 @@ class allsky{
 	    };
 	    
 	    sky.write(com).then(function(){
-		console.log("Comamnd TAKEIMAGE sent ok!");
+		//console.log("Comamnd TAKEIMAGE sent ok!");
 	    }).catch(fail);
 	});
     }
