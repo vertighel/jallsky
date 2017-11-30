@@ -219,9 +219,10 @@ var allsky_mod=require("./allsky_drv.js");
 
 
 	var image_data = await cam.get_image(params , function(message){ //progress callback
-	    ws.send(JSON.stringify(message),function(err,res){
-	    	if(err !=null) console.log("Websocket error sending message: "+err);
-	    });
+	    console.log("Progress ! "  + JSON.stringify(message));
+	    //ws.send(JSON.stringify(message),function(err,res){
+	   // 	if(err !=null) console.log("Websocket error sending message: "+err);
+	   // });
 	});
 		
 	console.log("Got image!");
