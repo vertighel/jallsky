@@ -10,7 +10,7 @@
  * 
  */
 
-"use strict"
+"use strict";
 
 //var wsserver = require('websocket').server;
 
@@ -29,6 +29,8 @@ var server = http.createServer(function(request, response) {});
 //ws = new wsserver( { httpServer: server } );
 
 var ws=new ws_mod.server(server);
+
+console.log("Created WS server!");
 
 /// 3) Creates a listener for connections.
 var count = 0;                  /// Resets clients counter. -----------> clients have random string ids assigned as cli.id
@@ -67,6 +69,7 @@ var mod_pack={
 
 ws.install_mod(mod_pack);
 
+console.log("WS server installed command pack OK!");
 
 ws.on("client_event", function(evt){
     if(evt.type=="join"){
@@ -88,3 +91,5 @@ ws.on("client_message", function(evt){ //Event sent on each client's incoming me
 server.listen(config.ws.port, function(){   /// Same port as client side.
     console.log((new Date()) + ': Server is listening on port '+config.ws.port);
 });
+
+console.log("WS server finished exec OK!");
