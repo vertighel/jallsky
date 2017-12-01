@@ -9,7 +9,6 @@
  *        d3.js code draws an histogram of the values.
  */
 
-
 /// Retrieves the configuration file
 
 var ws=new ws_web.server(); 
@@ -227,20 +226,28 @@ function update_image(obj){
 ws.install_mod({
     get_bytes : function(msg, /*reply*/){
 	//reply({ tu : " veux quoi?"});
-	$("#transfer_progress").val(msg.data.percent)
-	$("#transfer_output").text(msg.data.percent)
+	$("#transfer_progress")
+	    .css('width', msg.data.percent+'%')
+	    .attr('aria-valuenow', msg.data.percent)
+	$("#transfer_output").val(msg.data.percent)
 
     },
+
     image_data_func : function(msg){
-	$("#exposure_progress").val(msg.data.percent)
-	$("#exposure_output").text(msg.data.percent)
+	$("#exposure_progress")
+	    .css('width', msg.data.percent+'%')
+	    .attr('aria-valuenow', msg.data.percent)
+	$("#exposure_output").val(msg.data.percent)
     },
+
     database : function(msg){
 	update_image(msg.data);
     },
+
     create_png : function(msg){
 	update_image(msg.data);
     }
+
 });
 
 

@@ -12,15 +12,8 @@
 
 "use strict";
 
-//var wsserver = require('websocket').server;
-
-
-console.log("Server.2 starting!");
-
 var ws_mod=require("./ws_protocol_layer/lib/node/ws_server.js");
 
-
-console.log("Require ws_server done!");
 
 var http = require('http');    
 
@@ -37,18 +30,11 @@ var server = http.createServer(function(request, response) {});
 console.log("HTTP server created!");
 
 /// 2) Creates a websocket server.
-//ws = new wsserver( { httpServer: server } );
-
-var ws=new ws_mod.server(server);
-
-
-console.log("WS server created!");
-
-console.log("Created WS server!");
+var wss=new ws_mod.server(server);
 
 /// 3) Creates a listener for connections.
 var count = 0;                  /// Resets clients counter. -----------> clients have random string ids assigned as cli.id
-//var clients = {};               /// Stores connected client. -----------> ==ws.clients array if you need it!!
+//var clients = {};               /// Stores connected client. -----------> ==wss.clients array if you need it!!
 
 
 var mod_pack={
@@ -77,18 +63,18 @@ var mod_pack={
 	    }else{
 	    	console.log("==== Done all iterations! ====");
 	    }
-	    }
+	}
 	
 	do_something(done_cb);
 
     }
 };
 
-ws.install_mod(mod_pack);
+wss.install_mod(mod_pack);
 
 console.log("WS server installed command pack OK!");
 
-ws.on("client_event", function(evt){
+wss.on("client_event", function(evt){
     if(evt.type=="join"){
 	db_obs.last_entry(function(data){
 	    evt.client.send(data); /// Sends the string to the client.
@@ -101,8 +87,8 @@ ws.on("client_event", function(evt){
     }
 });
 
-ws.on("client_message", function(evt){ //Event sent on each client's incoming message
-    ws.broadcast(evt.cmd,evt.data);
+wss.on("client_message", function(evt){ //Event sent on each client's incoming message
+    wss.broadcast(evt.cmd,evt.data);
 });
 
 server.listen(config.ws.port, function(){   /// Same port as client side.
