@@ -225,7 +225,13 @@ class allsky{
     heater_off(){ return this.send_command('g\x00'); }
     chop_on(){ return this.send_command('U\x01'); }
     chop_off(){ return this.send_command('U\x00'); }
-    abort(){ return this.send_command('A'); }
+
+    async abort(){
+	
+	await this.send_command('A');
+	await close_shutter();
+	
+    }
     
     open_shutter(){ /// leaves the shutter motor energized
 	var sky=this;

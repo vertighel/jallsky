@@ -41,8 +41,10 @@ var db_obs= require('./db_obs.js');    /// DB functions
 
     
     exports.abort = function(params,cb){	
-	jall.cam.abort().then(cb);
+	jall.cam.abort().then(function(){
+	    jall.cam.close().then(cb);
+	});
     }
-
-	
+    
+    
 }).call()
