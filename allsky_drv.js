@@ -39,7 +39,7 @@
   
   <meta name="pjax-timeout" content="1000">
   
-  <meta name="request-id" content="224E:2CE8:E6BD21:187B8EB:5A2E75EA" data-pjax-transient>
+  <meta name="request-id" content="783D:2CE4:94AD25:102B54E:5A2E767D" data-pjax-transient>
   
 
   <meta name="selected-link" value="repo_source" data-pjax-transient>
@@ -49,7 +49,7 @@
 <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
     <meta name="google-analytics" content="UA-3769691-2">
 
-<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="224E:2CE8:E6BD21:187B8EB:5A2E75EA" name="octolytics-dimension-request_id" /><meta content="iad" name="octolytics-dimension-region_edge" /><meta content="iad" name="octolytics-dimension-region_render" />
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="783D:2CE4:94AD25:102B54E:5A2E767D" name="octolytics-dimension-request_id" /><meta content="iad" name="octolytics-dimension-region_edge" /><meta content="iad" name="octolytics-dimension-region_render" />
 <meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" />
 
 
@@ -64,10 +64,10 @@
   <meta name="user-login" content="">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="OWYwNjgzYTQ3OTAyMWNhNTA5ZGEyMDI5ZGEzMzdlNzljMjNlMmM0ODNmZWY5MmUzYzc5MjI3NTY1MWZmOWE4OHx7InJlbW90ZV9hZGRyZXNzIjoiMTMwLjI1MS4xODguMjUzIiwicmVxdWVzdF9pZCI6IjIyNEU6MkNFODpFNkJEMjE6MTg3QjhFQjo1QTJFNzVFQSIsInRpbWVzdGFtcCI6MTUxMjk5NDI4MiwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+    <meta name="js-proxy-site-detection-payload" content="ZWUyOGVhNmI3YjQxODNmNWMwNDkyNDlhMDc2YjNkZGQ0NTgyNzA5NDVlOTQ2NzRiZjEwNjRkMWY1NTdkOGY4MHx7InJlbW90ZV9hZGRyZXNzIjoiMTMwLjI1MS4xODguMjUzIiwicmVxdWVzdF9pZCI6Ijc4M0Q6MkNFNDo5NEFEMjU6MTAyQjU0RTo1QTJFNzY3RCIsInRpbWVzdGFtcCI6MTUxMjk5NDQyOSwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
 
 
-  <meta name="html-safe-nonce" content="8d8eda28e9240bfd4e3a19fbb312e62c073ce854">
+  <meta name="html-safe-nonce" content="68854187a47e92e9df6238791fb79e760c4a4ba0">
 
   <meta http-equiv="x-pjax-version" content="385a0122d735edffd093e880e58281a6">
   
@@ -308,9 +308,9 @@
   <div class="repository-content">
 
     
-  <a href="/vertighel/jallsky-test/blob/072102da17bac87cbf31175e998f70e46a871bcd/allsky_drv.js" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+  <a href="/vertighel/jallsky-test/blob/116aaeaf5dced90bfb711c7ad0972818fca3f715/allsky_drv.js" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
 
-  <!-- blob contrib key: blob_contributors:v21:da53ba147f8a3bdb9731e39ebaadacc0 -->
+  <!-- blob contrib key: blob_contributors:v21:6653fd4c41d1a9018af41d4b789d55f6 -->
 
   <div class="file-navigation js-zeroclipboard-container">
     
@@ -394,39 +394,16 @@
   </div>
 
 
-  
-  <div class="commit-tease">
-      <span class="float-right">
-        <a class="commit-tease-sha" href="/vertighel/jallsky-test/commit/072102da17bac87cbf31175e998f70e46a871bcd" data-pjax>
-          072102d
-        </a>
-        <relative-time datetime="2017-12-11T12:05:23Z">Dec 11, 2017</relative-time>
-      </span>
-      <div>
-        <img alt="" class="avatar" data-canonical-src="https://1.gravatar.com/avatar/bc1d18b4ae07d3c33591f582bd8ddc86?d=https%3A%2F%2Fassets-cdn.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=x&amp;s=140" height="20" src="https://camo.githubusercontent.com/038b53e6eeb254d1874f601290396089984bedf4/68747470733a2f2f312e67726176617461722e636f6d2f6176617461722f62633164313862346165303764336333333539316635383262643864646338363f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d313430" width="20" />
-        <span class="user-mention">Pierre Sprimont</span>
-          <a href="/vertighel/jallsky-test/commit/072102da17bac87cbf31175e998f70e46a871bcd" class="message" data-pjax="true" title="debug">debug</a>
-      </div>
+  <include-fragment class="commit-tease" src="/vertighel/jallsky-test/contributors/master/allsky_drv.js">
+    <div>
+      Fetching contributors&hellip;
+    </div>
 
     <div class="commit-tease-contributors">
-      <button type="button" class="btn-link muted-link contributors-toggle" data-facebox="#blob_contributors_box">
-        <strong>1</strong>
-         contributor
-      </button>
-      
+      <img alt="" class="loader-loading float-left" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" />
+      <span class="loader-error">Cannot retrieve contributors at this time</span>
     </div>
-
-    <div id="blob_contributors_box" style="display:none">
-      <h2 class="facebox-header" data-facebox-id="facebox-header">Users who have contributed to this file</h2>
-      <ul class="facebox-user-list" data-facebox-id="facebox-description">
-          <li class="facebox-user-list-item">
-            <img alt="@vertighel" height="24" src="https://avatars1.githubusercontent.com/u/3487070?s=48&amp;v=4" width="24" />
-            <a href="/vertighel">vertighel</a>
-          </li>
-      </ul>
-    </div>
-  </div>
-
+</include-fragment>
 
   <div class="file">
     <div class="file-header">
@@ -450,7 +427,7 @@
   </div>
 
   <div class="file-info">
-      526 lines (418 sloc)
+      528 lines (420 sloc)
       <span class="file-info-divider"></span>
     13.4 KB
   </div>
@@ -1466,31 +1443,31 @@
       </tr>
       <tr>
         <td id="L246" class="blob-num js-line-number" data-line-number="246"></td>
-        <td id="LC246" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">await</span> <span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>A<span class="pl-pds">&#39;</span></span>);</td>
+        <td id="LC246" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>A<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(</td>
       </tr>
       <tr>
         <td id="L247" class="blob-num js-line-number" data-line-number="247"></td>
-        <td id="LC247" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">await</span> <span class="pl-smi">sky</span>.<span class="pl-en">close_shutter</span>();</td>
+        <td id="LC247" class="blob-code blob-code-inner js-file-line">			<span class="pl-smi">sky</span>.<span class="pl-en">close_shutter</span>().<span class="pl-en">then</span>(<span class="pl-k">function</span>(){</td>
       </tr>
       <tr>
         <td id="L248" class="blob-num js-line-number" data-line-number="248"></td>
-        <td id="LC248" class="blob-code blob-code-inner js-file-line">		    <span class="pl-en">ok</span>();</td>
+        <td id="LC248" class="blob-code blob-code-inner js-file-line">			    <span class="pl-en">ok</span>();</td>
       </tr>
       <tr>
         <td id="L249" class="blob-num js-line-number" data-line-number="249"></td>
-        <td id="LC249" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">sky</span>.<span class="pl-smi">aborting</span><span class="pl-k">=</span><span class="pl-c1">false</span>;</td>
+        <td id="LC249" class="blob-code blob-code-inner js-file-line">			    <span class="pl-smi">sky</span>.<span class="pl-smi">aborting</span><span class="pl-k">=</span><span class="pl-c1">false</span>;</td>
       </tr>
       <tr>
         <td id="L250" class="blob-num js-line-number" data-line-number="250"></td>
-        <td id="LC250" class="blob-code blob-code-inner js-file-line">		});</td>
+        <td id="LC250" class="blob-code blob-code-inner js-file-line">			})</td>
       </tr>
       <tr>
         <td id="L251" class="blob-num js-line-number" data-line-number="251"></td>
-        <td id="LC251" class="blob-code blob-code-inner js-file-line">		</td>
+        <td id="LC251" class="blob-code blob-code-inner js-file-line">		    );</td>
       </tr>
       <tr>
         <td id="L252" class="blob-num js-line-number" data-line-number="252"></td>
-        <td id="LC252" class="blob-code blob-code-inner js-file-line">	    }<span class="pl-k">else</span>{</td>
+        <td id="LC252" class="blob-code blob-code-inner js-file-line">		});</td>
       </tr>
       <tr>
         <td id="L253" class="blob-num js-line-number" data-line-number="253"></td>
@@ -1498,346 +1475,346 @@
       </tr>
       <tr>
         <td id="L254" class="blob-num js-line-number" data-line-number="254"></td>
-        <td id="LC254" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">await</span> <span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>A<span class="pl-pds">&#39;</span></span>);</td>
+        <td id="LC254" class="blob-code blob-code-inner js-file-line">	    }<span class="pl-k">else</span>{</td>
       </tr>
       <tr>
         <td id="L255" class="blob-num js-line-number" data-line-number="255"></td>
-        <td id="LC255" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">await</span> <span class="pl-smi">sky</span>.<span class="pl-en">close_shutter</span>();</td>
+        <td id="LC255" class="blob-code blob-code-inner js-file-line">		</td>
       </tr>
       <tr>
         <td id="L256" class="blob-num js-line-number" data-line-number="256"></td>
-        <td id="LC256" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">sky</span>.<span class="pl-smi">aborting</span><span class="pl-k">=</span><span class="pl-c1">false</span>;</td>
+        <td id="LC256" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>A<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(<span class="pl-smi">sky</span>.<span class="pl-en">close_shutter</span>().<span class="pl-en">then</span>(<span class="pl-k">function</span>(){</td>
       </tr>
       <tr>
         <td id="L257" class="blob-num js-line-number" data-line-number="257"></td>
-        <td id="LC257" class="blob-code blob-code-inner js-file-line">		<span class="pl-en">ok</span>();</td>
+        <td id="LC257" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">sky</span>.<span class="pl-smi">aborting</span><span class="pl-k">=</span><span class="pl-c1">false</span>;</td>
       </tr>
       <tr>
         <td id="L258" class="blob-num js-line-number" data-line-number="258"></td>
-        <td id="LC258" class="blob-code blob-code-inner js-file-line">	    }</td>
+        <td id="LC258" class="blob-code blob-code-inner js-file-line">		    <span class="pl-en">ok</span>();</td>
       </tr>
       <tr>
         <td id="L259" class="blob-num js-line-number" data-line-number="259"></td>
-        <td id="LC259" class="blob-code blob-code-inner js-file-line">	});</td>
+        <td id="LC259" class="blob-code blob-code-inner js-file-line">		}));</td>
       </tr>
       <tr>
         <td id="L260" class="blob-num js-line-number" data-line-number="260"></td>
-        <td id="LC260" class="blob-code blob-code-inner js-file-line">    }</td>
+        <td id="LC260" class="blob-code blob-code-inner js-file-line">	    }</td>
       </tr>
       <tr>
         <td id="L261" class="blob-num js-line-number" data-line-number="261"></td>
-        <td id="LC261" class="blob-code blob-code-inner js-file-line">    </td>
+        <td id="LC261" class="blob-code blob-code-inner js-file-line">	});</td>
       </tr>
       <tr>
         <td id="L262" class="blob-num js-line-number" data-line-number="262"></td>
-        <td id="LC262" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">open_shutter</span>(){ <span class="pl-c"><span class="pl-c">//</span>/ leaves the shutter motor energized</span></td>
+        <td id="LC262" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L263" class="blob-num js-line-number" data-line-number="263"></td>
-        <td id="LC263" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> sky<span class="pl-k">=</span><span class="pl-c1">this</span>;</td>
+        <td id="LC263" class="blob-code blob-code-inner js-file-line">    </td>
       </tr>
       <tr>
         <td id="L264" class="blob-num js-line-number" data-line-number="264"></td>
-        <td id="LC264" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">Promise</span>(<span class="pl-k">function</span>(<span class="pl-smi">ok</span>, <span class="pl-smi">fail</span>){</td>
+        <td id="LC264" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">open_shutter</span>(){ <span class="pl-c"><span class="pl-c">//</span>/ leaves the shutter motor energized</span></td>
       </tr>
       <tr>
         <td id="L265" class="blob-num js-line-number" data-line-number="265"></td>
-        <td id="LC265" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>O<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){</td>
+        <td id="LC265" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> sky<span class="pl-k">=</span><span class="pl-c1">this</span>;</td>
       </tr>
       <tr>
         <td id="L266" class="blob-num js-line-number" data-line-number="266"></td>
-        <td id="LC266" class="blob-code blob-code-inner js-file-line">		<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Shutter open !<span class="pl-pds">&quot;</span></span>);</td>
+        <td id="LC266" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">Promise</span>(<span class="pl-k">function</span>(<span class="pl-smi">ok</span>, <span class="pl-smi">fail</span>){</td>
       </tr>
       <tr>
         <td id="L267" class="blob-num js-line-number" data-line-number="267"></td>
-        <td id="LC267" class="blob-code blob-code-inner js-file-line">		<span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span>(){</td>
+        <td id="LC267" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>O<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){</td>
       </tr>
       <tr>
         <td id="L268" class="blob-num js-line-number" data-line-number="268"></td>
-        <td id="LC268" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>K<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(ok).<span class="pl-en">catch</span>(fail);  <span class="pl-c"><span class="pl-c">//</span>/ DE_ENERGIZE</span></td>
+        <td id="LC268" class="blob-code blob-code-inner js-file-line">		<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Shutter open !<span class="pl-pds">&quot;</span></span>);</td>
       </tr>
       <tr>
         <td id="L269" class="blob-num js-line-number" data-line-number="269"></td>
-        <td id="LC269" class="blob-code blob-code-inner js-file-line">		},<span class="pl-c1">100</span>); <span class="pl-c"><span class="pl-c">//</span>1 second = 1000ms....	</span></td>
+        <td id="LC269" class="blob-code blob-code-inner js-file-line">		<span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span>(){</td>
       </tr>
       <tr>
         <td id="L270" class="blob-num js-line-number" data-line-number="270"></td>
-        <td id="LC270" class="blob-code blob-code-inner js-file-line">	    }).<span class="pl-en">catch</span>(fail);</td>
+        <td id="LC270" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>K<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(ok).<span class="pl-en">catch</span>(fail);  <span class="pl-c"><span class="pl-c">//</span>/ DE_ENERGIZE</span></td>
       </tr>
       <tr>
         <td id="L271" class="blob-num js-line-number" data-line-number="271"></td>
-        <td id="LC271" class="blob-code blob-code-inner js-file-line">	});</td>
+        <td id="LC271" class="blob-code blob-code-inner js-file-line">		},<span class="pl-c1">100</span>); <span class="pl-c"><span class="pl-c">//</span>1 second = 1000ms....	</span></td>
       </tr>
       <tr>
         <td id="L272" class="blob-num js-line-number" data-line-number="272"></td>
-        <td id="LC272" class="blob-code blob-code-inner js-file-line">    }</td>
+        <td id="LC272" class="blob-code blob-code-inner js-file-line">	    }).<span class="pl-en">catch</span>(fail);</td>
       </tr>
       <tr>
         <td id="L273" class="blob-num js-line-number" data-line-number="273"></td>
-        <td id="LC273" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC273" class="blob-code blob-code-inner js-file-line">	});</td>
       </tr>
       <tr>
         <td id="L274" class="blob-num js-line-number" data-line-number="274"></td>
-        <td id="LC274" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">close_shutter</span>(){ <span class="pl-c"><span class="pl-c">//</span>/ leaves the shutter motor energized</span></td>
+        <td id="LC274" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L275" class="blob-num js-line-number" data-line-number="275"></td>
-        <td id="LC275" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> sky<span class="pl-k">=</span><span class="pl-c1">this</span>;</td>
+        <td id="LC275" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L276" class="blob-num js-line-number" data-line-number="276"></td>
-        <td id="LC276" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">Promise</span>(<span class="pl-k">function</span>(<span class="pl-smi">ok</span>, <span class="pl-smi">fail</span>){</td>
+        <td id="LC276" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">close_shutter</span>(){ <span class="pl-c"><span class="pl-c">//</span>/ leaves the shutter motor energized</span></td>
       </tr>
       <tr>
         <td id="L277" class="blob-num js-line-number" data-line-number="277"></td>
-        <td id="LC277" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>C<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){</td>
+        <td id="LC277" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> sky<span class="pl-k">=</span><span class="pl-c1">this</span>;</td>
       </tr>
       <tr>
         <td id="L278" class="blob-num js-line-number" data-line-number="278"></td>
-        <td id="LC278" class="blob-code blob-code-inner js-file-line">		<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Shutter closed !<span class="pl-pds">&quot;</span></span>);</td>
+        <td id="LC278" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">Promise</span>(<span class="pl-k">function</span>(<span class="pl-smi">ok</span>, <span class="pl-smi">fail</span>){</td>
       </tr>
       <tr>
         <td id="L279" class="blob-num js-line-number" data-line-number="279"></td>
-        <td id="LC279" class="blob-code blob-code-inner js-file-line">		<span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span>(){</td>
+        <td id="LC279" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>C<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){</td>
       </tr>
       <tr>
         <td id="L280" class="blob-num js-line-number" data-line-number="280"></td>
-        <td id="LC280" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>K<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(ok).<span class="pl-en">catch</span>(fail);  <span class="pl-c"><span class="pl-c">//</span>/ DE_ENERGIZE</span></td>
+        <td id="LC280" class="blob-code blob-code-inner js-file-line">		<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Shutter closed !<span class="pl-pds">&quot;</span></span>);</td>
       </tr>
       <tr>
         <td id="L281" class="blob-num js-line-number" data-line-number="281"></td>
-        <td id="LC281" class="blob-code blob-code-inner js-file-line">		},<span class="pl-c1">100</span>); <span class="pl-c"><span class="pl-c">//</span>1 second = 1000ms....	</span></td>
+        <td id="LC281" class="blob-code blob-code-inner js-file-line">		<span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span>(){</td>
       </tr>
       <tr>
         <td id="L282" class="blob-num js-line-number" data-line-number="282"></td>
-        <td id="LC282" class="blob-code blob-code-inner js-file-line">	    }).<span class="pl-en">catch</span>(fail);</td>
+        <td id="LC282" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>K<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(ok).<span class="pl-en">catch</span>(fail);  <span class="pl-c"><span class="pl-c">//</span>/ DE_ENERGIZE</span></td>
       </tr>
       <tr>
         <td id="L283" class="blob-num js-line-number" data-line-number="283"></td>
-        <td id="LC283" class="blob-code blob-code-inner js-file-line">	});</td>
+        <td id="LC283" class="blob-code blob-code-inner js-file-line">		},<span class="pl-c1">100</span>); <span class="pl-c"><span class="pl-c">//</span>1 second = 1000ms....	</span></td>
       </tr>
       <tr>
         <td id="L284" class="blob-num js-line-number" data-line-number="284"></td>
-        <td id="LC284" class="blob-code blob-code-inner js-file-line">    }</td>
+        <td id="LC284" class="blob-code blob-code-inner js-file-line">	    }).<span class="pl-en">catch</span>(fail);</td>
       </tr>
       <tr>
         <td id="L285" class="blob-num js-line-number" data-line-number="285"></td>
-        <td id="LC285" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC285" class="blob-code blob-code-inner js-file-line">	});</td>
       </tr>
       <tr>
         <td id="L286" class="blob-num js-line-number" data-line-number="286"></td>
-        <td id="LC286" class="blob-code blob-code-inner js-file-line">    </td>
+        <td id="LC286" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L287" class="blob-num js-line-number" data-line-number="287"></td>
-        <td id="LC287" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">get_bytes</span>(<span class="pl-smi">nb</span>, <span class="pl-smi">cb</span>, <span class="pl-smi">skip</span>){</td>
-      </tr>
-      <tr>
-        <td id="L288" class="blob-num js-line-number" data-line-number="288"></td>
-        <td id="LC288" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> nr<span class="pl-k">=</span><span class="pl-c1">0</span>,nt<span class="pl-k">=</span><span class="pl-c1">0</span>;</td>
-      </tr>
-      <tr>
-        <td id="L289" class="blob-num js-line-number" data-line-number="289"></td>
-        <td id="LC289" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> buf<span class="pl-k">=</span><span class="pl-k">new</span> <span class="pl-en">Buffer</span>(nb);</td>
-      </tr>
-      <tr>
-        <td id="L290" class="blob-num js-line-number" data-line-number="290"></td>
-        <td id="LC290" class="blob-code blob-code-inner js-file-line">	<span class="pl-smi">buf</span>.<span class="pl-en">fill</span>(<span class="pl-c1">0</span>);</td>
-      </tr>
-      <tr>
-        <td id="L291" class="blob-num js-line-number" data-line-number="291"></td>
-        <td id="LC291" class="blob-code blob-code-inner js-file-line">	</td>
-      </tr>
-      <tr>
-        <td id="L292" class="blob-num js-line-number" data-line-number="292"></td>
-        <td id="LC292" class="blob-code blob-code-inner js-file-line">	<span class="pl-c1">this</span>.<span class="pl-en">data_listener_func</span><span class="pl-k">=</span><span class="pl-k">function</span>(<span class="pl-smi">data</span>){</td>
-      </tr>
-      <tr>
-        <td id="L293" class="blob-num js-line-number" data-line-number="293"></td>
-        <td id="LC293" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">if</span>(nt<span class="pl-k">===</span><span class="pl-c1">0</span> <span class="pl-k">&amp;&amp;</span> skip<span class="pl-k">!==</span><span class="pl-c1">undefined</span>){</td>
-      </tr>
-      <tr>
-        <td id="L294" class="blob-num js-line-number" data-line-number="294"></td>
-        <td id="LC294" class="blob-code blob-code-inner js-file-line">		<span class="pl-c"><span class="pl-c">//</span>console.log(&quot;Skipping checksum byte...&quot;);</span></td>
-      </tr>
-      <tr>
-        <td id="L295" class="blob-num js-line-number" data-line-number="295"></td>
-        <td id="LC295" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(<span class="pl-smi">data</span>.<span class="pl-c1">length</span><span class="pl-k">&gt;</span><span class="pl-c1">1</span>){</td>
-      </tr>
-      <tr>
-        <td id="L296" class="blob-num js-line-number" data-line-number="296"></td>
-        <td id="LC296" class="blob-code blob-code-inner js-file-line">		   <span class="pl-c"><span class="pl-c">//</span> console.log(&quot;Skipping checksum byte... and we got more data &quot; + data.length);</span></td>
-      </tr>
-      <tr>
-        <td id="L297" class="blob-num js-line-number" data-line-number="297"></td>
-        <td id="LC297" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">data</span>.<span class="pl-en">copy</span>(buf,nr,<span class="pl-c1">1</span>);</td>
-      </tr>
-      <tr>
-        <td id="L298" class="blob-num js-line-number" data-line-number="298"></td>
-        <td id="LC298" class="blob-code blob-code-inner js-file-line">		    nr<span class="pl-k">+=</span>(<span class="pl-smi">data</span>.<span class="pl-c1">length</span><span class="pl-k">-</span><span class="pl-c1">1</span>);</td>
-      </tr>
-      <tr>
-        <td id="L299" class="blob-num js-line-number" data-line-number="299"></td>
-        <td id="LC299" class="blob-code blob-code-inner js-file-line">		}</td>
-      </tr>
-      <tr>
-        <td id="L300" class="blob-num js-line-number" data-line-number="300"></td>
-        <td id="LC300" class="blob-code blob-code-inner js-file-line">	    }</td>
-      </tr>
-      <tr>
-        <td id="L301" class="blob-num js-line-number" data-line-number="301"></td>
-        <td id="LC301" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">else</span>{</td>
-      </tr>
-      <tr>
-        <td id="L302" class="blob-num js-line-number" data-line-number="302"></td>
-        <td id="LC302" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">data</span>.<span class="pl-en">copy</span>(buf,nr);</td>
-      </tr>
-      <tr>
-        <td id="L303" class="blob-num js-line-number" data-line-number="303"></td>
-        <td id="LC303" class="blob-code blob-code-inner js-file-line">		nr<span class="pl-k">+=</span><span class="pl-smi">data</span>.<span class="pl-c1">length</span>;</td>
-      </tr>
-      <tr>
-        <td id="L304" class="blob-num js-line-number" data-line-number="304"></td>
-        <td id="LC304" class="blob-code blob-code-inner js-file-line">	    }</td>
-      </tr>
-      <tr>
-        <td id="L305" class="blob-num js-line-number" data-line-number="305"></td>
-        <td id="LC305" class="blob-code blob-code-inner js-file-line">	    nt<span class="pl-k">+=</span><span class="pl-smi">data</span>.<span class="pl-c1">length</span>;</td>
-      </tr>
-      <tr>
-        <td id="L306" class="blob-num js-line-number" data-line-number="306"></td>
-        <td id="LC306" class="blob-code blob-code-inner js-file-line">	    </td>
-      </tr>
-      <tr>
-        <td id="L307" class="blob-num js-line-number" data-line-number="307"></td>
-        <td id="LC307" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">if</span>(nr<span class="pl-k">===</span>nb){</td>
-      </tr>
-      <tr>
-        <td id="L308" class="blob-num js-line-number" data-line-number="308"></td>
-        <td id="LC308" class="blob-code blob-code-inner js-file-line">		<span class="pl-en">cb</span>(buf);</td>
-      </tr>
-      <tr>
-        <td id="L309" class="blob-num js-line-number" data-line-number="309"></td>
-        <td id="LC309" class="blob-code blob-code-inner js-file-line">		nr<span class="pl-k">=</span><span class="pl-c1">0</span>;</td>
-      </tr>
-      <tr>
-        <td id="L310" class="blob-num js-line-number" data-line-number="310"></td>
-        <td id="LC310" class="blob-code blob-code-inner js-file-line">	    }</td>
-      </tr>
-      <tr>
-        <td id="L311" class="blob-num js-line-number" data-line-number="311"></td>
-        <td id="LC311" class="blob-code blob-code-inner js-file-line">	    </td>
-      </tr>
-      <tr>
-        <td id="L312" class="blob-num js-line-number" data-line-number="312"></td>
-        <td id="LC312" class="blob-code blob-code-inner js-file-line">	}; <span class="pl-c"><span class="pl-c">//</span>/ data listener_func</span></td>
-      </tr>
-      <tr>
-        <td id="L313" class="blob-num js-line-number" data-line-number="313"></td>
-        <td id="LC313" class="blob-code blob-code-inner js-file-line">    } <span class="pl-c"><span class="pl-c">//</span>/ get_bytes</span></td>
-      </tr>
-      <tr>
-        <td id="L314" class="blob-num js-line-number" data-line-number="314"></td>
-        <td id="LC314" class="blob-code blob-code-inner js-file-line">
+        <td id="LC287" class="blob-code blob-code-inner js-file-line">
 </td>
       </tr>
       <tr>
+        <td id="L288" class="blob-num js-line-number" data-line-number="288"></td>
+        <td id="LC288" class="blob-code blob-code-inner js-file-line">    </td>
+      </tr>
+      <tr>
+        <td id="L289" class="blob-num js-line-number" data-line-number="289"></td>
+        <td id="LC289" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">get_bytes</span>(<span class="pl-smi">nb</span>, <span class="pl-smi">cb</span>, <span class="pl-smi">skip</span>){</td>
+      </tr>
+      <tr>
+        <td id="L290" class="blob-num js-line-number" data-line-number="290"></td>
+        <td id="LC290" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> nr<span class="pl-k">=</span><span class="pl-c1">0</span>,nt<span class="pl-k">=</span><span class="pl-c1">0</span>;</td>
+      </tr>
+      <tr>
+        <td id="L291" class="blob-num js-line-number" data-line-number="291"></td>
+        <td id="LC291" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> buf<span class="pl-k">=</span><span class="pl-k">new</span> <span class="pl-en">Buffer</span>(nb);</td>
+      </tr>
+      <tr>
+        <td id="L292" class="blob-num js-line-number" data-line-number="292"></td>
+        <td id="LC292" class="blob-code blob-code-inner js-file-line">	<span class="pl-smi">buf</span>.<span class="pl-en">fill</span>(<span class="pl-c1">0</span>);</td>
+      </tr>
+      <tr>
+        <td id="L293" class="blob-num js-line-number" data-line-number="293"></td>
+        <td id="LC293" class="blob-code blob-code-inner js-file-line">	</td>
+      </tr>
+      <tr>
+        <td id="L294" class="blob-num js-line-number" data-line-number="294"></td>
+        <td id="LC294" class="blob-code blob-code-inner js-file-line">	<span class="pl-c1">this</span>.<span class="pl-en">data_listener_func</span><span class="pl-k">=</span><span class="pl-k">function</span>(<span class="pl-smi">data</span>){</td>
+      </tr>
+      <tr>
+        <td id="L295" class="blob-num js-line-number" data-line-number="295"></td>
+        <td id="LC295" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">if</span>(nt<span class="pl-k">===</span><span class="pl-c1">0</span> <span class="pl-k">&amp;&amp;</span> skip<span class="pl-k">!==</span><span class="pl-c1">undefined</span>){</td>
+      </tr>
+      <tr>
+        <td id="L296" class="blob-num js-line-number" data-line-number="296"></td>
+        <td id="LC296" class="blob-code blob-code-inner js-file-line">		<span class="pl-c"><span class="pl-c">//</span>console.log(&quot;Skipping checksum byte...&quot;);</span></td>
+      </tr>
+      <tr>
+        <td id="L297" class="blob-num js-line-number" data-line-number="297"></td>
+        <td id="LC297" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(<span class="pl-smi">data</span>.<span class="pl-c1">length</span><span class="pl-k">&gt;</span><span class="pl-c1">1</span>){</td>
+      </tr>
+      <tr>
+        <td id="L298" class="blob-num js-line-number" data-line-number="298"></td>
+        <td id="LC298" class="blob-code blob-code-inner js-file-line">		   <span class="pl-c"><span class="pl-c">//</span> console.log(&quot;Skipping checksum byte... and we got more data &quot; + data.length);</span></td>
+      </tr>
+      <tr>
+        <td id="L299" class="blob-num js-line-number" data-line-number="299"></td>
+        <td id="LC299" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">data</span>.<span class="pl-en">copy</span>(buf,nr,<span class="pl-c1">1</span>);</td>
+      </tr>
+      <tr>
+        <td id="L300" class="blob-num js-line-number" data-line-number="300"></td>
+        <td id="LC300" class="blob-code blob-code-inner js-file-line">		    nr<span class="pl-k">+=</span>(<span class="pl-smi">data</span>.<span class="pl-c1">length</span><span class="pl-k">-</span><span class="pl-c1">1</span>);</td>
+      </tr>
+      <tr>
+        <td id="L301" class="blob-num js-line-number" data-line-number="301"></td>
+        <td id="LC301" class="blob-code blob-code-inner js-file-line">		}</td>
+      </tr>
+      <tr>
+        <td id="L302" class="blob-num js-line-number" data-line-number="302"></td>
+        <td id="LC302" class="blob-code blob-code-inner js-file-line">	    }</td>
+      </tr>
+      <tr>
+        <td id="L303" class="blob-num js-line-number" data-line-number="303"></td>
+        <td id="LC303" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">else</span>{</td>
+      </tr>
+      <tr>
+        <td id="L304" class="blob-num js-line-number" data-line-number="304"></td>
+        <td id="LC304" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">data</span>.<span class="pl-en">copy</span>(buf,nr);</td>
+      </tr>
+      <tr>
+        <td id="L305" class="blob-num js-line-number" data-line-number="305"></td>
+        <td id="LC305" class="blob-code blob-code-inner js-file-line">		nr<span class="pl-k">+=</span><span class="pl-smi">data</span>.<span class="pl-c1">length</span>;</td>
+      </tr>
+      <tr>
+        <td id="L306" class="blob-num js-line-number" data-line-number="306"></td>
+        <td id="LC306" class="blob-code blob-code-inner js-file-line">	    }</td>
+      </tr>
+      <tr>
+        <td id="L307" class="blob-num js-line-number" data-line-number="307"></td>
+        <td id="LC307" class="blob-code blob-code-inner js-file-line">	    nt<span class="pl-k">+=</span><span class="pl-smi">data</span>.<span class="pl-c1">length</span>;</td>
+      </tr>
+      <tr>
+        <td id="L308" class="blob-num js-line-number" data-line-number="308"></td>
+        <td id="LC308" class="blob-code blob-code-inner js-file-line">	    </td>
+      </tr>
+      <tr>
+        <td id="L309" class="blob-num js-line-number" data-line-number="309"></td>
+        <td id="LC309" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">if</span>(nr<span class="pl-k">===</span>nb){</td>
+      </tr>
+      <tr>
+        <td id="L310" class="blob-num js-line-number" data-line-number="310"></td>
+        <td id="LC310" class="blob-code blob-code-inner js-file-line">		<span class="pl-en">cb</span>(buf);</td>
+      </tr>
+      <tr>
+        <td id="L311" class="blob-num js-line-number" data-line-number="311"></td>
+        <td id="LC311" class="blob-code blob-code-inner js-file-line">		nr<span class="pl-k">=</span><span class="pl-c1">0</span>;</td>
+      </tr>
+      <tr>
+        <td id="L312" class="blob-num js-line-number" data-line-number="312"></td>
+        <td id="LC312" class="blob-code blob-code-inner js-file-line">	    }</td>
+      </tr>
+      <tr>
+        <td id="L313" class="blob-num js-line-number" data-line-number="313"></td>
+        <td id="LC313" class="blob-code blob-code-inner js-file-line">	    </td>
+      </tr>
+      <tr>
+        <td id="L314" class="blob-num js-line-number" data-line-number="314"></td>
+        <td id="LC314" class="blob-code blob-code-inner js-file-line">	}; <span class="pl-c"><span class="pl-c">//</span>/ data listener_func</span></td>
+      </tr>
+      <tr>
         <td id="L315" class="blob-num js-line-number" data-line-number="315"></td>
-        <td id="LC315" class="blob-code blob-code-inner js-file-line">        </td>
+        <td id="LC315" class="blob-code blob-code-inner js-file-line">    } <span class="pl-c"><span class="pl-c">//</span>/ get_bytes</span></td>
       </tr>
       <tr>
         <td id="L316" class="blob-num js-line-number" data-line-number="316"></td>
-        <td id="LC316" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span>/ This command defines the location and size of the sub-frame. The</span></td>
+        <td id="LC316" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L317" class="blob-num js-line-number" data-line-number="317"></td>
-        <td id="LC317" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span>/ maximum size of the sub- frame is 127 pixels. </span></td>
+        <td id="LC317" class="blob-code blob-code-inner js-file-line">        </td>
       </tr>
       <tr>
         <td id="L318" class="blob-num js-line-number" data-line-number="318"></td>
-        <td id="LC318" class="blob-code blob-code-inner js-file-line">    </td>
+        <td id="LC318" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span>/ This command defines the location and size of the sub-frame. The</span></td>
       </tr>
       <tr>
         <td id="L319" class="blob-num js-line-number" data-line-number="319"></td>
-        <td id="LC319" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">define_subframe</span>(<span class="pl-smi">params</span>){</td>
+        <td id="LC319" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">//</span>/ maximum size of the sub- frame is 127 pixels. </span></td>
       </tr>
       <tr>
         <td id="L320" class="blob-num js-line-number" data-line-number="320"></td>
-        <td id="LC320" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> sky<span class="pl-k">=</span><span class="pl-c1">this</span>;</td>
+        <td id="LC320" class="blob-code blob-code-inner js-file-line">    </td>
       </tr>
       <tr>
         <td id="L321" class="blob-num js-line-number" data-line-number="321"></td>
-        <td id="LC321" class="blob-code blob-code-inner js-file-line">	</td>
+        <td id="LC321" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">define_subframe</span>(<span class="pl-smi">params</span>){</td>
       </tr>
       <tr>
         <td id="L322" class="blob-num js-line-number" data-line-number="322"></td>
-        <td id="LC322" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">Promise</span>(<span class="pl-k">function</span>(<span class="pl-smi">ok</span>, <span class="pl-smi">fail</span>){</td>
+        <td id="LC322" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> sky<span class="pl-k">=</span><span class="pl-c1">this</span>;</td>
       </tr>
       <tr>
         <td id="L323" class="blob-num js-line-number" data-line-number="323"></td>
-        <td id="LC323" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> x<span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">4</span>);</td>
+        <td id="LC323" class="blob-code blob-code-inner js-file-line">	</td>
       </tr>
       <tr>
         <td id="L324" class="blob-num js-line-number" data-line-number="324"></td>
-        <td id="LC324" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">x</span>.<span class="pl-en">writeInt32LE</span>(<span class="pl-smi">params</span>.<span class="pl-smi">x_start</span>);    </td>
+        <td id="LC324" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">Promise</span>(<span class="pl-k">function</span>(<span class="pl-smi">ok</span>, <span class="pl-smi">fail</span>){</td>
       </tr>
       <tr>
         <td id="L325" class="blob-num js-line-number" data-line-number="325"></td>
-        <td id="LC325" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> y<span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">4</span>);</td>
+        <td id="LC325" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> x<span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">4</span>);</td>
       </tr>
       <tr>
         <td id="L326" class="blob-num js-line-number" data-line-number="326"></td>
-        <td id="LC326" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">y</span>.<span class="pl-en">writeInt32LE</span>(<span class="pl-smi">params</span>.<span class="pl-smi">y_start</span>);</td>
+        <td id="LC326" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">x</span>.<span class="pl-en">writeInt32LE</span>(<span class="pl-smi">params</span>.<span class="pl-smi">x_start</span>);    </td>
       </tr>
       <tr>
         <td id="L327" class="blob-num js-line-number" data-line-number="327"></td>
-        <td id="LC327" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> s<span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">4</span>);</td>
+        <td id="LC327" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> y<span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">4</span>);</td>
       </tr>
       <tr>
         <td id="L328" class="blob-num js-line-number" data-line-number="328"></td>
-        <td id="LC328" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">s</span>.<span class="pl-en">writeInt32LE</span>(<span class="pl-smi">params</span>.<span class="pl-c1">size</span>);</td>
+        <td id="LC328" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">y</span>.<span class="pl-en">writeInt32LE</span>(<span class="pl-smi">params</span>.<span class="pl-smi">y_start</span>);</td>
       </tr>
       <tr>
         <td id="L329" class="blob-num js-line-number" data-line-number="329"></td>
-        <td id="LC329" class="blob-code blob-code-inner js-file-line">	    </td>
+        <td id="LC329" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> s<span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">4</span>);</td>
       </tr>
       <tr>
         <td id="L330" class="blob-num js-line-number" data-line-number="330"></td>
-        <td id="LC330" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> combuf <span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">7</span>); </td>
+        <td id="LC330" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">s</span>.<span class="pl-en">writeInt32LE</span>(<span class="pl-smi">params</span>.<span class="pl-c1">size</span>);</td>
       </tr>
       <tr>
         <td id="L331" class="blob-num js-line-number" data-line-number="331"></td>
-        <td id="LC331" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">0</span>]<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&#39;</span>S<span class="pl-pds">&#39;</span></span>.<span class="pl-c1">charCodeAt</span>(<span class="pl-c1">0</span>);</td>
+        <td id="LC331" class="blob-code blob-code-inner js-file-line">	    </td>
       </tr>
       <tr>
         <td id="L332" class="blob-num js-line-number" data-line-number="332"></td>
-        <td id="LC332" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">1</span>]<span class="pl-k">=</span>x[<span class="pl-c1">1</span>];</td>
+        <td id="LC332" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> combuf <span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">7</span>); </td>
       </tr>
       <tr>
         <td id="L333" class="blob-num js-line-number" data-line-number="333"></td>
-        <td id="LC333" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">2</span>]<span class="pl-k">=</span>x[<span class="pl-c1">0</span>];</td>
+        <td id="LC333" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">0</span>]<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&#39;</span>S<span class="pl-pds">&#39;</span></span>.<span class="pl-c1">charCodeAt</span>(<span class="pl-c1">0</span>);</td>
       </tr>
       <tr>
         <td id="L334" class="blob-num js-line-number" data-line-number="334"></td>
-        <td id="LC334" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">3</span>]<span class="pl-k">=</span>y[<span class="pl-c1">1</span>];</td>
+        <td id="LC334" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">1</span>]<span class="pl-k">=</span>x[<span class="pl-c1">1</span>];</td>
       </tr>
       <tr>
         <td id="L335" class="blob-num js-line-number" data-line-number="335"></td>
-        <td id="LC335" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">4</span>]<span class="pl-k">=</span>y[<span class="pl-c1">0</span>];</td>
+        <td id="LC335" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">2</span>]<span class="pl-k">=</span>x[<span class="pl-c1">0</span>];</td>
       </tr>
       <tr>
         <td id="L336" class="blob-num js-line-number" data-line-number="336"></td>
-        <td id="LC336" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">5</span>]<span class="pl-k">=</span>s[<span class="pl-c1">0</span>];</td>
+        <td id="LC336" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">3</span>]<span class="pl-k">=</span>y[<span class="pl-c1">1</span>];</td>
       </tr>
       <tr>
         <td id="L337" class="blob-num js-line-number" data-line-number="337"></td>
-        <td id="LC337" class="blob-code blob-code-inner js-file-line">	    </td>
+        <td id="LC337" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">4</span>]<span class="pl-k">=</span>y[<span class="pl-c1">0</span>];</td>
       </tr>
       <tr>
         <td id="L338" class="blob-num js-line-number" data-line-number="338"></td>
-        <td id="LC338" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> cs<span class="pl-k">=</span><span class="pl-smi">sky</span>.<span class="pl-en">checksum_buf</span>(combuf);</td>
+        <td id="LC338" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">5</span>]<span class="pl-k">=</span>s[<span class="pl-c1">0</span>];</td>
       </tr>
       <tr>
         <td id="L339" class="blob-num js-line-number" data-line-number="339"></td>
@@ -1845,145 +1822,144 @@
       </tr>
       <tr>
         <td id="L340" class="blob-num js-line-number" data-line-number="340"></td>
-        <td id="LC340" class="blob-code blob-code-inner js-file-line">	    <span class="pl-c"><span class="pl-c">//</span>var com=combuf;</span></td>
+        <td id="LC340" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> cs<span class="pl-k">=</span><span class="pl-smi">sky</span>.<span class="pl-en">checksum_buf</span>(combuf);</td>
       </tr>
       <tr>
         <td id="L341" class="blob-num js-line-number" data-line-number="341"></td>
-        <td id="LC341" class="blob-code blob-code-inner js-file-line">	    <span class="pl-c"><span class="pl-c">//</span>var cmd_checksum=combuf.readUInt8(6);	</span></td>
+        <td id="LC341" class="blob-code blob-code-inner js-file-line">	    </td>
       </tr>
       <tr>
         <td id="L342" class="blob-num js-line-number" data-line-number="342"></td>
-        <td id="LC342" class="blob-code blob-code-inner js-file-line">	    </td>
+        <td id="LC342" class="blob-code blob-code-inner js-file-line">	    <span class="pl-c"><span class="pl-c">//</span>var com=combuf;</span></td>
       </tr>
       <tr>
         <td id="L343" class="blob-num js-line-number" data-line-number="343"></td>
-        <td id="LC343" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-en">data_listener_func</span><span class="pl-k">=</span><span class="pl-k">function</span> (<span class="pl-smi">buf</span>){</td>
+        <td id="LC343" class="blob-code blob-code-inner js-file-line">	    <span class="pl-c"><span class="pl-c">//</span>var cmd_checksum=combuf.readUInt8(6);	</span></td>
       </tr>
       <tr>
         <td id="L344" class="blob-num js-line-number" data-line-number="344"></td>
-        <td id="LC344" class="blob-code blob-code-inner js-file-line">		<span class="pl-c"><span class="pl-c">//</span>console.log(&quot;Received data from SP! &quot; + buf.byteLength);</span></td>
+        <td id="LC344" class="blob-code blob-code-inner js-file-line">	    </td>
       </tr>
       <tr>
         <td id="L345" class="blob-num js-line-number" data-line-number="345"></td>
-        <td id="LC345" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">var</span> received_cs<span class="pl-k">=</span><span class="pl-smi">buf</span>.<span class="pl-en">readUInt8</span>(<span class="pl-c1">0</span>);</td>
+        <td id="LC345" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-en">data_listener_func</span><span class="pl-k">=</span><span class="pl-k">function</span> (<span class="pl-smi">buf</span>){</td>
       </tr>
       <tr>
         <td id="L346" class="blob-num js-line-number" data-line-number="346"></td>
-        <td id="LC346" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">var</span> received_data<span class="pl-k">=</span><span class="pl-smi">buf</span>.<span class="pl-c1">slice</span>(<span class="pl-c1">1</span>); <span class="pl-c"><span class="pl-c">//</span>/ cut the first element</span></td>
+        <td id="LC346" class="blob-code blob-code-inner js-file-line">		<span class="pl-c"><span class="pl-c">//</span>console.log(&quot;Received data from SP! &quot; + buf.byteLength);</span></td>
       </tr>
       <tr>
         <td id="L347" class="blob-num js-line-number" data-line-number="347"></td>
-        <td id="LC347" class="blob-code blob-code-inner js-file-line">		</td>
+        <td id="LC347" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">var</span> received_cs<span class="pl-k">=</span><span class="pl-smi">buf</span>.<span class="pl-en">readUInt8</span>(<span class="pl-c1">0</span>);</td>
       </tr>
       <tr>
         <td id="L348" class="blob-num js-line-number" data-line-number="348"></td>
-        <td id="LC348" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(received_cs<span class="pl-k">!==</span><span class="pl-smi">cs</span>.<span class="pl-c1">charCodeAt</span>(<span class="pl-c1">0</span>)){  <span class="pl-c"><span class="pl-c">//</span>/ checksum matching</span></td>
+        <td id="LC348" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">var</span> received_data<span class="pl-k">=</span><span class="pl-smi">buf</span>.<span class="pl-c1">slice</span>(<span class="pl-c1">1</span>); <span class="pl-c"><span class="pl-c">//</span>/ cut the first element</span></td>
       </tr>
       <tr>
         <td id="L349" class="blob-num js-line-number" data-line-number="349"></td>
-        <td id="LC349" class="blob-code blob-code-inner js-file-line">		    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Define subframe checksum error ! Sent = <span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> <span class="pl-smi">cs</span>.<span class="pl-c1">charCodeAt</span>(<span class="pl-c1">0</span>) <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">&quot;</span> received=<span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> received_cs );</td>
+        <td id="LC349" class="blob-code blob-code-inner js-file-line">		</td>
       </tr>
       <tr>
         <td id="L350" class="blob-num js-line-number" data-line-number="350"></td>
-        <td id="LC350" class="blob-code blob-code-inner js-file-line">		    <span class="pl-en">fail</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Define subframe checksum error ! Sent = <span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> <span class="pl-smi">cs</span>.<span class="pl-c1">charCodeAt</span>(<span class="pl-c1">0</span>) <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">&quot;</span> received=<span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> received_cs);</td>
+        <td id="LC350" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(received_cs<span class="pl-k">!==</span><span class="pl-smi">cs</span>.<span class="pl-c1">charCodeAt</span>(<span class="pl-c1">0</span>)){  <span class="pl-c"><span class="pl-c">//</span>/ checksum matching</span></td>
       </tr>
       <tr>
         <td id="L351" class="blob-num js-line-number" data-line-number="351"></td>
-        <td id="LC351" class="blob-code blob-code-inner js-file-line">		}<span class="pl-k">else</span>{</td>
+        <td id="LC351" class="blob-code blob-code-inner js-file-line">		    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Define subframe checksum error ! Sent = <span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> <span class="pl-smi">cs</span>.<span class="pl-c1">charCodeAt</span>(<span class="pl-c1">0</span>) <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">&quot;</span> received=<span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> received_cs );</td>
       </tr>
       <tr>
         <td id="L352" class="blob-num js-line-number" data-line-number="352"></td>
-        <td id="LC352" class="blob-code blob-code-inner js-file-line">		    <span class="pl-c"><span class="pl-c">//</span>  console.log(&quot;Checksum OK  ! sent = &quot; + cs.charCodeAt(0) + &quot; received=&quot; + received_cs );</span></td>
+        <td id="LC352" class="blob-code blob-code-inner js-file-line">		    <span class="pl-en">fail</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Define subframe checksum error ! Sent = <span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> <span class="pl-smi">cs</span>.<span class="pl-c1">charCodeAt</span>(<span class="pl-c1">0</span>) <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">&quot;</span> received=<span class="pl-pds">&quot;</span></span> <span class="pl-k">+</span> received_cs);</td>
       </tr>
       <tr>
         <td id="L353" class="blob-num js-line-number" data-line-number="353"></td>
-        <td id="LC353" class="blob-code blob-code-inner js-file-line">		}</td>
+        <td id="LC353" class="blob-code blob-code-inner js-file-line">		}<span class="pl-k">else</span>{</td>
       </tr>
       <tr>
         <td id="L354" class="blob-num js-line-number" data-line-number="354"></td>
-        <td id="LC354" class="blob-code blob-code-inner js-file-line">		</td>
+        <td id="LC354" class="blob-code blob-code-inner js-file-line">		    <span class="pl-c"><span class="pl-c">//</span>  console.log(&quot;Checksum OK  ! sent = &quot; + cs.charCodeAt(0) + &quot; received=&quot; + received_cs );</span></td>
       </tr>
       <tr>
         <td id="L355" class="blob-num js-line-number" data-line-number="355"></td>
-        <td id="LC355" class="blob-code blob-code-inner js-file-line">		<span class="pl-en">ok</span>(received_data);</td>
+        <td id="LC355" class="blob-code blob-code-inner js-file-line">		}</td>
       </tr>
       <tr>
         <td id="L356" class="blob-num js-line-number" data-line-number="356"></td>
-        <td id="LC356" class="blob-code blob-code-inner js-file-line">	    } <span class="pl-c"><span class="pl-c">//</span>/ on_data</span></td>
+        <td id="LC356" class="blob-code blob-code-inner js-file-line">		</td>
       </tr>
       <tr>
         <td id="L357" class="blob-num js-line-number" data-line-number="357"></td>
-        <td id="LC357" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC357" class="blob-code blob-code-inner js-file-line">		<span class="pl-en">ok</span>(received_data);</td>
       </tr>
       <tr>
         <td id="L358" class="blob-num js-line-number" data-line-number="358"></td>
-        <td id="LC358" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-c1">write</span>(combuf).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){}).<span class="pl-en">catch</span>(fail);</td>
+        <td id="LC358" class="blob-code blob-code-inner js-file-line">	    } <span class="pl-c"><span class="pl-c">//</span>/ on_data</span></td>
       </tr>
       <tr>
         <td id="L359" class="blob-num js-line-number" data-line-number="359"></td>
-        <td id="LC359" class="blob-code blob-code-inner js-file-line">	});</td>
-      </tr>
-      <tr>
-        <td id="L360" class="blob-num js-line-number" data-line-number="360"></td>
-        <td id="LC360" class="blob-code blob-code-inner js-file-line">	</td>
-      </tr>
-      <tr>
-        <td id="L361" class="blob-num js-line-number" data-line-number="361"></td>
-        <td id="LC361" class="blob-code blob-code-inner js-file-line">    }</td>
-      </tr>
-      <tr>
-        <td id="L362" class="blob-num js-line-number" data-line-number="362"></td>
-        <td id="LC362" class="blob-code blob-code-inner js-file-line">        </td>
-      </tr>
-      <tr>
-        <td id="L363" class="blob-num js-line-number" data-line-number="363"></td>
-        <td id="LC363" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">/**</span> </span></td>
-      </tr>
-      <tr>
-        <td id="L364" class="blob-num js-line-number" data-line-number="364"></td>
-        <td id="LC364" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     *  </span></td>
-      </tr>
-      <tr>
-        <td id="L365" class="blob-num js-line-number" data-line-number="365"></td>
-        <td id="LC365" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * </span></td>
-      </tr>
-      <tr>
-        <td id="L366" class="blob-num js-line-number" data-line-number="366"></td>
-        <td id="LC366" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * <span class="pl-k">@param</span> <span class="pl-smi">params</span> </span></td>
-      </tr>
-      <tr>
-        <td id="L367" class="blob-num js-line-number" data-line-number="367"></td>
-        <td id="LC367" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * <span class="pl-k">@param</span> <span class="pl-smi">progress_callback</span> Function to be called after each block is downloaded.</span></td>
-      </tr>
-      <tr>
-        <td id="L368" class="blob-num js-line-number" data-line-number="368"></td>
-        <td id="LC368" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * <span class="pl-k">@param</span> <span class="pl-smi">cb</span> </span></td>
-      </tr>
-      <tr>
-        <td id="L369" class="blob-num js-line-number" data-line-number="369"></td>
-        <td id="LC369" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * </span></td>
-      </tr>
-      <tr>
-        <td id="L370" class="blob-num js-line-number" data-line-number="370"></td>
-        <td id="LC370" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * <span class="pl-k">@return</span> </span></td>
-      </tr>
-      <tr>
-        <td id="L371" class="blob-num js-line-number" data-line-number="371"></td>
-        <td id="LC371" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     <span class="pl-c">*/</span></span></td>
-      </tr>
-      <tr>
-        <td id="L372" class="blob-num js-line-number" data-line-number="372"></td>
-        <td id="LC372" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">get_image</span>(<span class="pl-smi">params</span>, <span class="pl-smi">progress_callback</span>){</td>
-      </tr>
-      <tr>
-        <td id="L373" class="blob-num js-line-number" data-line-number="373"></td>
-        <td id="LC373" class="blob-code blob-code-inner js-file-line">
+        <td id="LC359" class="blob-code blob-code-inner js-file-line">
 </td>
       </tr>
       <tr>
+        <td id="L360" class="blob-num js-line-number" data-line-number="360"></td>
+        <td id="LC360" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-c1">write</span>(combuf).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){}).<span class="pl-en">catch</span>(fail);</td>
+      </tr>
+      <tr>
+        <td id="L361" class="blob-num js-line-number" data-line-number="361"></td>
+        <td id="LC361" class="blob-code blob-code-inner js-file-line">	});</td>
+      </tr>
+      <tr>
+        <td id="L362" class="blob-num js-line-number" data-line-number="362"></td>
+        <td id="LC362" class="blob-code blob-code-inner js-file-line">	</td>
+      </tr>
+      <tr>
+        <td id="L363" class="blob-num js-line-number" data-line-number="363"></td>
+        <td id="LC363" class="blob-code blob-code-inner js-file-line">    }</td>
+      </tr>
+      <tr>
+        <td id="L364" class="blob-num js-line-number" data-line-number="364"></td>
+        <td id="LC364" class="blob-code blob-code-inner js-file-line">        </td>
+      </tr>
+      <tr>
+        <td id="L365" class="blob-num js-line-number" data-line-number="365"></td>
+        <td id="LC365" class="blob-code blob-code-inner js-file-line">    <span class="pl-c"><span class="pl-c">/**</span> </span></td>
+      </tr>
+      <tr>
+        <td id="L366" class="blob-num js-line-number" data-line-number="366"></td>
+        <td id="LC366" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     *  </span></td>
+      </tr>
+      <tr>
+        <td id="L367" class="blob-num js-line-number" data-line-number="367"></td>
+        <td id="LC367" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * </span></td>
+      </tr>
+      <tr>
+        <td id="L368" class="blob-num js-line-number" data-line-number="368"></td>
+        <td id="LC368" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * <span class="pl-k">@param</span> <span class="pl-smi">params</span> </span></td>
+      </tr>
+      <tr>
+        <td id="L369" class="blob-num js-line-number" data-line-number="369"></td>
+        <td id="LC369" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * <span class="pl-k">@param</span> <span class="pl-smi">progress_callback</span> Function to be called after each block is downloaded.</span></td>
+      </tr>
+      <tr>
+        <td id="L370" class="blob-num js-line-number" data-line-number="370"></td>
+        <td id="LC370" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * <span class="pl-k">@param</span> <span class="pl-smi">cb</span> </span></td>
+      </tr>
+      <tr>
+        <td id="L371" class="blob-num js-line-number" data-line-number="371"></td>
+        <td id="LC371" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * </span></td>
+      </tr>
+      <tr>
+        <td id="L372" class="blob-num js-line-number" data-line-number="372"></td>
+        <td id="LC372" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     * <span class="pl-k">@return</span> </span></td>
+      </tr>
+      <tr>
+        <td id="L373" class="blob-num js-line-number" data-line-number="373"></td>
+        <td id="LC373" class="blob-code blob-code-inner js-file-line"><span class="pl-c">     <span class="pl-c">*/</span></span></td>
+      </tr>
+      <tr>
         <td id="L374" class="blob-num js-line-number" data-line-number="374"></td>
-        <td id="LC374" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> sky<span class="pl-k">=</span><span class="pl-c1">this</span>;</td>
+        <td id="LC374" class="blob-code blob-code-inner js-file-line">    <span class="pl-en">get_image</span>(<span class="pl-smi">params</span>, <span class="pl-smi">progress_callback</span>){</td>
       </tr>
       <tr>
         <td id="L375" class="blob-num js-line-number" data-line-number="375"></td>
@@ -1992,35 +1968,36 @@
       </tr>
       <tr>
         <td id="L376" class="blob-num js-line-number" data-line-number="376"></td>
-        <td id="LC376" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">Promise</span>(<span class="pl-k">function</span>(<span class="pl-smi">ok</span>, <span class="pl-smi">fail</span>){</td>
+        <td id="LC376" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">var</span> sky<span class="pl-k">=</span><span class="pl-c1">this</span>;</td>
       </tr>
       <tr>
         <td id="L377" class="blob-num js-line-number" data-line-number="377"></td>
-        <td id="LC377" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> image_type<span class="pl-k">=</span>{</td>
+        <td id="LC377" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L378" class="blob-num js-line-number" data-line-number="378"></td>
-        <td id="LC378" class="blob-code blob-code-inner js-file-line">		dark<span class="pl-k">:</span> {imcode<span class="pl-k">:</span><span class="pl-c1">0</span>},</td>
+        <td id="LC378" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">return</span> <span class="pl-k">new</span> <span class="pl-en">Promise</span>(<span class="pl-k">function</span>(<span class="pl-smi">ok</span>, <span class="pl-smi">fail</span>){</td>
       </tr>
       <tr>
         <td id="L379" class="blob-num js-line-number" data-line-number="379"></td>
-        <td id="LC379" class="blob-code blob-code-inner js-file-line">		light<span class="pl-k">:</span>{imcode<span class="pl-k">:</span><span class="pl-c1">1</span>},</td>
+        <td id="LC379" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> image_type<span class="pl-k">=</span>{</td>
       </tr>
       <tr>
         <td id="L380" class="blob-num js-line-number" data-line-number="380"></td>
-        <td id="LC380" class="blob-code blob-code-inner js-file-line">		auto<span class="pl-k">:</span> {imcode<span class="pl-k">:</span><span class="pl-c1">2</span>},  <span class="pl-c"><span class="pl-c">//</span>/ Light-Dark (only binned).</span></td>
+        <td id="LC380" class="blob-code blob-code-inner js-file-line">		dark<span class="pl-k">:</span> {imcode<span class="pl-k">:</span><span class="pl-c1">0</span>},</td>
       </tr>
       <tr>
         <td id="L381" class="blob-num js-line-number" data-line-number="381"></td>
-        <td id="LC381" class="blob-code blob-code-inner js-file-line">	    };</td>
+        <td id="LC381" class="blob-code blob-code-inner js-file-line">		light<span class="pl-k">:</span>{imcode<span class="pl-k">:</span><span class="pl-c1">1</span>},</td>
       </tr>
       <tr>
         <td id="L382" class="blob-num js-line-number" data-line-number="382"></td>
-        <td id="LC382" class="blob-code blob-code-inner js-file-line">	    </td>
+        <td id="LC382" class="blob-code blob-code-inner js-file-line">		auto<span class="pl-k">:</span> {imcode<span class="pl-k">:</span><span class="pl-c1">2</span>},  <span class="pl-c"><span class="pl-c">//</span>/ Light-Dark (only binned).</span></td>
       </tr>
       <tr>
         <td id="L383" class="blob-num js-line-number" data-line-number="383"></td>
-        <td id="LC383" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">if</span>(<span class="pl-smi">params</span>.<span class="pl-c1">size</span> <span class="pl-k">==</span> <span class="pl-c1">undefined</span>) <span class="pl-smi">params</span>.<span class="pl-c1">size</span><span class="pl-k">=</span><span class="pl-c1">127</span>; <span class="pl-c"><span class="pl-c">//</span>/ max size if not specified</span></td>
+        <td id="LC383" class="blob-code blob-code-inner js-file-line">	    };</td>
       </tr>
       <tr>
         <td id="L384" class="blob-num js-line-number" data-line-number="384"></td>
@@ -2028,35 +2005,35 @@
       </tr>
       <tr>
         <td id="L385" class="blob-num js-line-number" data-line-number="385"></td>
-        <td id="LC385" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> frame_type<span class="pl-k">=</span>{<span class="pl-c"><span class="pl-c">//</span>/ width, height, blocks, frcode</span></td>
+        <td id="LC385" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">if</span>(<span class="pl-smi">params</span>.<span class="pl-c1">size</span> <span class="pl-k">==</span> <span class="pl-c1">undefined</span>) <span class="pl-smi">params</span>.<span class="pl-c1">size</span><span class="pl-k">=</span><span class="pl-c1">127</span>; <span class="pl-c"><span class="pl-c">//</span>/ max size if not specified</span></td>
       </tr>
       <tr>
         <td id="L386" class="blob-num js-line-number" data-line-number="386"></td>
-        <td id="LC386" class="blob-code blob-code-inner js-file-line">		full<span class="pl-k">:</span>   {width<span class="pl-k">:</span><span class="pl-c1">640</span>,  height<span class="pl-k">:</span><span class="pl-c1">480</span>,  blocks<span class="pl-k">:</span><span class="pl-c1">4096</span>, frcode<span class="pl-k">:</span><span class="pl-c1">0</span>    },</td>
+        <td id="LC386" class="blob-code blob-code-inner js-file-line">	    </td>
       </tr>
       <tr>
         <td id="L387" class="blob-num js-line-number" data-line-number="387"></td>
-        <td id="LC387" class="blob-code blob-code-inner js-file-line">		crop<span class="pl-k">:</span>   {width<span class="pl-k">:</span><span class="pl-c1">512</span>,  height<span class="pl-k">:</span><span class="pl-c1">480</span>,  blocks<span class="pl-k">:</span><span class="pl-c1">4096</span>, frcode<span class="pl-k">:</span><span class="pl-c1">1</span>    },</td>
+        <td id="LC387" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> frame_type<span class="pl-k">=</span>{<span class="pl-c"><span class="pl-c">//</span>/ width, height, blocks, frcode</span></td>
       </tr>
       <tr>
         <td id="L388" class="blob-num js-line-number" data-line-number="388"></td>
-        <td id="LC388" class="blob-code blob-code-inner js-file-line">		binned<span class="pl-k">:</span> {width<span class="pl-k">:</span><span class="pl-c1">320</span>,  height<span class="pl-k">:</span><span class="pl-c1">240</span>,  blocks<span class="pl-k">:</span><span class="pl-c1">1024</span>, frcode<span class="pl-k">:</span><span class="pl-c1">2</span>    }, <span class="pl-c"><span class="pl-c">//</span>/ only auto</span></td>
+        <td id="LC388" class="blob-code blob-code-inner js-file-line">		full<span class="pl-k">:</span>   {width<span class="pl-k">:</span><span class="pl-c1">640</span>,  height<span class="pl-k">:</span><span class="pl-c1">480</span>,  blocks<span class="pl-k">:</span><span class="pl-c1">4096</span>, frcode<span class="pl-k">:</span><span class="pl-c1">0</span>    },</td>
       </tr>
       <tr>
         <td id="L389" class="blob-num js-line-number" data-line-number="389"></td>
-        <td id="LC389" class="blob-code blob-code-inner js-file-line">		custom<span class="pl-k">:</span> {width<span class="pl-k">:</span><span class="pl-smi">params</span>.<span class="pl-c1">size</span>, height<span class="pl-k">:</span><span class="pl-smi">params</span>.<span class="pl-c1">size</span>, blocks<span class="pl-k">:</span><span class="pl-smi">params</span>.<span class="pl-c1">size</span>, frcode<span class="pl-k">:</span><span class="pl-c1">255</span>  }</td>
+        <td id="LC389" class="blob-code blob-code-inner js-file-line">		crop<span class="pl-k">:</span>   {width<span class="pl-k">:</span><span class="pl-c1">512</span>,  height<span class="pl-k">:</span><span class="pl-c1">480</span>,  blocks<span class="pl-k">:</span><span class="pl-c1">4096</span>, frcode<span class="pl-k">:</span><span class="pl-c1">1</span>    },</td>
       </tr>
       <tr>
         <td id="L390" class="blob-num js-line-number" data-line-number="390"></td>
-        <td id="LC390" class="blob-code blob-code-inner js-file-line">	    };</td>
+        <td id="LC390" class="blob-code blob-code-inner js-file-line">		binned<span class="pl-k">:</span> {width<span class="pl-k">:</span><span class="pl-c1">320</span>,  height<span class="pl-k">:</span><span class="pl-c1">240</span>,  blocks<span class="pl-k">:</span><span class="pl-c1">1024</span>, frcode<span class="pl-k">:</span><span class="pl-c1">2</span>    }, <span class="pl-c"><span class="pl-c">//</span>/ only auto</span></td>
       </tr>
       <tr>
         <td id="L391" class="blob-num js-line-number" data-line-number="391"></td>
-        <td id="LC391" class="blob-code blob-code-inner js-file-line">	    </td>
+        <td id="LC391" class="blob-code blob-code-inner js-file-line">		custom<span class="pl-k">:</span> {width<span class="pl-k">:</span><span class="pl-smi">params</span>.<span class="pl-c1">size</span>, height<span class="pl-k">:</span><span class="pl-smi">params</span>.<span class="pl-c1">size</span>, blocks<span class="pl-k">:</span><span class="pl-smi">params</span>.<span class="pl-c1">size</span>, frcode<span class="pl-k">:</span><span class="pl-c1">255</span>  }</td>
       </tr>
       <tr>
         <td id="L392" class="blob-num js-line-number" data-line-number="392"></td>
-        <td id="LC392" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">if</span>(<span class="pl-smi">params</span>.<span class="pl-smi">imagetyp</span> <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&#39;</span>auto<span class="pl-pds">&#39;</span></span>) <span class="pl-smi">params</span>.<span class="pl-smi">frametyp</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&#39;</span>binned<span class="pl-pds">&#39;</span></span>;</td>
+        <td id="LC392" class="blob-code blob-code-inner js-file-line">	    };</td>
       </tr>
       <tr>
         <td id="L393" class="blob-num js-line-number" data-line-number="393"></td>
@@ -2064,7 +2041,7 @@
       </tr>
       <tr>
         <td id="L394" class="blob-num js-line-number" data-line-number="394"></td>
-        <td id="LC394" class="blob-code blob-code-inner js-file-line">	    <span class="pl-c1">Object</span>.<span class="pl-en">assign</span>(params, image_type[<span class="pl-smi">params</span>.<span class="pl-smi">imagetyp</span>], frame_type[<span class="pl-smi">params</span>.<span class="pl-smi">frametyp</span>]);</td>
+        <td id="LC394" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">if</span>(<span class="pl-smi">params</span>.<span class="pl-smi">imagetyp</span> <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&#39;</span>auto<span class="pl-pds">&#39;</span></span>) <span class="pl-smi">params</span>.<span class="pl-smi">frametyp</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&#39;</span>binned<span class="pl-pds">&#39;</span></span>;</td>
       </tr>
       <tr>
         <td id="L395" class="blob-num js-line-number" data-line-number="395"></td>
@@ -2072,51 +2049,51 @@
       </tr>
       <tr>
         <td id="L396" class="blob-num js-line-number" data-line-number="396"></td>
-        <td id="LC396" class="blob-code blob-code-inner js-file-line">	    <span class="pl-c"><span class="pl-c">//</span>/ Camera expsosure time works in 100µs units</span></td>
+        <td id="LC396" class="blob-code blob-code-inner js-file-line">	    <span class="pl-c1">Object</span>.<span class="pl-en">assign</span>(params, image_type[<span class="pl-smi">params</span>.<span class="pl-smi">imagetyp</span>], frame_type[<span class="pl-smi">params</span>.<span class="pl-smi">frametyp</span>]);</td>
       </tr>
       <tr>
         <td id="L397" class="blob-num js-line-number" data-line-number="397"></td>
-        <td id="LC397" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">params</span>.<span class="pl-smi">exptime</span><span class="pl-k">=</span> <span class="pl-c1">parseFloat</span>(<span class="pl-smi">params</span>.<span class="pl-smi">exptime</span>) <span class="pl-c"><span class="pl-c">//</span>/ It will be useful several times</span></td>
+        <td id="LC397" class="blob-code blob-code-inner js-file-line">	    </td>
       </tr>
       <tr>
         <td id="L398" class="blob-num js-line-number" data-line-number="398"></td>
-        <td id="LC398" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> exptime <span class="pl-k">=</span> <span class="pl-smi">params</span>.<span class="pl-smi">exptime</span> <span class="pl-k">/</span> <span class="pl-c1">100e-6</span>;</td>
+        <td id="LC398" class="blob-code blob-code-inner js-file-line">	    <span class="pl-c"><span class="pl-c">//</span>/ Camera expsosure time works in 100µs units</span></td>
       </tr>
       <tr>
         <td id="L399" class="blob-num js-line-number" data-line-number="399"></td>
-        <td id="LC399" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">if</span>(exptime <span class="pl-k">&gt;</span> <span class="pl-c1">0x63FFFF</span>) exptime <span class="pl-k">=</span> <span class="pl-c1">0x63FFFF</span>; <span class="pl-c"><span class="pl-c">//</span>/ 653.3599s</span></td>
+        <td id="LC399" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">params</span>.<span class="pl-smi">exptime</span><span class="pl-k">=</span> <span class="pl-c1">parseFloat</span>(<span class="pl-smi">params</span>.<span class="pl-smi">exptime</span>) <span class="pl-c"><span class="pl-c">//</span>/ It will be useful several times</span></td>
       </tr>
       <tr>
         <td id="L400" class="blob-num js-line-number" data-line-number="400"></td>
-        <td id="LC400" class="blob-code blob-code-inner js-file-line">	    </td>
+        <td id="LC400" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> exptime <span class="pl-k">=</span> <span class="pl-smi">params</span>.<span class="pl-smi">exptime</span> <span class="pl-k">/</span> <span class="pl-c1">100e-6</span>;</td>
       </tr>
       <tr>
         <td id="L401" class="blob-num js-line-number" data-line-number="401"></td>
-        <td id="LC401" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> blocks_expected <span class="pl-k">=</span> (<span class="pl-smi">params</span>.<span class="pl-c1">width</span> <span class="pl-k">*</span> <span class="pl-smi">params</span>.<span class="pl-c1">height</span>) <span class="pl-k">/</span> <span class="pl-smi">params</span>.<span class="pl-smi">blocks</span>;</td>
+        <td id="LC401" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">if</span>(exptime <span class="pl-k">&gt;</span> <span class="pl-c1">0x63FFFF</span>) exptime <span class="pl-k">=</span> <span class="pl-c1">0x63FFFF</span>; <span class="pl-c"><span class="pl-c">//</span>/ 653.3599s</span></td>
       </tr>
       <tr>
         <td id="L402" class="blob-num js-line-number" data-line-number="402"></td>
-        <td id="LC402" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> block_nbytes<span class="pl-k">=</span><span class="pl-c1">2</span><span class="pl-k">*</span><span class="pl-smi">params</span>.<span class="pl-smi">blocks</span>;	</td>
+        <td id="LC402" class="blob-code blob-code-inner js-file-line">	    </td>
       </tr>
       <tr>
         <td id="L403" class="blob-num js-line-number" data-line-number="403"></td>
-        <td id="LC403" class="blob-code blob-code-inner js-file-line">	    </td>
+        <td id="LC403" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> blocks_expected <span class="pl-k">=</span> (<span class="pl-smi">params</span>.<span class="pl-c1">width</span> <span class="pl-k">*</span> <span class="pl-smi">params</span>.<span class="pl-c1">height</span>) <span class="pl-k">/</span> <span class="pl-smi">params</span>.<span class="pl-smi">blocks</span>;</td>
       </tr>
       <tr>
         <td id="L404" class="blob-num js-line-number" data-line-number="404"></td>
-        <td id="LC404" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> exp<span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">4</span>);</td>
+        <td id="LC404" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> block_nbytes<span class="pl-k">=</span><span class="pl-c1">2</span><span class="pl-k">*</span><span class="pl-smi">params</span>.<span class="pl-smi">blocks</span>;	</td>
       </tr>
       <tr>
         <td id="L405" class="blob-num js-line-number" data-line-number="405"></td>
-        <td id="LC405" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">exp</span>.<span class="pl-en">writeInt32LE</span>(exptime);</td>
+        <td id="LC405" class="blob-code blob-code-inner js-file-line">	    </td>
       </tr>
       <tr>
         <td id="L406" class="blob-num js-line-number" data-line-number="406"></td>
-        <td id="LC406" class="blob-code blob-code-inner js-file-line">	    </td>
+        <td id="LC406" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> exp<span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">4</span>);</td>
       </tr>
       <tr>
         <td id="L407" class="blob-num js-line-number" data-line-number="407"></td>
-        <td id="LC407" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> combuf <span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">7</span>);</td>
+        <td id="LC407" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">exp</span>.<span class="pl-en">writeInt32LE</span>(exptime);</td>
       </tr>
       <tr>
         <td id="L408" class="blob-num js-line-number" data-line-number="408"></td>
@@ -2124,35 +2101,35 @@
       </tr>
       <tr>
         <td id="L409" class="blob-num js-line-number" data-line-number="409"></td>
-        <td id="LC409" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">0</span>]<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&#39;</span>T<span class="pl-pds">&#39;</span></span>.<span class="pl-c1">charCodeAt</span>(<span class="pl-c1">0</span>);</td>
+        <td id="LC409" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> combuf <span class="pl-k">=</span><span class="pl-smi">Buffer</span>.<span class="pl-en">alloc</span>(<span class="pl-c1">7</span>);</td>
       </tr>
       <tr>
         <td id="L410" class="blob-num js-line-number" data-line-number="410"></td>
-        <td id="LC410" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">1</span>]<span class="pl-k">=</span>exp[<span class="pl-c1">2</span>];</td>
+        <td id="LC410" class="blob-code blob-code-inner js-file-line">	    </td>
       </tr>
       <tr>
         <td id="L411" class="blob-num js-line-number" data-line-number="411"></td>
-        <td id="LC411" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">2</span>]<span class="pl-k">=</span>exp[<span class="pl-c1">1</span>];</td>
+        <td id="LC411" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">0</span>]<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">&#39;</span>T<span class="pl-pds">&#39;</span></span>.<span class="pl-c1">charCodeAt</span>(<span class="pl-c1">0</span>);</td>
       </tr>
       <tr>
         <td id="L412" class="blob-num js-line-number" data-line-number="412"></td>
-        <td id="LC412" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">3</span>]<span class="pl-k">=</span>exp[<span class="pl-c1">0</span>];</td>
+        <td id="LC412" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">1</span>]<span class="pl-k">=</span>exp[<span class="pl-c1">2</span>];</td>
       </tr>
       <tr>
         <td id="L413" class="blob-num js-line-number" data-line-number="413"></td>
-        <td id="LC413" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">4</span>]<span class="pl-k">=</span><span class="pl-smi">params</span>.<span class="pl-smi">frcode</span>;</td>
+        <td id="LC413" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">2</span>]<span class="pl-k">=</span>exp[<span class="pl-c1">1</span>];</td>
       </tr>
       <tr>
         <td id="L414" class="blob-num js-line-number" data-line-number="414"></td>
-        <td id="LC414" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">5</span>]<span class="pl-k">=</span><span class="pl-smi">params</span>.<span class="pl-smi">imcode</span>;</td>
+        <td id="LC414" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">3</span>]<span class="pl-k">=</span>exp[<span class="pl-c1">0</span>];</td>
       </tr>
       <tr>
         <td id="L415" class="blob-num js-line-number" data-line-number="415"></td>
-        <td id="LC415" class="blob-code blob-code-inner js-file-line">	    </td>
+        <td id="LC415" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">4</span>]<span class="pl-k">=</span><span class="pl-smi">params</span>.<span class="pl-smi">frcode</span>;</td>
       </tr>
       <tr>
         <td id="L416" class="blob-num js-line-number" data-line-number="416"></td>
-        <td id="LC416" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-en">checksum_buf</span>(combuf);</td>
+        <td id="LC416" class="blob-code blob-code-inner js-file-line">	    combuf[<span class="pl-c1">5</span>]<span class="pl-k">=</span><span class="pl-smi">params</span>.<span class="pl-smi">imcode</span>;</td>
       </tr>
       <tr>
         <td id="L417" class="blob-num js-line-number" data-line-number="417"></td>
@@ -2160,55 +2137,55 @@
       </tr>
       <tr>
         <td id="L418" class="blob-num js-line-number" data-line-number="418"></td>
-        <td id="LC418" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> com<span class="pl-k">=</span>combuf;</td>
+        <td id="LC418" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-en">checksum_buf</span>(combuf);</td>
       </tr>
       <tr>
         <td id="L419" class="blob-num js-line-number" data-line-number="419"></td>
-        <td id="LC419" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> cmd_checksum<span class="pl-k">=</span><span class="pl-smi">combuf</span>.<span class="pl-en">readUInt8</span>(<span class="pl-c1">6</span>);</td>
+        <td id="LC419" class="blob-code blob-code-inner js-file-line">	    </td>
       </tr>
       <tr>
         <td id="L420" class="blob-num js-line-number" data-line-number="420"></td>
-        <td id="LC420" class="blob-code blob-code-inner js-file-line">	</td>
+        <td id="LC420" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> com<span class="pl-k">=</span>combuf;</td>
       </tr>
       <tr>
         <td id="L421" class="blob-num js-line-number" data-line-number="421"></td>
-        <td id="LC421" class="blob-code blob-code-inner js-file-line">	   <span class="pl-c"><span class="pl-c">//</span> console.log(&quot;Take image checksum is &quot; + cmd_checksum);</span></td>
+        <td id="LC421" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> cmd_checksum<span class="pl-k">=</span><span class="pl-smi">combuf</span>.<span class="pl-en">readUInt8</span>(<span class="pl-c1">6</span>);</td>
       </tr>
       <tr>
         <td id="L422" class="blob-num js-line-number" data-line-number="422"></td>
-        <td id="LC422" class="blob-code blob-code-inner js-file-line">	   <span class="pl-c"><span class="pl-c">//</span> console.log(&quot;Length of com=&quot; + com.length + &quot; should be 7?&quot;);</span></td>
+        <td id="LC422" class="blob-code blob-code-inner js-file-line">	</td>
       </tr>
       <tr>
         <td id="L423" class="blob-num js-line-number" data-line-number="423"></td>
-        <td id="LC423" class="blob-code blob-code-inner js-file-line">	    </td>
+        <td id="LC423" class="blob-code blob-code-inner js-file-line">	   <span class="pl-c"><span class="pl-c">//</span> console.log(&quot;Take image checksum is &quot; + cmd_checksum);</span></td>
       </tr>
       <tr>
         <td id="L424" class="blob-num js-line-number" data-line-number="424"></td>
-        <td id="LC424" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> timestamp <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>();</td>
+        <td id="LC424" class="blob-code blob-code-inner js-file-line">	   <span class="pl-c"><span class="pl-c">//</span> console.log(&quot;Length of com=&quot; + com.length + &quot; should be 7?&quot;);</span></td>
       </tr>
       <tr>
         <td id="L425" class="blob-num js-line-number" data-line-number="425"></td>
-        <td id="LC425" class="blob-code blob-code-inner js-file-line">	    timestamp <span class="pl-k">=</span> <span class="pl-smi">timestamp</span>.<span class="pl-en">toISOString</span>();</td>
+        <td id="LC425" class="blob-code blob-code-inner js-file-line">	    </td>
       </tr>
       <tr>
         <td id="L426" class="blob-num js-line-number" data-line-number="426"></td>
-        <td id="LC426" class="blob-code blob-code-inner js-file-line">	</td>
+        <td id="LC426" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> timestamp <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>();</td>
       </tr>
       <tr>
         <td id="L427" class="blob-num js-line-number" data-line-number="427"></td>
-        <td id="LC427" class="blob-code blob-code-inner js-file-line">	    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>Beginning Exposure<span class="pl-pds">&#39;</span></span>);</td>
+        <td id="LC427" class="blob-code blob-code-inner js-file-line">	    timestamp <span class="pl-k">=</span> <span class="pl-smi">timestamp</span>.<span class="pl-en">toISOString</span>();</td>
       </tr>
       <tr>
         <td id="L428" class="blob-num js-line-number" data-line-number="428"></td>
-        <td id="LC428" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> start_time <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>().<span class="pl-c1">getTime</span>(); <span class="pl-c"><span class="pl-c">//</span>/ in ms</span></td>
+        <td id="LC428" class="blob-code blob-code-inner js-file-line">	</td>
       </tr>
       <tr>
         <td id="L429" class="blob-num js-line-number" data-line-number="429"></td>
-        <td id="LC429" class="blob-code blob-code-inner js-file-line">	    </td>
+        <td id="LC429" class="blob-code blob-code-inner js-file-line">	    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>Beginning Exposure<span class="pl-pds">&#39;</span></span>);</td>
       </tr>
       <tr>
         <td id="L430" class="blob-num js-line-number" data-line-number="430"></td>
-        <td id="LC430" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> first_data_received<span class="pl-k">=</span><span class="pl-c1">true</span>;</td>
+        <td id="LC430" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> start_time <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>().<span class="pl-c1">getTime</span>(); <span class="pl-c"><span class="pl-c">//</span>/ in ms</span></td>
       </tr>
       <tr>
         <td id="L431" class="blob-num js-line-number" data-line-number="431"></td>
@@ -2216,144 +2193,144 @@
       </tr>
       <tr>
         <td id="L432" class="blob-num js-line-number" data-line-number="432"></td>
-        <td id="LC432" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-en">data_listener_func</span><span class="pl-k">=</span><span class="pl-k">function</span>(<span class="pl-smi">in_data</span>){</td>
+        <td id="LC432" class="blob-code blob-code-inner js-file-line">	    <span class="pl-k">var</span> first_data_received<span class="pl-k">=</span><span class="pl-c1">true</span>;</td>
       </tr>
       <tr>
         <td id="L433" class="blob-num js-line-number" data-line-number="433"></td>
-        <td id="LC433" class="blob-code blob-code-inner js-file-line">		</td>
+        <td id="LC433" class="blob-code blob-code-inner js-file-line">	    </td>
       </tr>
       <tr>
         <td id="L434" class="blob-num js-line-number" data-line-number="434"></td>
-        <td id="LC434" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(first_data_received<span class="pl-k">===</span><span class="pl-c1">true</span>){</td>
+        <td id="LC434" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-en">data_listener_func</span><span class="pl-k">=</span><span class="pl-k">function</span>(<span class="pl-smi">in_data</span>){</td>
       </tr>
       <tr>
         <td id="L435" class="blob-num js-line-number" data-line-number="435"></td>
-        <td id="LC435" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> firstchar<span class="pl-k">=</span><span class="pl-smi">in_data</span>.<span class="pl-en">readUInt8</span>(<span class="pl-c1">0</span>);</td>
+        <td id="LC435" class="blob-code blob-code-inner js-file-line">		</td>
       </tr>
       <tr>
         <td id="L436" class="blob-num js-line-number" data-line-number="436"></td>
-        <td id="LC436" class="blob-code blob-code-inner js-file-line">		    first_data_received <span class="pl-k">=</span> <span class="pl-c1">false</span>;</td>
+        <td id="LC436" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(first_data_received<span class="pl-k">===</span><span class="pl-c1">true</span>){</td>
       </tr>
       <tr>
         <td id="L437" class="blob-num js-line-number" data-line-number="437"></td>
-        <td id="LC437" class="blob-code blob-code-inner js-file-line">		    </td>
+        <td id="LC437" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> firstchar<span class="pl-k">=</span><span class="pl-smi">in_data</span>.<span class="pl-en">readUInt8</span>(<span class="pl-c1">0</span>);</td>
       </tr>
       <tr>
         <td id="L438" class="blob-num js-line-number" data-line-number="438"></td>
-        <td id="LC438" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">if</span>(cmd_checksum <span class="pl-k">!==</span> firstchar){</td>
+        <td id="LC438" class="blob-code blob-code-inner js-file-line">		    first_data_received <span class="pl-k">=</span> <span class="pl-c1">false</span>;</td>
       </tr>
       <tr>
         <td id="L439" class="blob-num js-line-number" data-line-number="439"></td>
-        <td id="LC439" class="blob-code blob-code-inner js-file-line">			<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Image_data_func Checksum error !!<span class="pl-pds">&quot;</span></span>);</td>
+        <td id="LC439" class="blob-code blob-code-inner js-file-line">		    </td>
       </tr>
       <tr>
         <td id="L440" class="blob-num js-line-number" data-line-number="440"></td>
-        <td id="LC440" class="blob-code blob-code-inner js-file-line">		    }<span class="pl-c"><span class="pl-c">//</span>else console.log(&quot;Image_data_func Checksum match !&quot;);</span></td>
+        <td id="LC440" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">if</span>(cmd_checksum <span class="pl-k">!==</span> firstchar){</td>
       </tr>
       <tr>
         <td id="L441" class="blob-num js-line-number" data-line-number="441"></td>
-        <td id="LC441" class="blob-code blob-code-inner js-file-line">			</td>
+        <td id="LC441" class="blob-code blob-code-inner js-file-line">			<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Image_data_func Checksum error !!<span class="pl-pds">&quot;</span></span>);</td>
       </tr>
       <tr>
         <td id="L442" class="blob-num js-line-number" data-line-number="442"></td>
-        <td id="LC442" class="blob-code blob-code-inner js-file-line">		}</td>
+        <td id="LC442" class="blob-code blob-code-inner js-file-line">		    }<span class="pl-c"><span class="pl-c">//</span>else console.log(&quot;Image_data_func Checksum match !&quot;);</span></td>
       </tr>
       <tr>
         <td id="L443" class="blob-num js-line-number" data-line-number="443"></td>
-        <td id="LC443" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">else</span>{</td>
+        <td id="LC443" class="blob-code blob-code-inner js-file-line">			</td>
       </tr>
       <tr>
         <td id="L444" class="blob-num js-line-number" data-line-number="444"></td>
-        <td id="LC444" class="blob-code blob-code-inner js-file-line">		  <span class="pl-c"><span class="pl-c">//</span>  console.log(&quot;GetImage received progress data [&quot;+in_data.toString(&#39;ascii&#39;)+&quot;]&quot;);</span></td>
+        <td id="LC444" class="blob-code blob-code-inner js-file-line">		}</td>
       </tr>
       <tr>
         <td id="L445" class="blob-num js-line-number" data-line-number="445"></td>
-        <td id="LC445" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC445" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">else</span>{</td>
       </tr>
       <tr>
         <td id="L446" class="blob-num js-line-number" data-line-number="446"></td>
-        <td id="LC446" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> mid_time <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>().<span class="pl-c1">getTime</span>(); <span class="pl-c"><span class="pl-c">//</span>in ms</span></td>
+        <td id="LC446" class="blob-code blob-code-inner js-file-line">		  <span class="pl-c"><span class="pl-c">//</span>  console.log(&quot;GetImage received progress data [&quot;+in_data.toString(&#39;ascii&#39;)+&quot;]&quot;);</span></td>
       </tr>
       <tr>
         <td id="L447" class="blob-num js-line-number" data-line-number="447"></td>
-        <td id="LC447" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> time_elapsed <span class="pl-k">=</span> ((mid_time<span class="pl-k">-</span>start_time)<span class="pl-k">/</span><span class="pl-c1">1000</span>).<span class="pl-en">toFixed</span>(<span class="pl-c1">3</span>); <span class="pl-c"><span class="pl-c">//</span>/ in s</span></td>
+        <td id="LC447" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L448" class="blob-num js-line-number" data-line-number="448"></td>
-        <td id="LC448" class="blob-code blob-code-inner js-file-line">		    </td>
+        <td id="LC448" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> mid_time <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>().<span class="pl-c1">getTime</span>(); <span class="pl-c"><span class="pl-c">//</span>in ms</span></td>
       </tr>
       <tr>
         <td id="L449" class="blob-num js-line-number" data-line-number="449"></td>
-        <td id="LC449" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">if</span>(progress_callback<span class="pl-k">!==</span><span class="pl-c1">undefined</span>)</td>
+        <td id="LC449" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> time_elapsed <span class="pl-k">=</span> ((mid_time<span class="pl-k">-</span>start_time)<span class="pl-k">/</span><span class="pl-c1">1000</span>).<span class="pl-en">toFixed</span>(<span class="pl-c1">3</span>); <span class="pl-c"><span class="pl-c">//</span>/ in s</span></td>
       </tr>
       <tr>
         <td id="L450" class="blob-num js-line-number" data-line-number="450"></td>
-        <td id="LC450" class="blob-code blob-code-inner js-file-line">			<span class="pl-en">progress_callback</span>({</td>
+        <td id="LC450" class="blob-code blob-code-inner js-file-line">		    </td>
       </tr>
       <tr>
         <td id="L451" class="blob-num js-line-number" data-line-number="451"></td>
-        <td id="LC451" class="blob-code blob-code-inner js-file-line">	    		    exposure_time <span class="pl-k">:</span> <span class="pl-smi">params</span>.<span class="pl-smi">exptime</span>, </td>
+        <td id="LC451" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">if</span>(progress_callback<span class="pl-k">!==</span><span class="pl-c1">undefined</span>)</td>
       </tr>
       <tr>
         <td id="L452" class="blob-num js-line-number" data-line-number="452"></td>
-        <td id="LC452" class="blob-code blob-code-inner js-file-line">	    		    time_elapsed   <span class="pl-k">:</span> time_elapsed,</td>
+        <td id="LC452" class="blob-code blob-code-inner js-file-line">			<span class="pl-en">progress_callback</span>({</td>
       </tr>
       <tr>
         <td id="L453" class="blob-num js-line-number" data-line-number="453"></td>
-        <td id="LC453" class="blob-code blob-code-inner js-file-line">	    		    percent        <span class="pl-k">:</span> ((time_elapsed<span class="pl-k">/</span><span class="pl-smi">params</span>.<span class="pl-smi">exptime</span>)<span class="pl-k">*</span><span class="pl-c1">100</span>).<span class="pl-en">toFixed</span>(<span class="pl-c1">0</span>)</td>
+        <td id="LC453" class="blob-code blob-code-inner js-file-line">	    		    exposure_time <span class="pl-k">:</span> <span class="pl-smi">params</span>.<span class="pl-smi">exptime</span>, </td>
       </tr>
       <tr>
         <td id="L454" class="blob-num js-line-number" data-line-number="454"></td>
-        <td id="LC454" class="blob-code blob-code-inner js-file-line">	    		});</td>
+        <td id="LC454" class="blob-code blob-code-inner js-file-line">	    		    time_elapsed   <span class="pl-k">:</span> time_elapsed,</td>
       </tr>
       <tr>
         <td id="L455" class="blob-num js-line-number" data-line-number="455"></td>
-        <td id="LC455" class="blob-code blob-code-inner js-file-line">		}</td>
+        <td id="LC455" class="blob-code blob-code-inner js-file-line">	    		    percent        <span class="pl-k">:</span> ((time_elapsed<span class="pl-k">/</span><span class="pl-smi">params</span>.<span class="pl-smi">exptime</span>)<span class="pl-k">*</span><span class="pl-c1">100</span>).<span class="pl-en">toFixed</span>(<span class="pl-c1">0</span>)</td>
       </tr>
       <tr>
         <td id="L456" class="blob-num js-line-number" data-line-number="456"></td>
-        <td id="LC456" class="blob-code blob-code-inner js-file-line">		</td>
+        <td id="LC456" class="blob-code blob-code-inner js-file-line">	    		});</td>
       </tr>
       <tr>
         <td id="L457" class="blob-num js-line-number" data-line-number="457"></td>
-        <td id="LC457" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(in_data <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&#39;</span>D<span class="pl-pds">&#39;</span></span>){ <span class="pl-c"><span class="pl-c">//</span>/ Exposure complete</span></td>
+        <td id="LC457" class="blob-code blob-code-inner js-file-line">		}</td>
       </tr>
       <tr>
         <td id="L458" class="blob-num js-line-number" data-line-number="458"></td>
-        <td id="LC458" class="blob-code blob-code-inner js-file-line">		    </td>
+        <td id="LC458" class="blob-code blob-code-inner js-file-line">		</td>
       </tr>
       <tr>
         <td id="L459" class="blob-num js-line-number" data-line-number="459"></td>
-        <td id="LC459" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> blocks_complete <span class="pl-k">=</span> <span class="pl-c1">0</span>;</td>
+        <td id="LC459" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(in_data <span class="pl-k">==</span> <span class="pl-s"><span class="pl-pds">&#39;</span>D<span class="pl-pds">&#39;</span></span>){ <span class="pl-c"><span class="pl-c">//</span>/ Exposure complete</span></td>
       </tr>
       <tr>
         <td id="L460" class="blob-num js-line-number" data-line-number="460"></td>
-        <td id="LC460" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> total_nbytes<span class="pl-k">=</span>blocks_expected<span class="pl-k">*</span>block_nbytes;</td>
+        <td id="LC460" class="blob-code blob-code-inner js-file-line">		    </td>
       </tr>
       <tr>
         <td id="L461" class="blob-num js-line-number" data-line-number="461"></td>
-        <td id="LC461" class="blob-code blob-code-inner js-file-line">		    <span class="pl-c"><span class="pl-c">//</span>var data=new ArrayBuffer();</span></td>
+        <td id="LC461" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> blocks_complete <span class="pl-k">=</span> <span class="pl-c1">0</span>;</td>
       </tr>
       <tr>
         <td id="L462" class="blob-num js-line-number" data-line-number="462"></td>
-        <td id="LC462" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> received_bytes<span class="pl-k">=</span><span class="pl-c1">0</span>;</td>
+        <td id="LC462" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> total_nbytes<span class="pl-k">=</span>blocks_expected<span class="pl-k">*</span>block_nbytes;</td>
       </tr>
       <tr>
         <td id="L463" class="blob-num js-line-number" data-line-number="463"></td>
-        <td id="LC463" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> received_cs_bytes<span class="pl-k">=</span><span class="pl-c1">0</span>;</td>
+        <td id="LC463" class="blob-code blob-code-inner js-file-line">		    <span class="pl-c"><span class="pl-c">//</span>var data=new ArrayBuffer();</span></td>
       </tr>
       <tr>
         <td id="L464" class="blob-num js-line-number" data-line-number="464"></td>
-        <td id="LC464" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> block_bytes<span class="pl-k">=</span><span class="pl-c1">0</span>;</td>
+        <td id="LC464" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> received_bytes<span class="pl-k">=</span><span class="pl-c1">0</span>;</td>
       </tr>
       <tr>
         <td id="L465" class="blob-num js-line-number" data-line-number="465"></td>
-        <td id="LC465" class="blob-code blob-code-inner js-file-line">		    </td>
+        <td id="LC465" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> received_cs_bytes<span class="pl-k">=</span><span class="pl-c1">0</span>;</td>
       </tr>
       <tr>
         <td id="L466" class="blob-num js-line-number" data-line-number="466"></td>
-        <td id="LC466" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> image_data<span class="pl-k">=</span><span class="pl-k">new</span> <span class="pl-en">Buffer</span>(total_nbytes);</td>
+        <td id="LC466" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> block_bytes<span class="pl-k">=</span><span class="pl-c1">0</span>;</td>
       </tr>
       <tr>
         <td id="L467" class="blob-num js-line-number" data-line-number="467"></td>
@@ -2361,27 +2338,27 @@
       </tr>
       <tr>
         <td id="L468" class="blob-num js-line-number" data-line-number="468"></td>
-        <td id="LC468" class="blob-code blob-code-inner js-file-line">		    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>Exposure Complete ! Transfering Image : <span class="pl-pds">&#39;</span></span> <span class="pl-k">+</span> blocks_expected <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">&quot;</span> blocks to read<span class="pl-pds">&quot;</span></span>);</td>
+        <td id="LC468" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">var</span> image_data<span class="pl-k">=</span><span class="pl-k">new</span> <span class="pl-en">Buffer</span>(total_nbytes);</td>
       </tr>
       <tr>
         <td id="L469" class="blob-num js-line-number" data-line-number="469"></td>
-        <td id="LC469" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">sky</span>.<span class="pl-smi">transfering</span><span class="pl-k">=</span><span class="pl-c1">true</span>;</td>
+        <td id="LC469" class="blob-code blob-code-inner js-file-line">		    </td>
       </tr>
       <tr>
         <td id="L470" class="blob-num js-line-number" data-line-number="470"></td>
-        <td id="LC470" class="blob-code blob-code-inner js-file-line">		    </td>
+        <td id="LC470" class="blob-code blob-code-inner js-file-line">		    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>Exposure Complete ! Transfering Image : <span class="pl-pds">&#39;</span></span> <span class="pl-k">+</span> blocks_expected <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">&quot;</span> blocks to read<span class="pl-pds">&quot;</span></span>);</td>
       </tr>
       <tr>
         <td id="L471" class="blob-num js-line-number" data-line-number="471"></td>
-        <td id="LC471" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">sky</span>.<span class="pl-en">get_bytes</span>(block_nbytes<span class="pl-k">+</span><span class="pl-c1">1</span>,<span class="pl-k">function</span>(<span class="pl-smi">in_data</span>){</td>
+        <td id="LC471" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">sky</span>.<span class="pl-smi">transfering</span><span class="pl-k">=</span><span class="pl-c1">true</span>;</td>
       </tr>
       <tr>
         <td id="L472" class="blob-num js-line-number" data-line-number="472"></td>
-        <td id="LC472" class="blob-code blob-code-inner js-file-line">			</td>
+        <td id="LC472" class="blob-code blob-code-inner js-file-line">		    </td>
       </tr>
       <tr>
         <td id="L473" class="blob-num js-line-number" data-line-number="473"></td>
-        <td id="LC473" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">var</span> nb<span class="pl-k">=</span><span class="pl-smi">in_data</span>.<span class="pl-smi">byteLength</span>;</td>
+        <td id="LC473" class="blob-code blob-code-inner js-file-line">		    <span class="pl-smi">sky</span>.<span class="pl-en">get_bytes</span>(block_nbytes<span class="pl-k">+</span><span class="pl-c1">1</span>,<span class="pl-k">function</span>(<span class="pl-smi">in_data</span>){</td>
       </tr>
       <tr>
         <td id="L474" class="blob-num js-line-number" data-line-number="474"></td>
@@ -2389,31 +2366,31 @@
       </tr>
       <tr>
         <td id="L475" class="blob-num js-line-number" data-line-number="475"></td>
-        <td id="LC475" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">var</span> cs <span class="pl-k">=</span> <span class="pl-c1">0</span>;</td>
+        <td id="LC475" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">var</span> nb<span class="pl-k">=</span><span class="pl-smi">in_data</span>.<span class="pl-smi">byteLength</span>;</td>
       </tr>
       <tr>
         <td id="L476" class="blob-num js-line-number" data-line-number="476"></td>
-        <td id="LC476" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">for</span>(<span class="pl-k">var</span> c<span class="pl-k">=</span><span class="pl-c1">0</span>; c<span class="pl-k">&lt;</span>block_nbytes; c<span class="pl-k">++</span>)</td>
+        <td id="LC476" class="blob-code blob-code-inner js-file-line">			</td>
       </tr>
       <tr>
         <td id="L477" class="blob-num js-line-number" data-line-number="477"></td>
-        <td id="LC477" class="blob-code blob-code-inner js-file-line">			    cs <span class="pl-k">=</span> cs <span class="pl-k">^</span> <span class="pl-smi">in_data</span>.<span class="pl-en">readUInt8</span>(c);</td>
+        <td id="LC477" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">var</span> cs <span class="pl-k">=</span> <span class="pl-c1">0</span>;</td>
       </tr>
       <tr>
         <td id="L478" class="blob-num js-line-number" data-line-number="478"></td>
-        <td id="LC478" class="blob-code blob-code-inner js-file-line">		    </td>
+        <td id="LC478" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">for</span>(<span class="pl-k">var</span> c<span class="pl-k">=</span><span class="pl-c1">0</span>; c<span class="pl-k">&lt;</span>block_nbytes; c<span class="pl-k">++</span>)</td>
       </tr>
       <tr>
         <td id="L479" class="blob-num js-line-number" data-line-number="479"></td>
-        <td id="LC479" class="blob-code blob-code-inner js-file-line">			<span class="pl-smi">in_data</span>.<span class="pl-en">copy</span>(image_data,received_bytes,<span class="pl-c1">0</span>,block_nbytes);</td>
+        <td id="LC479" class="blob-code blob-code-inner js-file-line">			    cs <span class="pl-k">=</span> cs <span class="pl-k">^</span> <span class="pl-smi">in_data</span>.<span class="pl-en">readUInt8</span>(c);</td>
       </tr>
       <tr>
         <td id="L480" class="blob-num js-line-number" data-line-number="480"></td>
-        <td id="LC480" class="blob-code blob-code-inner js-file-line">			</td>
+        <td id="LC480" class="blob-code blob-code-inner js-file-line">		    </td>
       </tr>
       <tr>
         <td id="L481" class="blob-num js-line-number" data-line-number="481"></td>
-        <td id="LC481" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">var</span> csum_in<span class="pl-k">=</span><span class="pl-smi">in_data</span>.<span class="pl-en">readUInt8</span>(block_nbytes);</td>
+        <td id="LC481" class="blob-code blob-code-inner js-file-line">			<span class="pl-smi">in_data</span>.<span class="pl-en">copy</span>(image_data,received_bytes,<span class="pl-c1">0</span>,block_nbytes);</td>
       </tr>
       <tr>
         <td id="L482" class="blob-num js-line-number" data-line-number="482"></td>
@@ -2421,170 +2398,169 @@
       </tr>
       <tr>
         <td id="L483" class="blob-num js-line-number" data-line-number="483"></td>
-        <td id="LC483" class="blob-code blob-code-inner js-file-line">			received_bytes<span class="pl-k">+=</span>block_nbytes;</td>
+        <td id="LC483" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">var</span> csum_in<span class="pl-k">=</span><span class="pl-smi">in_data</span>.<span class="pl-en">readUInt8</span>(block_nbytes);</td>
       </tr>
       <tr>
         <td id="L484" class="blob-num js-line-number" data-line-number="484"></td>
-        <td id="LC484" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC484" class="blob-code blob-code-inner js-file-line">			</td>
       </tr>
       <tr>
         <td id="L485" class="blob-num js-line-number" data-line-number="485"></td>
-        <td id="LC485" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(progress_callback<span class="pl-k">!==</span><span class="pl-c1">undefined</span>)</td>
+        <td id="LC485" class="blob-code blob-code-inner js-file-line">			received_bytes<span class="pl-k">+=</span>block_nbytes;</td>
       </tr>
       <tr>
         <td id="L486" class="blob-num js-line-number" data-line-number="486"></td>
-        <td id="LC486" class="blob-code blob-code-inner js-file-line">			    <span class="pl-en">progress_callback</span>({</td>
+        <td id="LC486" class="blob-code blob-code-inner js-file-line">
+</td>
       </tr>
       <tr>
         <td id="L487" class="blob-num js-line-number" data-line-number="487"></td>
-        <td id="LC487" class="blob-code blob-code-inner js-file-line">				whoami<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>get_bytes<span class="pl-pds">&quot;</span></span>,</td>
+        <td id="LC487" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(progress_callback<span class="pl-k">!==</span><span class="pl-c1">undefined</span>)</td>
       </tr>
       <tr>
         <td id="L488" class="blob-num js-line-number" data-line-number="488"></td>
-        <td id="LC488" class="blob-code blob-code-inner js-file-line">				received_bytes <span class="pl-k">:</span> received_bytes,</td>
+        <td id="LC488" class="blob-code blob-code-inner js-file-line">			    <span class="pl-en">progress_callback</span>({</td>
       </tr>
       <tr>
         <td id="L489" class="blob-num js-line-number" data-line-number="489"></td>
-        <td id="LC489" class="blob-code blob-code-inner js-file-line">				total_nbytes   <span class="pl-k">:</span> total_nbytes,</td>
+        <td id="LC489" class="blob-code blob-code-inner js-file-line">				whoami<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">&quot;</span>get_bytes<span class="pl-pds">&quot;</span></span>,</td>
       </tr>
       <tr>
         <td id="L490" class="blob-num js-line-number" data-line-number="490"></td>
-        <td id="LC490" class="blob-code blob-code-inner js-file-line">				percent        <span class="pl-k">:</span> (received_bytes<span class="pl-k">/</span>total_nbytes<span class="pl-k">*</span><span class="pl-c1">100</span>).<span class="pl-en">toFixed</span>(<span class="pl-c1">0</span>)</td>
+        <td id="LC490" class="blob-code blob-code-inner js-file-line">				received_bytes <span class="pl-k">:</span> received_bytes,</td>
       </tr>
       <tr>
         <td id="L491" class="blob-num js-line-number" data-line-number="491"></td>
-        <td id="LC491" class="blob-code blob-code-inner js-file-line">			    });</td>
+        <td id="LC491" class="blob-code blob-code-inner js-file-line">				total_nbytes   <span class="pl-k">:</span> total_nbytes,</td>
       </tr>
       <tr>
         <td id="L492" class="blob-num js-line-number" data-line-number="492"></td>
-        <td id="LC492" class="blob-code blob-code-inner js-file-line">			</td>
+        <td id="LC492" class="blob-code blob-code-inner js-file-line">				percent        <span class="pl-k">:</span> (received_bytes<span class="pl-k">/</span>total_nbytes<span class="pl-k">*</span><span class="pl-c1">100</span>).<span class="pl-en">toFixed</span>(<span class="pl-c1">0</span>)</td>
       </tr>
       <tr>
         <td id="L493" class="blob-num js-line-number" data-line-number="493"></td>
-        <td id="LC493" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(received_bytes<span class="pl-k">===</span>total_nbytes){</td>
+        <td id="LC493" class="blob-code blob-code-inner js-file-line">			    });</td>
       </tr>
       <tr>
         <td id="L494" class="blob-num js-line-number" data-line-number="494"></td>
-        <td id="LC494" class="blob-code blob-code-inner js-file-line">			    <span class="pl-smi">sky</span>.<span class="pl-c1">write</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>K<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){ <span class="pl-c"><span class="pl-c">//</span>/ Checksum OK</span></td>
+        <td id="LC494" class="blob-code blob-code-inner js-file-line">			</td>
       </tr>
       <tr>
         <td id="L495" class="blob-num js-line-number" data-line-number="495"></td>
-        <td id="LC495" class="blob-code blob-code-inner js-file-line">				<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Received all data !<span class="pl-pds">&quot;</span></span>);</td>
+        <td id="LC495" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(received_bytes<span class="pl-k">===</span>total_nbytes){</td>
       </tr>
       <tr>
         <td id="L496" class="blob-num js-line-number" data-line-number="496"></td>
-        <td id="LC496" class="blob-code blob-code-inner js-file-line">				<span class="pl-smi">sky</span>.<span class="pl-smi">transfering</span><span class="pl-k">=</span><span class="pl-c1">false</span>;</td>
+        <td id="LC496" class="blob-code blob-code-inner js-file-line">			    <span class="pl-smi">sky</span>.<span class="pl-c1">write</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>K<span class="pl-pds">&#39;</span></span>).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){ <span class="pl-c"><span class="pl-c">//</span>/ Checksum OK</span></td>
       </tr>
       <tr>
         <td id="L497" class="blob-num js-line-number" data-line-number="497"></td>
-        <td id="LC497" class="blob-code blob-code-inner js-file-line">				<span class="pl-en">ok</span>(image_data);</td>
+        <td id="LC497" class="blob-code blob-code-inner js-file-line">				<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Received all data !<span class="pl-pds">&quot;</span></span>);</td>
       </tr>
       <tr>
         <td id="L498" class="blob-num js-line-number" data-line-number="498"></td>
-        <td id="LC498" class="blob-code blob-code-inner js-file-line">			    }).<span class="pl-en">catch</span>(fail);</td>
+        <td id="LC498" class="blob-code blob-code-inner js-file-line">				<span class="pl-smi">sky</span>.<span class="pl-smi">transfering</span><span class="pl-k">=</span><span class="pl-c1">false</span>;</td>
       </tr>
       <tr>
         <td id="L499" class="blob-num js-line-number" data-line-number="499"></td>
-        <td id="LC499" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span></td>
+        <td id="LC499" class="blob-code blob-code-inner js-file-line">				<span class="pl-en">ok</span>(image_data);</td>
       </tr>
       <tr>
         <td id="L500" class="blob-num js-line-number" data-line-number="500"></td>
-        <td id="LC500" class="blob-code blob-code-inner js-file-line">			    <span class="pl-smi">sky</span>.<span class="pl-c1">write</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>K<span class="pl-pds">&#39;</span></span>).<span class="pl-en">catch</span>(fail);  <span class="pl-c"><span class="pl-c">//</span>/ Checksum OK</span></td>
+        <td id="LC500" class="blob-code blob-code-inner js-file-line">			    }).<span class="pl-en">catch</span>(fail);</td>
       </tr>
       <tr>
         <td id="L501" class="blob-num js-line-number" data-line-number="501"></td>
-        <td id="LC501" class="blob-code blob-code-inner js-file-line">		    },<span class="pl-c1">1</span>);</td>
+        <td id="LC501" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span></td>
       </tr>
       <tr>
         <td id="L502" class="blob-num js-line-number" data-line-number="502"></td>
-        <td id="LC502" class="blob-code blob-code-inner js-file-line">
-</td>
+        <td id="LC502" class="blob-code blob-code-inner js-file-line">			    <span class="pl-smi">sky</span>.<span class="pl-c1">write</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>K<span class="pl-pds">&#39;</span></span>).<span class="pl-en">catch</span>(fail);  <span class="pl-c"><span class="pl-c">//</span>/ Checksum OK</span></td>
       </tr>
       <tr>
         <td id="L503" class="blob-num js-line-number" data-line-number="503"></td>
-        <td id="LC503" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">if</span>(<span class="pl-smi">sky</span>.<span class="pl-smi">aborting</span>){</td>
+        <td id="LC503" class="blob-code blob-code-inner js-file-line">		    },<span class="pl-c1">1</span>);</td>
       </tr>
       <tr>
         <td id="L504" class="blob-num js-line-number" data-line-number="504"></td>
-        <td id="LC504" class="blob-code blob-code-inner js-file-line">			<span class="pl-smi">sky</span>.<span class="pl-smi">transfering</span><span class="pl-k">=</span><span class="pl-c1">false</span>;</td>
-      </tr>
-      <tr>
-        <td id="L505" class="blob-num js-line-number" data-line-number="505"></td>
-        <td id="LC505" class="blob-code blob-code-inner js-file-line">			<span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>S<span class="pl-pds">&#39;</span></span>,<span class="pl-c1">null</span>).<span class="pl-en">catch</span>(fail).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){</td>
-      </tr>
-      <tr>
-        <td id="L506" class="blob-num js-line-number" data-line-number="506"></td>
-        <td id="LC506" class="blob-code blob-code-inner js-file-line">			    <span class="pl-smi">sky</span>.<span class="pl-en">signal</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>transfer_aborted<span class="pl-pds">&quot;</span></span>,{});</td>
-      </tr>
-      <tr>
-        <td id="L507" class="blob-num js-line-number" data-line-number="507"></td>
-        <td id="LC507" class="blob-code blob-code-inner js-file-line">			    <span class="pl-smi">sky</span>.<span class="pl-smi">transfering</span><span class="pl-k">=</span><span class="pl-c1">false</span>;</td>
-      </tr>
-      <tr>
-        <td id="L508" class="blob-num js-line-number" data-line-number="508"></td>
-        <td id="LC508" class="blob-code blob-code-inner js-file-line">			    <span class="pl-en">fail</span>();</td>
-      </tr>
-      <tr>
-        <td id="L509" class="blob-num js-line-number" data-line-number="509"></td>
-        <td id="LC509" class="blob-code blob-code-inner js-file-line">			}); <span class="pl-c"><span class="pl-c">//</span>/ ABORT transfer image</span></td>
-      </tr>
-      <tr>
-        <td id="L510" class="blob-num js-line-number" data-line-number="510"></td>
-        <td id="LC510" class="blob-code blob-code-inner js-file-line">			</td>
-      </tr>
-      <tr>
-        <td id="L511" class="blob-num js-line-number" data-line-number="511"></td>
-        <td id="LC511" class="blob-code blob-code-inner js-file-line">		    }<span class="pl-k">else</span>{</td>
-      </tr>
-      <tr>
-        <td id="L512" class="blob-num js-line-number" data-line-number="512"></td>
-        <td id="LC512" class="blob-code blob-code-inner js-file-line">			<span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>X<span class="pl-pds">&#39;</span></span>,<span class="pl-c1">null</span>).<span class="pl-en">catch</span>(fail); <span class="pl-c"><span class="pl-c">//</span>/ transfer image</span></td>
-      </tr>
-      <tr>
-        <td id="L513" class="blob-num js-line-number" data-line-number="513"></td>
-        <td id="LC513" class="blob-code blob-code-inner js-file-line">		    }</td>
-      </tr>
-      <tr>
-        <td id="L514" class="blob-num js-line-number" data-line-number="514"></td>
-        <td id="LC514" class="blob-code blob-code-inner js-file-line">		}</td>
-      </tr>
-      <tr>
-        <td id="L515" class="blob-num js-line-number" data-line-number="515"></td>
-        <td id="LC515" class="blob-code blob-code-inner js-file-line">	    };</td>
-      </tr>
-      <tr>
-        <td id="L516" class="blob-num js-line-number" data-line-number="516"></td>
-        <td id="LC516" class="blob-code blob-code-inner js-file-line">	    </td>
-      </tr>
-      <tr>
-        <td id="L517" class="blob-num js-line-number" data-line-number="517"></td>
-        <td id="LC517" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-c1">write</span>(com).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){</td>
-      </tr>
-      <tr>
-        <td id="L518" class="blob-num js-line-number" data-line-number="518"></td>
-        <td id="LC518" class="blob-code blob-code-inner js-file-line">		<span class="pl-c"><span class="pl-c">//</span>console.log(&quot;Comamnd TAKEIMAGE sent ok!&quot;);</span></td>
-      </tr>
-      <tr>
-        <td id="L519" class="blob-num js-line-number" data-line-number="519"></td>
-        <td id="LC519" class="blob-code blob-code-inner js-file-line">	    }).<span class="pl-en">catch</span>(fail);</td>
-      </tr>
-      <tr>
-        <td id="L520" class="blob-num js-line-number" data-line-number="520"></td>
-        <td id="LC520" class="blob-code blob-code-inner js-file-line">	});</td>
-      </tr>
-      <tr>
-        <td id="L521" class="blob-num js-line-number" data-line-number="521"></td>
-        <td id="LC521" class="blob-code blob-code-inner js-file-line">    }</td>
-      </tr>
-      <tr>
-        <td id="L522" class="blob-num js-line-number" data-line-number="522"></td>
-        <td id="LC522" class="blob-code blob-code-inner js-file-line">
+        <td id="LC504" class="blob-code blob-code-inner js-file-line">
 </td>
       </tr>
       <tr>
+        <td id="L505" class="blob-num js-line-number" data-line-number="505"></td>
+        <td id="LC505" class="blob-code blob-code-inner js-file-line">		    <span class="pl-k">if</span>(<span class="pl-smi">sky</span>.<span class="pl-smi">aborting</span>){</td>
+      </tr>
+      <tr>
+        <td id="L506" class="blob-num js-line-number" data-line-number="506"></td>
+        <td id="LC506" class="blob-code blob-code-inner js-file-line">			<span class="pl-smi">sky</span>.<span class="pl-smi">transfering</span><span class="pl-k">=</span><span class="pl-c1">false</span>;</td>
+      </tr>
+      <tr>
+        <td id="L507" class="blob-num js-line-number" data-line-number="507"></td>
+        <td id="LC507" class="blob-code blob-code-inner js-file-line">			<span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>S<span class="pl-pds">&#39;</span></span>,<span class="pl-c1">null</span>).<span class="pl-en">catch</span>(fail).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){</td>
+      </tr>
+      <tr>
+        <td id="L508" class="blob-num js-line-number" data-line-number="508"></td>
+        <td id="LC508" class="blob-code blob-code-inner js-file-line">			    <span class="pl-smi">sky</span>.<span class="pl-en">signal</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>transfer_aborted<span class="pl-pds">&quot;</span></span>,{});</td>
+      </tr>
+      <tr>
+        <td id="L509" class="blob-num js-line-number" data-line-number="509"></td>
+        <td id="LC509" class="blob-code blob-code-inner js-file-line">			    <span class="pl-smi">sky</span>.<span class="pl-smi">transfering</span><span class="pl-k">=</span><span class="pl-c1">false</span>;</td>
+      </tr>
+      <tr>
+        <td id="L510" class="blob-num js-line-number" data-line-number="510"></td>
+        <td id="LC510" class="blob-code blob-code-inner js-file-line">			    <span class="pl-en">fail</span>();</td>
+      </tr>
+      <tr>
+        <td id="L511" class="blob-num js-line-number" data-line-number="511"></td>
+        <td id="LC511" class="blob-code blob-code-inner js-file-line">			}); <span class="pl-c"><span class="pl-c">//</span>/ ABORT transfer image</span></td>
+      </tr>
+      <tr>
+        <td id="L512" class="blob-num js-line-number" data-line-number="512"></td>
+        <td id="LC512" class="blob-code blob-code-inner js-file-line">			</td>
+      </tr>
+      <tr>
+        <td id="L513" class="blob-num js-line-number" data-line-number="513"></td>
+        <td id="LC513" class="blob-code blob-code-inner js-file-line">		    }<span class="pl-k">else</span>{</td>
+      </tr>
+      <tr>
+        <td id="L514" class="blob-num js-line-number" data-line-number="514"></td>
+        <td id="LC514" class="blob-code blob-code-inner js-file-line">			<span class="pl-smi">sky</span>.<span class="pl-en">send_command</span>(<span class="pl-s"><span class="pl-pds">&#39;</span>X<span class="pl-pds">&#39;</span></span>,<span class="pl-c1">null</span>).<span class="pl-en">catch</span>(fail); <span class="pl-c"><span class="pl-c">//</span>/ transfer image</span></td>
+      </tr>
+      <tr>
+        <td id="L515" class="blob-num js-line-number" data-line-number="515"></td>
+        <td id="LC515" class="blob-code blob-code-inner js-file-line">		    }</td>
+      </tr>
+      <tr>
+        <td id="L516" class="blob-num js-line-number" data-line-number="516"></td>
+        <td id="LC516" class="blob-code blob-code-inner js-file-line">		}</td>
+      </tr>
+      <tr>
+        <td id="L517" class="blob-num js-line-number" data-line-number="517"></td>
+        <td id="LC517" class="blob-code blob-code-inner js-file-line">	    };</td>
+      </tr>
+      <tr>
+        <td id="L518" class="blob-num js-line-number" data-line-number="518"></td>
+        <td id="LC518" class="blob-code blob-code-inner js-file-line">	    </td>
+      </tr>
+      <tr>
+        <td id="L519" class="blob-num js-line-number" data-line-number="519"></td>
+        <td id="LC519" class="blob-code blob-code-inner js-file-line">	    <span class="pl-smi">sky</span>.<span class="pl-c1">write</span>(com).<span class="pl-en">then</span>(<span class="pl-k">function</span>(){</td>
+      </tr>
+      <tr>
+        <td id="L520" class="blob-num js-line-number" data-line-number="520"></td>
+        <td id="LC520" class="blob-code blob-code-inner js-file-line">		<span class="pl-c"><span class="pl-c">//</span>console.log(&quot;Comamnd TAKEIMAGE sent ok!&quot;);</span></td>
+      </tr>
+      <tr>
+        <td id="L521" class="blob-num js-line-number" data-line-number="521"></td>
+        <td id="LC521" class="blob-code blob-code-inner js-file-line">	    }).<span class="pl-en">catch</span>(fail);</td>
+      </tr>
+      <tr>
+        <td id="L522" class="blob-num js-line-number" data-line-number="522"></td>
+        <td id="LC522" class="blob-code blob-code-inner js-file-line">	});</td>
+      </tr>
+      <tr>
         <td id="L523" class="blob-num js-line-number" data-line-number="523"></td>
-        <td id="LC523" class="blob-code blob-code-inner js-file-line">};</td>
+        <td id="LC523" class="blob-code blob-code-inner js-file-line">    }</td>
       </tr>
       <tr>
         <td id="L524" class="blob-num js-line-number" data-line-number="524"></td>
@@ -2593,7 +2569,16 @@
       </tr>
       <tr>
         <td id="L525" class="blob-num js-line-number" data-line-number="525"></td>
-        <td id="LC525" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">module</span>.<span class="pl-smi">exports</span>.<span class="pl-smi">allsky</span><span class="pl-k">=</span>allsky;</td>
+        <td id="LC525" class="blob-code blob-code-inner js-file-line">};</td>
+      </tr>
+      <tr>
+        <td id="L526" class="blob-num js-line-number" data-line-number="526"></td>
+        <td id="LC526" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="L527" class="blob-num js-line-number" data-line-number="527"></td>
+        <td id="LC527" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">module</span>.<span class="pl-smi">exports</span>.<span class="pl-smi">allsky</span><span class="pl-k">=</span>allsky;</td>
       </tr>
 </table>
 
@@ -2605,7 +2590,7 @@
       <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
         <li><a class="js-zeroclipboard dropdown-item" style="cursor:pointer;" id="js-copy-lines" data-original-text="Copy lines">Copy lines</a></li>
         <li><a class="js-zeroclipboard dropdown-item" id= "js-copy-permalink" style="cursor:pointer;" data-original-text="Copy permalink">Copy permalink</a></li>
-        <li><a href="/vertighel/jallsky-test/blame/072102da17bac87cbf31175e998f70e46a871bcd/allsky_drv.js" class="dropdown-item js-update-url-with-hash" id="js-view-git-blame">View git blame</a></li>
+        <li><a href="/vertighel/jallsky-test/blame/116aaeaf5dced90bfb711c7ad0972818fca3f715/allsky_drv.js" class="dropdown-item js-update-url-with-hash" id="js-view-git-blame">View git blame</a></li>
           <li><a href="/vertighel/jallsky-test/issues/new" class="dropdown-item" id="js-new-issue">Open new issue</a></li>
       </ul>
     </div>
@@ -2635,7 +2620,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between py-6 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2017 <span title="0.12119s from unicorn-125104322-9qbqq">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2017 <span title="0.18289s from unicorn-125104322-n21sq">GitHub</span>, Inc.</li>
         <li class="mr-3"><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
         <li class="mr-3"><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
         <li class="mr-3"><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
