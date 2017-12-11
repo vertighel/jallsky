@@ -231,10 +231,7 @@ var allsky_mod=require("./allsky_drv.js");
 	    });
 
 	    console.log("Got image!");
-	    await write_fits(image_data, params)
-	    
-	    //params.whoami="create_png";
-	    
+	    await write_fits(image_data, params);
 	    await create_png(params);
 	    
 	}
