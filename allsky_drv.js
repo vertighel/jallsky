@@ -243,16 +243,16 @@ class allsky{
 	    if(sky.transfering){
 		
 		sky.on("transfer_aborted", function(){
-		    await this.send_command('A');
-		    await this.close_shutter();
+		    await sky.send_command('A');
+		    await sky.close_shutter();
 		    ok();
 		    sky.aborting=false;
 		});
 		
 	    }else{
 		
-		await this.send_command('A');
-		await this.close_shutter();
+		await sky.send_command('A');
+		await sky.close_shutter();
 		sky.aborting=false;
 		ok();
 	    }
