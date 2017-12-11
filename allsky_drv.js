@@ -82,11 +82,13 @@ class allsky{
     open(){
 	var sky=this;
 	return new Promise(function(ok, fail){
-	    console.log("Open....");
-	    sky.sp.open(function(err){
-		if(err) fail(err);
-		else ok();
-	    }); 
+	    if(sky.sp.isOpen) ok(); else {
+		console.log("Open....");
+		sky.sp.open(function(err){
+		    if(err) fail(err);
+		    else ok();
+		});
+	    }
 	});
     }
 
