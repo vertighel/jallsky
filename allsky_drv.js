@@ -230,7 +230,7 @@ class allsky{
 	
 	await this.send_command('A');
 	await close_shutter();
-	
+	return "ok";
     }
     
     open_shutter(){ /// leaves the shutter motor energized
