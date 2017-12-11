@@ -507,9 +507,11 @@ class allsky{
 			    sky.write('K').catch(fail);  /// Checksum OK
 		    },1);
 
-		    if(sky.aborting){
+		    if(sky.aborting==true){
+			console.log("TRANSFER: Abort detected! Sending S command to stop transfer");
 			sky.transfering=false;
 			sky.send_command('S',null).catch(fail).then(function(){
+			    console.log("TRANSFER: Ok, transfer stopped!");
 			    sky.signal("transfer_aborted",{});
 			    sky.transfering=false;
 			    fail();
