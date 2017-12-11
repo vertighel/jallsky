@@ -248,6 +248,10 @@ ws.install_mod({
 
     create_png : function(msg){
 	update_image(msg.data);
+    },
+
+    client : function(msg){
+	console.log("Received CLIENT command : unhandled ! implement here :) data is " + JSON.stringify(msg.data));
     }
 
 });
