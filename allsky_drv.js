@@ -258,10 +258,17 @@ class allsky{
 		
 	    }else{
 		
-		sky.send_command('A').then(sky.close_shutter().then(function(){
-		    sky.aborting=false;
-		    ok();
-		}));
+		sky.send_command('A').then(function(){
+
+		    sky.on("transfer_aborted", function(){
+		    
+			
+			sky.close_shutter().then(function(){
+			    sky.aborting=false;
+			    ok();
+			});
+		    });
+		});
 	    }
 	});
     }
@@ -431,7 +438,7 @@ class allsky{
 	    var timestamp = new Date();
 	    timestamp = timestamp.toISOString();
 	
-	    console.log('Beginning Exposure');
+	    console.log('EXPOSE: Beginning Exposure!');
 	    var start_time = new Date().getTime(); /// in ms
 	    
 	    var first_data_received=true;
