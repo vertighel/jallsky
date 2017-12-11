@@ -93,15 +93,18 @@ class allsky{
     /// Close serialport communication
     close(){
 	var sky=this;
+	
 	return new Promise(function(ok, fail){
-	    console.log("Closing SP....");
-	    sky.sp.close(function(err){
-		if(err) fail(err);
-		else ok();
-	    }); 
+	    if(sky.sp.isOpen){
+		console.log("Closing SP....");
+		sky.sp.close(function(err){
+		    if(err) fail(err);
+		    else ok();
+		});
+	    }else ok();
 	});
     }
-
+    
     
     write(buffer){
 
@@ -227,7 +230,7 @@ class allsky{
     chop_off(){ return this.send_command('U\x00'); }
 
     async abort(){
-	
+
 	await this.send_command('A');
 	await this.close_shutter();
 	return "ok";
