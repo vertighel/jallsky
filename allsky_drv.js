@@ -237,40 +237,46 @@ class allsky{
 	var sky=this;
 
 	return new Promise(function(ok, fail){
-
 	    sky.aborting=true;
 	    
-	    if(sky.transfering){
+	    if(!sky.transfering){
+		sky.send_command('A').then(ok).catch(fail);
+	    }else ok();
+	});
 
-		console.log("ABORT: Transfer detected: aborting transfer....");
+	//     sky.aborting=true;
+	    
+	//     if(sky.transfering){
+
+	// 	console.log("ABORT: Transfer detected: aborting transfer....");
 		
-		sky.on("transfer_aborted", function(){
+	// 	sky.on("transfer_aborted", function(){
 
-		    console.log("ABORT: Transfer aborted! ");		    
+	// 	    console.log("ABORT: Transfer aborted! ");		    
 
-		    //sky.send_command('A').then(
-		    sky.close_shutter().then(function(){
-			ok();
-			sky.aborting=false;
-		    })
-		    //);
-		});
+	// 	    //sky.send_command('A').then(
+	// 	    sky.close_shutter().then(function(){
+	// 		ok();
+	// 		sky.aborting=false;
+	// 	    })
+	// 	    //);
+	// 	});
 		
-	    }else{
+	//     }else{
 		
-		sky.send_command('A').then(function(){
+	// 	sky.send_command('A').then(function(){
 
-		    sky.on("transfer_aborted", function(){
+	// 	    sky.on("transfer_aborted", function(){
 		    
 			
-			sky.close_shutter().then(function(){
-			    sky.aborting=false;
-			    ok();
-			});
-		    });
-		});
-	    }
-	});
+	// 		sky.close_shutter().then(function(){
+	// 		    sky.aborting=false;
+	// 		    ok();
+	// 		});
+	// 	    });
+	// 	});
+	//     }
+	// });
     }
     
     open_shutter(){ /// leaves the shutter motor energized
@@ -517,8 +523,9 @@ class allsky{
 				sky.transfering=false;
 				sky.send_command('S',null).catch(fail).then(function(){
 				    console.log("TRANSFER: Ok, transfer stopped!");
-				    sky.signal("transfer_aborted",{});
+				    //sky.signal("transfer_aborted",{});
 				    sky.transfering=false;
+				    sky.aborting=false;
 				    fail();
 				}); /// ABORT transfer image
 				
