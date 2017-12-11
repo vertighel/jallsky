@@ -220,22 +220,28 @@ var allsky_mod=require("./allsky_drv.js");
 	console.log("Shutter opened!");
 
 
-	var image_data = await cam.get_image(params , function(message){ //progress callback
-	    //console.log("Progress ! "  + JSON.stringify(message));
-	    ws.send("image_data_func",message).catch(function(err){
-	   	console.log("Websocket error sending message: "+err);
+	var image_data;
+
+	try{
+	    image_data= await cam.get_image(params , function(message){ //progress callback
+		//console.log("Progress ! "  + JSON.stringify(message));
+		ws.send("image_data_func",message).catch(function(err){
+	   	    console.log("Websocket error sending message: "+err);
+		});
 	    });
-	});
-	
-	console.log("Got image!");
-	
 
-	await write_fits(image_data, params)
-
-	//params.whoami="create_png";
+	    console.log("Got image!");
+	    await write_fits(image_data, params)
+	    
+	    //params.whoami="create_png";
+	    
+	    await create_png(params);
+	    
+	}
+	catch( error){
+	    console.log("Error Got image or image aborted !");
+	}
 	
-	await create_png(params);
-
 	console.log("Closing shutter....");
 	await cam.close_shutter();
 

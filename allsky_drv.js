@@ -392,6 +392,9 @@ class allsky{
     get_image(params, progress_callback){
 
 	var sky=this;
+	sky.aborting=false;
+	sky.transfering=false;
+	
 
 	return new Promise(function(ok, fail){
 	    var image_type={
@@ -517,12 +520,12 @@ class allsky{
 				ok(image_data);
 			    }).catch(fail);
 			}else{
-			    console.log("TRANSFER: sky.aborting = " + sky.aborting);
+			    //console.log("TRANSFER: sky.aborting = " + sky.aborting);
 			    if(sky.aborting==true){
 				console.log("TRANSFER: Abort detected! Sending S command to stop transfer");
 				sky.transfering=false;
 				sky.send_command('S',null).catch(fail).then(function(){
-				    console.log("TRANSFER: Ok, transfer stopped!");
+				    console.log("TRANSFER: Ok, transfer aborted!");
 				    //sky.signal("transfer_aborted",{});
 				    sky.transfering=false;
 				    sky.aborting=false;
