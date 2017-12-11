@@ -82,7 +82,7 @@ class allsky{
     open(){
 	var sky=this;
 	return new Promise(function(ok, fail){
-	    if(sky.sp.isOpen) ok(); else {
+	    if(sky.sp.isOpen==true) ok(); else {
 		console.log("Open....");
 		sky.sp.open(function(err){
 		    if(err) fail(err);
@@ -97,7 +97,7 @@ class allsky{
 	var sky=this;
 	
 	return new Promise(function(ok, fail){
-	    if(sky.sp.isOpen){
+	    if(sky.sp.isOpen==true){
 		console.log("Closing SP....");
 		sky.sp.close(function(err){
 		    if(err) fail(err);
