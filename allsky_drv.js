@@ -241,14 +241,19 @@ class allsky{
 	    sky.aborting=true;
 	    
 	    if(sky.transfering){
+
+		console.log("ABORT: Transfer detected: aborting transfer....");
 		
 		sky.on("transfer_aborted", function(){
-		    sky.send_command('A').then(
-			sky.close_shutter().then(function(){
-			    ok();
-			    sky.aborting=false;
-			})
-		    );
+
+		    console.log("ABORT: Transfer aborted! ");		    
+
+		    //sky.send_command('A').then(
+		    sky.close_shutter().then(function(){
+			ok();
+			sky.aborting=false;
+		    })
+		    //);
 		});
 		
 	    }else{
