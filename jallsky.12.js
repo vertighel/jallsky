@@ -233,7 +233,12 @@ var allsky_mod=require("./allsky_drv.js");
 	    console.log("Got image!");
 	    await write_fits(image_data, params);
 	    await create_png(params);
+
+	    ws.send("create_png",params).catch(function(err){
+		console.log("Websocket error sending message: "+err);
+	    });		    
 	    
+
 	}
 	catch( error){
 	    console.log("Error Got image or image aborted !");
@@ -246,10 +251,6 @@ var allsky_mod=require("./allsky_drv.js");
 	await cam.close();
 	
 	console.log("Camera closed!");
-	
-	ws.send("create_png",params).catch(function(err){
-	    console.log("Websocket error sending message: "+err);
-	});		    
 	
 
     } /// launch_exposure
