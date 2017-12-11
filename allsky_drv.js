@@ -251,10 +251,10 @@ class allsky{
 		
 	    }else{
 		
-		await sky.send_command('A');
-		await sky.close_shutter();
-		sky.aborting=false;
-		ok();
+		sky.send_command('A').then(sky.close_shutter().then(function(){
+		    sky.aborting=false;
+		    ok();
+		}));
 	    }
 	});
     }
