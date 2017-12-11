@@ -59,7 +59,9 @@ $("form").on("submit",function(event){
     console.log(JSON.stringify(compactdata,undefined,2))    
  //   ws.send(JSON.stringify(compactdata)); /// Sends the string to the server.
 
+    console.log("form submit sending command client !");
     wsc.send("client", compactdata);
+    console.log("form submit sending command client DONE!");
 
     
 });
