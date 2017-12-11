@@ -77,7 +77,7 @@ console.log("WS server installed command pack OK!");
 wss.on("client_event", function(evt){
     if(evt.type=="join"){
 	db_obs.last_entry(function(data){
-	    evt.client.send(data); /// Sends the string to the client.
+	    evt.client.send(data.whoami, data); /// Sends the string to the client.
 	});
 	
 	count++;
