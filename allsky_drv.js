@@ -229,7 +229,7 @@ class allsky{
     async abort(){
 	
 	await this.send_command('A');
-	await close_shutter();
+	await this.close_shutter();
 	return "ok";
     }
     
