@@ -44,7 +44,9 @@ class allsky{
 	this.data_listener_func=null;
 
 	allsky_this=this;
-	
+
+	this.aborting=false;
+	this.transfering=false;
     }
     
     /// Attach en event handler
@@ -232,10 +234,29 @@ class allsky{
     chop_off(){ return this.send_command('U\x00'); }
 
     async abort(){
+	var sky=this;
 
-	await this.send_command('A');
-	await this.close_shutter();
-	return "ok";
+	return new Promise(function(ok, fail){
+
+	    sky.aborting=true;
+	    
+	    if(sky.transfering){
+		
+		sky.on("transfer_aborted", function(){
+		    await this.send_command('A');
+		    await this.close_shutter();
+		    ok();
+		    sky.aborting=false;
+		});
+		
+	    }else{
+		
+		await this.send_command('A');
+		await this.close_shutter();
+		sky.aborting=false;
+		ok();
+	    }
+	});
     }
     
     open_shutter(){ /// leaves the shutter motor energized
@@ -445,6 +466,7 @@ class allsky{
 		    var image_data=new Buffer(total_nbytes);
 		    
 		    console.log('Exposure Complete ! Transfering Image : ' + blocks_expected + " blocks to read");
+		    sky.transfering=true;
 		    
 		    sky.get_bytes(block_nbytes+1,function(in_data){
 			
@@ -471,13 +493,24 @@ class allsky{
 			if(received_bytes===total_nbytes){
 			    sky.write('K').then(function(){ /// Checksum OK
 				console.log("Received all data !");
+				sky.transfering=false;
 				ok(image_data);
 			    }).catch(fail);
 			}else
 			    sky.write('K').catch(fail);  /// Checksum OK
 		    },1);
-		    
-		    sky.send_command('X',null).catch(fail); /// transfer image
+
+		    if(sky.aborting){
+			sky.transfering=false;
+			sky.send_command('S',null).catch(fail).then(function(){
+			    sky.signal("transfer_aborted",{});
+			    sky.transfering=false;
+			    fail();
+			}); /// ABORT transfer image
+			
+		    }else{
+			sky.send_command('X',null).catch(fail); /// transfer image
+		    }
 		}
 	    };
 	    
