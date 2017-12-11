@@ -20,13 +20,19 @@ var ws = new WebSocket('ws://'+config.ws.hostname+':'+config.ws.port, 'echo-prot
 (function(){
 
     exports.elapsed = function(data,cb){
-	data.percent = (data.t1/data.t2*100).toFixed(0)	
+	data.percent = (data.t1/data.t2*100).toFixed(0)
+
+	console.log("SENDING BAD MESSAGE TO WS! :)");
+	
 	ws.send(JSON.stringify(data),function(err,res){
 	    if(err !=null) console.log("Websocket error sending message: "+err)
 	})	
     }
     
-    exports.simple = function(data,cb){	
+    exports.simple = function(data,cb){
+
+	console.log("SENDING BAD MESSAGE TO WS! :)");
+	
 	ws.send(JSON.stringify(data),function(err,res){
 	    if(err !=null) console.log("Websocket error sending message: "+err)	    
 	})	
