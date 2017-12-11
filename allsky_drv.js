@@ -505,9 +505,9 @@ class allsky{
 			    });
 			
 			if(received_bytes===total_nbytes){
+			    sky.transfering=false;
 			    sky.write('K').then(function(){ /// Checksum OK
 				console.log("Received all data !");
-				sky.transfering=false;
 				ok(image_data);
 			    }).catch(fail);
 			}else{
