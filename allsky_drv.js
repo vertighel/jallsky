@@ -233,7 +233,7 @@ class allsky{
     chop_on(){ return this.send_command('U\x01'); }
     chop_off(){ return this.send_command('U\x00'); }
 
-    async abort(){
+    abort(){
 	var sky=this;
 
 	return new Promise(function(ok, fail){
