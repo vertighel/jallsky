@@ -33,8 +33,8 @@ console.log("HTTP server created!");
 var wss=new ws_mod.server(server);
 
 /// 3) Creates a listener for connections.
-var count = 0;                  /// Resets clients counter. -----------> clients have random string ids assigned as cli.id
-//var clients = {};               /// Stores connected client. -----------> ==wss.clients array if you need it!!
+var count = 0;            /// Resets clients counter. -----------> clients have random string ids assigned as cli.id
+//var clients = {};      /// Stores connected client. -----------> ==wss.clients array if you need it!!
 
 
 var mod_pack={

@@ -27,7 +27,6 @@ var config = (function() {
     return config;
 })();
 
-
 var wsc=ws.create_client({
     path : "", /// need a path for accessing our websocket server?
     port : config.ws.port, /// defaults to same as web server we are connected to
