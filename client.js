@@ -75,7 +75,12 @@ $("#abort").on("click",function(event){
     console.log(JSON.stringify(compactdata,undefined,2))    
 //    ws.send(JSON.stringify(compactdata)); /// Sends the string to the server         
 
-    wsc.send("abort", compactdata);
+    wsc.query("abort", compactdata, function(reply_data){
+
+	console.log("Abort done! you can take another image ! example data back : " + JSON.stringify(reply_data) );
+	
+	
+    });
 });
 
 
@@ -226,6 +231,7 @@ function update_image(obj){
 
 
 ws.install_mod({
+
     get_bytes : function(msg, /*reply*/){
 	//reply({ tu : " veux quoi?"});
 	$("#transfer_progress")
