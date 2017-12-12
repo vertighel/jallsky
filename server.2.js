@@ -44,7 +44,7 @@ var mod_pack={
 
 	    console.log("Abort doner amd com port closed ! Sending reply ...");
 
-	    reply({ msg : "Ok abort done !", x : 3.14159 }):
+	    reply({ msg : "Ok abort done !", x : 3.14159 });
 	    
 	}); 
     },
