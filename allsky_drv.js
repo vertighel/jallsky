@@ -507,7 +507,6 @@ class allsky{
 
 			if(progress_callback!==undefined)
 			    progress_callback({
-				whoami:"get_bytes",
 				received_bytes : received_bytes,
 				total_nbytes   : total_nbytes,
 				percent        : (received_bytes/total_nbytes*100).toFixed(0)

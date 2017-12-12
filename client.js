@@ -3,10 +3,8 @@
  * @author Davide Ricci
  * @date   Sat Apr 22 01:52:25 2017
  * 
- * @brief Grabs information from the webpage and send it to the server.
- *        compactdata.whoami is the sender of the websocket message.
- *        Depending from the sender, a server action is called.
- *        d3.js code draws an histogram of the values.
+ * @brief Grabs information from the webpage and send it to the
+ *        server.  d3.js code draws an histogram of the values.
  */
 
 /// Retrieves the configuration file
@@ -54,7 +52,6 @@ $("form").on("submit",function(event){
 	compactdata[this.name] = this.value; /// the name is the value.
     });
     
-//    compactdata.whoami="client" /// This tells the websocket who's sending the event.
     console.log(JSON.stringify(compactdata,undefined,2))    
  //   ws.send(JSON.stringify(compactdata)); /// Sends the string to the server.
 
@@ -69,14 +66,13 @@ $("form").on("submit",function(event){
 $("#abort").on("click",function(event){
     
     var compactdata = {}
-//    compactdata.whoami="abort" 
-//    compactdata.action="abort"     
     console.log(JSON.stringify(compactdata,undefined,2))    
 //    ws.send(JSON.stringify(compactdata)); /// Sends the string to the server         
 
     wsc.query("abort", compactdata, function(reply_data){
 
 	console.log("Abort done! you can take another image ! example data back : " + JSON.stringify(reply_data) );
+	
 	
     });
 });
