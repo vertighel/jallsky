@@ -4,16 +4,17 @@
  * @file   jallsky.12.js
  * @author Pierre Sprimont and Davide Ricci (davide.ricci82@gmail.com)
  * @date   Sat Apr 22 02:46:46 2017
- *
+ * 
  * @brief  AllSky 340M Camera driver
- *
- *
+ * 
+ * 
  */
 
 "use strict";
 
 var julian = require("julian");     /// Julian Date conversion.
 var fs=require("fs")                /// File stream for node-fits.
+
 
 var fits = require('./node-fits/build/Release/fits'); /// Manages fits files.
 var config= require('./config.json')   /// Configuration file.
@@ -23,10 +24,21 @@ var allsky_mod=require("./allsky_drv.js");
 
 (function(){
 
-    // var ws = new WebSocket('ws://localhost:1234', 'echo-protocol'); /// SET SAME PORT ON SERVER SIDE!
-    // var ws = new WebSocket('ws://192.168.0.6:1234', 'echo-protocol'); /// SET SAME PORT ON SERVER SIDE!
+    // //    var ws = new WebSocket('ws://localhost:1234', 'echo-protocol'); /// SET SAME PORT ON SERVER SIDE!
+    // //var ws = new WebSocket('ws://192.168.0.6:1234', 'echo-protocol'); /// SET SAME PORT ON SERVER SIDE!
     // var ws = new WebSocket('ws://79.51.122.224:1234', 'echo-protocol'); /// SET SAME PORT ON SERVER SIDE!
 
+    // var fits_dir="./mnt/fits/";
+    // var png_dir="./mnt/png/";
+
+    // /// CREATE TABLE allskycam (id int auto_increment primary key,
+    // /// fitsname varchar(256), dateobs varchar(23), pngname varchar(256), jd double, exptime float);
+    // var connection = mysql.createConnection({
+    // host     : 'localhost',
+    // user     : 'root',
+    // password : 'password',
+    // database : 'test'
+    // });
 
     var cam = new allsky_mod.allsky();
 
@@ -56,13 +68,13 @@ var allsky_mod=require("./allsky_drv.js");
     });
 
 
-    /**
-     *
-     *
-     * @param params
-     * @param cb
-     *
-     * @return
+        /** 
+     * 
+     * 
+     * @param params 
+     * @param cb 
+     * 
+     * @return 
      */
     function create_png(params){
 
@@ -105,7 +117,7 @@ var allsky_mod=require("./allsky_drv.js");
                                     if(error)
                                         fail("Histo error : " + error);
                                     else{
-                                        // console.log("HISTO : " + JSON.stringify(histo));
+                                        //console.log("HISTO : " + JSON.stringify(histo));
                                         params.histo=histo;
 
                                         var cuts=config.png.cuts; /// [11000,40000] for 25s
@@ -134,14 +146,14 @@ var allsky_mod=require("./allsky_drv.js");
 
 
 
-    /**
-     *
-     *
-     * @param data
-     * @param params
-     * @param cb
-     *
-     * @return
+        /** 
+     * 
+     * 
+     * @param data 
+     * @param params 
+     * @param cb 
+     * 
+     * @return 
      */
     async function write_fits(data,params){
 
@@ -182,13 +194,13 @@ var allsky_mod=require("./allsky_drv.js");
 
     }
 
-    /**
-     *
-     *
-     * @param params
-     * @param cb
-     *
-     * @return
+        /** 
+     * 
+     * 
+     * @param params 
+     * @param cb 
+     * 
+     * @return 
      */
     async function launch_exposure(params, ws){
 
@@ -219,11 +231,13 @@ var allsky_mod=require("./allsky_drv.js");
             });
 
             console.log("Got image!");
-            await write_fits(image_data, params)
-
-            //params.whoami="create_png";
-
+            await write_fits(image_data, params);
             await create_png(params);
+
+            ws.send("create_png",params).catch(function(err){
+                console.log("Websocket error sending message: "+err);
+            });
+
 
         }
         catch( error){
@@ -237,10 +251,6 @@ var allsky_mod=require("./allsky_drv.js");
         await cam.close();
 
         console.log("Camera closed!");
-
-        ws.send("create_png",params).catch(function(err){
-            console.log("Websocket error sending message: "+err);
-        });
 
 
     } /// launch_exposure
@@ -257,11 +267,11 @@ var allsky_mod=require("./allsky_drv.js");
     console.log("Module Ready!");
 
     // launch_exposure()
-    //  .then(function(){
-    //      console.log("Exposure done! ");
-    //  }).catch(function(e){
-    //      console.log("Exposure : " + e);
-    //  });
+    // .then(function(){
+    //     console.log("Exposure done! ");
+    // }).catch(function(e){
+    //     console.log("Exposure : " + e);
+    // });
 
 
 }).call(this);

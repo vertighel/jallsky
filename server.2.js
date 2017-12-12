@@ -40,9 +40,15 @@ var count = 0;            /// Resets clients counter. -----------> clients have 
 var mod_pack={
 
     abort : function(msg, reply){
-	schedule.abort(msg.data); 
-    },
+	schedule.abort(msg.data, function (){
 
+	    console.log("Abort doner amd com port closed ! Sending reply ...");
+
+	    reply({ msg : "Ok abort done !", x : 3.14159 }):
+	    
+	}); 
+    },
+    
     client : function(msg, reply){
 
 	var connection = this;

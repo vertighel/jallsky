@@ -1,5 +1,5 @@
-{    
-    
+{
+
     "fits" : {
 	"dir"     : "./mnt/fits/",
 	"comment" : "Where fits files are stored"
@@ -14,14 +14,14 @@
 	"cuts"    : [11000,40000],
 	"comment" : "dir: png file directory; cuts: 0=min,65535=max, [11000,40000] for 25s exposure; colormap: (0=min,1=max) steps [[R,G,B,A,level]...[R,G,B,A,level]]"
     },
-    
+
     "ws" : {
 	"ip"      : "192.168.253.206",
-	"hostname": "orsa.local",
-	"port"    : 1234,	
+        "hostname": "orsa.local",
+        "port"    : 1234,
 	"comment" : "Parameters of the websocket server"
     },
-    
+
     "mongo" : {
     	"database" : "test",
         "ip"       : "localhost",
@@ -35,7 +35,7 @@
 	"baudrate" : 115200,
 	"comment"  : "Parameters for camera connection"
     },
-    
+
     "header" : {
 	"template" : "./header_template.json",
 	"comment"  : "Address of the header template"
