@@ -78,7 +78,6 @@ $("#abort").on("click",function(event){
 
 	console.log("Abort done! you can take another image ! example data back : " + JSON.stringify(reply_data) );
 	
-	
     });
 });
 
