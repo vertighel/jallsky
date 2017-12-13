@@ -15,11 +15,8 @@
 var julian = require("julian");     /// Julian Date conversion.
 var fs=require("fs")                /// File stream for node-fits.
 
-
 var fits = require('./node-fits/build/Release/fits'); /// Manages fits files.
 var config= require('./config.json')   /// Configuration file.
-//var message = require('./message.js'); /// Websocket meessage functions.
-
 var allsky_mod=require("./allsky_drv.js");
 
 (function(){
@@ -67,8 +64,7 @@ var allsky_mod=require("./allsky_drv.js");
         console.log("Allsky camera : serial link disconnected.");
     });
 
-
-        /** 
+    /** 
      * 
      * 
      * @param params 
@@ -144,9 +140,8 @@ var allsky_mod=require("./allsky_drv.js");
         });//Promise
     }
 
-
-
-        /** 
+    
+    /** 
      * 
      * 
      * @param data 
@@ -194,7 +189,7 @@ var allsky_mod=require("./allsky_drv.js");
 
     }
 
-        /** 
+    /** 
      * 
      * 
      * @param params 

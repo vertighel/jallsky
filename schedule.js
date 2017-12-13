@@ -52,9 +52,16 @@ function do_exposure(params, wss, ws, cb){
 	    });  /// jall.launch_exposure
 	
     };
+
     
     exports.launch = function(params, ws_server, ws, cb){
 	do_exposure(params, ws_server, ws, cb);
+    };
+	
+    exports.abort = function(params,cb){	
+	jall.cam.abort().then(function(){
+	    jall.cam.close().then(cb);
+	});
     };
     
     exports.start_auto_expo = function(params, ws_server, ws, cb){
@@ -87,12 +94,6 @@ function do_exposure(params, wss, ws, cb){
     exports.stop_auto_expo = function(params, ws_server, ws, cb){
 	auto_expo_done_cb=cb;
 	auto_expo=false;
-    };
-	
-    exports.abort = function(params,cb){	
-	jall.cam.abort().then(function(){
-	    jall.cam.close().then(cb);
-	});
     };
     
     
