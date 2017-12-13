@@ -18,33 +18,82 @@ var jall = require('./jallsky.12.js'); /// Camera driver
 var db_obs= require('./db_obs.js');    /// DB functions
 
 
+function do_exposure(params, wss, ws, cb){
+    
+    
+    
+}
+
 (function(params){
 
 //jall.launch_exposure({exptime:2,imagetyp:'light',frametyp:'crop'})
 
-    exports.launch = function(params, ws_server, ws, cb){
+    var auto_expo=false;
+    var auto_expo_done_cb=undefined;
 
-	jall.launch_exposure(params, ws_server, ws)
+    function auto_expo_done(){
+
+    }
+    
+    function do_exposure(params, ws_server, ws, cb){
+		jall.launch_exposure(params, ws_server, ws)
 	    .then(function(){
 		console.log("schedule: launch expo done OK!");
 		db_obs.enter(params,function(){
-		    cb("*********** done! ***************");		
-		})
-		
+		    cb(null, "*********** done! ***************");		
+		});
+	    
 	    })
-	    .catch (function(error) {
-		
-		console.log("Schedule error : launch exposure : " + error);
+	    .catch (function(err) {
+		var error="Schedule error : launch exposure : " + err;
+		console.log(error);
+		cb(error);
+		    
 	    });  /// jall.launch_exposure
 	
-    }
-
+    };
     
+    exports.launch = function(params, ws_server, ws, cb){
+	do_exposure(params, ws_server, ws, cb);
+    };
+    
+    exports.start_auto_expo = function(params, ws_server, ws, cb){
+	
+	var nexpo=0;
+	auto_expo=true;
+	
+	function exposure_done_cb(fail, ok){
+
+	    if(fail==null){
+		console.log("AUTO_EXPO : Begin exposure " + nexpo + " : " + ok);
+		if(auto_expo==true)
+		    do_exposure(params, ws_server, ws, exposure_done_cb);
+		else{ //stop received!
+		    cb(null, "AUTO EXPO : terminated !");
+		    if(auto_expo_done_cb!==undefined)
+			auto_expo_done_cb("AUTO EXPO terminated!");
+		}
+	    }else{
+		console.log("AUTO_EXPO : Error in exposure, aborting ! nexpo= " + nexpo + " error : " + fail);
+		cb(fail);
+	    }
+	    
+	    nexpo++;
+	}
+	
+	exposure_done_cb();
+    }
+    
+    exports.stop_auto_expo = function(params, ws_server, ws, cb){
+	auto_expo_done_cb=cb;
+	auto_expo=false;
+    };
+	
     exports.abort = function(params,cb){	
 	jall.cam.abort().then(function(){
 	    jall.cam.close().then(cb);
 	});
-    }
+    };
     
     
 }).call()
