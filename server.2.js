@@ -57,7 +57,7 @@ var mod_pack={
 	var ntrucs=msgjson.nexp;
 	
 	function do_something(cb){
-	    schedule.launch(msgjson, connection, cb)
+	    schedule.launch(msgjson, wss, connection, cb)
 	} /// do something	    
 	
 	function done_cb(){
