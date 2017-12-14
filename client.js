@@ -237,18 +237,26 @@ function update_image(obj){
 ws.install_mod({
 
     get_bytes : function(msg){ ///,reply){
-	$("#transfer_progress")
-	    .css('width', msg.data.percent+'%')
-	    .attr('aria-valuenow', msg.data.percent);
-	$("#transfer_output").val(msg.data.percent);
 
     },
 
     image_data_func : function(msg){
-	$("#exposure_progress")
-	    .css('width', msg.data.percent+'%')
-	    .attr('aria-valuenow', msg.data.percent);
-	$("#exposure_output").val(msg.data.percent);
+        switch(msg.data.which_progress) {
+        case "exposure":
+	    $("#exposure_progress")
+	        .css('width', msg.data.percent+'%')
+	        .attr('aria-valuenow', msg.data.percent);
+	    $("#exposure_output").val(msg.data.percent);
+            break;
+        case "transfer":
+	    $("#transfer_progress")
+	        .css('width', msg.data.percent+'%')
+	        .attr('aria-valuenow', msg.data.percent);
+	    $("#transfer_output").val(msg.data.percent);
+            break;
+        default:
+            console.log(msg.data.percent);
+        };
     },
 
     database : function(msg){
