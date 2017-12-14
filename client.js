@@ -133,8 +133,8 @@ function update_image(obj){
     // if(obj.histo) update_histogram()
 
     /// Changing min max values and color cuts.
-    $("#mincuts").text(obj.histo.start);
-    $("#maxcuts").text(obj.histo.step);
+    $("#mincuts").text(obj.histo.start.toFixed(0));
+    $("#maxcuts").text(obj.histo.step*obj.histo.data.length);
 
     $("#maxist").text(Math.max(...obj.histo.data));
     // $("#minist").text(Math.min(...obj.histo.data))
