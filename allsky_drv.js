@@ -1,9 +1,9 @@
-#!/usr/bin/env node
+
 
 /**
  * @file   allsky_drv.js
  * @author Pierre Sprimont and Davide Ricci (davide.ricci82@gmail.com)
- * @date   Tue Oct  3 15:57:19 2017
+ * @date   Thu Dec 14 10:55:11 2017
  * 
  * @brief  AllSky 340M Camera driver
  * 
@@ -22,12 +22,12 @@ class allsky{
     constructor(options){
 	var sp_options={
 	    baudRate : config.camera.baudrate,  /// 115200 (, 230400, 460800),
-	    autoOpen : false,
+	    autoOpen : false
 	};
-	var sp_dev=config.camera.device;       /// /dev/ttyUSB0  
+	var sp_dev=config.camera.device;        /// /dev/ttyUSB0  
 	
 	if(options!==undefined){
-	    if(options.baudrate!==undefined) sp_options.baudRate =  options.baudrate;
+	    if(options.baudrate!==undefined) sp_options.baudRate = options.baudrate;
 	    if(options.dev!==undefined) sp_dev=options.dev;
 	}
 	
@@ -45,11 +45,12 @@ class allsky{
 
 	allsky_this=this;
 
+        /// Manage if abort is called on exposure or transfer 
 	this.aborting=false;
 	this.transfering=false;
     }
     
-    /// Attach en event handler
+    /// Attach an event handler
     on(evt, cb){
 	if(this.cb[evt]===undefined)this.cb[evt]=[];
 	this.cb[evt].push(cb);
@@ -57,7 +58,6 @@ class allsky{
     
     /// Signal an event
     signal(evt, data){
-	//console.log("Event " + evt + " data " + data );
 	var sky=this;
 	if(this.cb[evt]===undefined)
 	    return undefined;
@@ -65,16 +65,24 @@ class allsky{
 	return data;
     }
 
+    /// Define event handler
     sp_open(evt){
-//	for(var p in this) console.log("class property " + p);
 	allsky_this.signal("open",evt);
     }
-    sp_close(evt){ allsky_this.signal("close",evt); }
-    sp_disconnect(evt){ allsky_this.signal("disconnect",evt); }
-    sp_error(evt){ allsky_this.signal("error",evt); }
+
+    sp_close(evt){
+        allsky_this.signal("close",evt);
+    }
+
+    sp_disconnect(evt){
+        allsky_this.signal("disconnect",evt);
+    }
+    
+    sp_error(evt){
+        allsky_this.signal("error",evt);
+    }
 
     sp_data(evt){
-//	console.log("SP Received data !");
 	if(allsky_this.data_listener_func!==null)
 	    allsky_this.data_listener_func(evt);
 	allsky_this.signal("data",evt);
@@ -83,9 +91,10 @@ class allsky{
     /// Open serialport communication
     open(){
 	var sky=this;
+        
 	return new Promise(function(ok, fail){
 	    if(sky.sp.isOpen==true) ok(); else {
-		console.log("Open....");
+		console.log("Open...");
 		sky.sp.open(function(err){
 		    if(err) fail(err);
 		    else ok();
@@ -108,16 +117,14 @@ class allsky{
 	    }else ok();
 	});
     }
-    
-    
+        
+    /// Write buffer
     write(buffer){
-
 	var sky=this;
 	
 	return new Promise(function(ok, fail){
-	    //console.log("writing to SP NB=" + buffer.length);
 	    sky.sp.write(buffer, function(){
-		//console.log("Drain SP...");
+
 		sky.sp.drain(function(err){
 
 		    if(err){
@@ -125,7 +132,6 @@ class allsky{
 			fail(err);
 		    }
 		    else{
-			//console.log("write: data written! ");
 			ok();
 		    }
 		});
@@ -133,10 +139,10 @@ class allsky{
 	});
     }
     
-    /// The checksum is calculated by complementing the byte, clearing
-    /// the most significant bit and XOR with the current checksum,
-    /// going through each byte in the command.  For each individual
-    /// command the checksum starts as 0.
+    /// Checksum buffer. Checksum is calculated by complementing the
+    /// byte, clearing the most significant bit and XOR with the
+    /// current checksum, going through each byte in the command.  For
+    /// each individual command the checksum starts as 0.
     checksum_buf(com){
 	var cs=0;
 	var cl=com.length;
@@ -149,7 +155,8 @@ class allsky{
 	return String.fromCharCode(cs);
 	//console.log("Checksum buf: ["+com.writeUInt8(cs,cl-1)+"]");
     }
-    
+
+    /// Checksum
     checksum(com){
 	var cs = 0;
 	for(var b=0; b<com.split('').length; b++){
@@ -159,7 +166,8 @@ class allsky{
 	return String.fromCharCode(cs);
 	//console.log("Checksum: ["+String.fromCharCode(cs)+"]");
     }
-
+    
+    /// Send command
     send_command(command, arg) {
 	var sky=this;
 	
@@ -167,21 +175,17 @@ class allsky{
 	    var cs = sky.checksum(command);
 	    
 	    var cmd=command+cs;
-	    //	console.log("Sending command ["+command+"]; checksum ["+cs.charCodeAt(0)+"]; length="+cmd.length+" number of bytes="+nb);
-	    //console.log("Sending command ["+command+"]");
 	    
 	    function on_data(buf){
-		//console.log("Received data from SP! " + buf.byteLength);
 		var received_cs=buf.readUInt8(0);
 		var received_data=buf.slice(1); /// cut the first element
 		
 		if(received_cs!==cs.charCodeAt(0)){  /// checksum matching
 		    console.log("Checksum ERR ! sent = " + cs.charCodeAt(0) + " received=" + received_cs );
 		}else{
-		  //  console.log("Checksum OK  ! sent = " + cs.charCodeAt(0) + " received=" + received_cs );
-		}
-	    
-		ok(received_data);
+		    // ok(received_data);
+		}	  
+		    ok(received_data);
 	    } /// on_data
 	    
 	    if(arg===undefined)
@@ -198,18 +202,17 @@ class allsky{
 	    }
 	    
 	    sky.write(cmd).then(function(){
-		//console.log("send_command: write command ["+command+"] on sp ok !");
+                
 	    }).catch(fail);
 	    
 	});
     }
 
+    /// Send test
     async send_test(){
-	//console.log("Sending test command...");
 	var data = await this.send_command('E',2);
 	console.log("Got test answer !");
 	if(data=='O'){
-	  //  console.log("Test passed !");
 	    return "Test passed.";
 	}
 	else{
@@ -218,21 +221,25 @@ class allsky{
 	}
     }
 
+    /// Get firmware version
     async get_firmware_version(){
 	var data = await this.send_command('V',3);
 	return data.readInt16LE(0);
     }
 
+    /// Get serial number
     async get_serial_number(){
 	var data=await this.send_command('r',11);
 	return data.toString('ascii');
     }
 
+    /// Switch on and off heater and chop.
     heater_on(){ return this.send_command('g\x01'); }
     heater_off(){ return this.send_command('g\x00'); }
     chop_on(){ return this.send_command('U\x01'); }
     chop_off(){ return this.send_command('U\x00'); }
 
+    /// Abort
     abort(){
 	var sky=this;
 
@@ -243,42 +250,9 @@ class allsky{
 		sky.send_command('A').then(ok).catch(fail);
 	    }else ok();
 	});
-
-	//     sky.aborting=true;
-	    
-	//     if(sky.transfering){
-
-	// 	console.log("ABORT: Transfer detected: aborting transfer....");
-		
-	// 	sky.on("transfer_aborted", function(){
-
-	// 	    console.log("ABORT: Transfer aborted! ");		    
-
-	// 	    //sky.send_command('A').then(
-	// 	    sky.close_shutter().then(function(){
-	// 		ok();
-	// 		sky.aborting=false;
-	// 	    })
-	// 	    //);
-	// 	});
-		
-	//     }else{
-		
-	// 	sky.send_command('A').then(function(){
-
-	// 	    sky.on("transfer_aborted", function(){
-		    
-			
-	// 		sky.close_shutter().then(function(){
-	// 		    sky.aborting=false;
-	// 		    ok();
-	// 		});
-	// 	    });
-	// 	});
-	//     }
-	// });
     }
-    
+
+    /// Open shutter
     open_shutter(){ /// leaves the shutter motor energized
 	var sky=this;
 	return new Promise(function(ok, fail){
@@ -291,6 +265,7 @@ class allsky{
 	});
     }
 
+    /// Close shutter
     close_shutter(){ /// leaves the shutter motor energized
 	var sky=this;
 	return new Promise(function(ok, fail){
@@ -303,7 +278,7 @@ class allsky{
 	});
     }
 
-    
+    /// Get data bytes
     get_bytes(nb, cb, skip){
 	var nr=0,nt=0;
 	var buf=new Buffer(nb);
@@ -330,12 +305,20 @@ class allsky{
 	    }
 	    
 	}; /// data listener_func
-    } /// get_bytes
+    }
 
-        
-    /// This command defines the location and size of the sub-frame. The
-    /// maximum size of the sub- frame is 127 pixels. 
-    
+
+    /** 
+     * Define subframe 
+     *
+     * This command defines the location and size of the
+     * sub-frame. The maximum size of the sub- frame is 127 pixels.
+     * 
+     * @param params 
+     * @param cb 
+     * 
+     * @return 
+     */
     define_subframe(params){
 	var sky=this;
 	
@@ -356,12 +339,9 @@ class allsky{
 	    combuf[5]=s[0];
 	    
 	    var cs=sky.checksum_buf(combuf);
-	    
-	    //var com=combuf;
-	    //var cmd_checksum=combuf.readUInt8(6);	
-	    
+
+	    /// Data listener
 	    sky.data_listener_func=function (buf){
-		//console.log("Received data from SP! " + buf.byteLength);
 		var received_cs=buf.readUInt8(0);
 		var received_data=buf.slice(1); /// cut the first element
 		
@@ -369,15 +349,14 @@ class allsky{
 		    console.log("Define subframe checksum error ! Sent = " + cs.charCodeAt(0) + " received=" + received_cs );
 		    fail("Define subframe checksum error ! Sent = " + cs.charCodeAt(0) + " received=" + received_cs);
 		}else{
-		    //  console.log("Checksum OK  ! sent = " + cs.charCodeAt(0) + " received=" + received_cs );
+		    // ok(received_data);                    
 		}
 		
 		ok(received_data);
-	    } /// on_data
+	    }; /// data_listener
 
 	    sky.write(combuf).then(function(){}).catch(fail);
-	});
-	
+	});	
     }
         
     /** 
@@ -393,16 +372,17 @@ class allsky{
 
 	var sky=this;
 	sky.aborting=false;
-	sky.transfering=false;
-	
+	sky.transfering=false;	
 
 	return new Promise(function(ok, fail){
+
 	    var image_type={
 		dark: {imcode:0},
 		light:{imcode:1},
-		auto: {imcode:2},  /// Light-Dark (only binned).
+		auto: {imcode:2}  /// Light-Dark (only binned).
 	    };
 	    
+	    /// Maximum size of the sub-frame: 127 pixels.
 	    if(params.size == undefined) params.size=127; /// max size if not specified
 	    
 	    var frame_type={/// width, height, blocks, frcode
@@ -417,7 +397,7 @@ class allsky{
 	    Object.assign(params, image_type[params.imagetyp], frame_type[params.frametyp]);
 	    
 	    /// Camera expsosure time works in 100µs units
-	    params.exptime= parseFloat(params.exptime) /// It will be useful several times
+	    params.exptime= parseFloat(params.exptime); /// It will be useful several times
 	    var exptime = params.exptime / 100e-6;
 	    if(exptime > 0x63FFFF) exptime = 0x63FFFF; /// 653.3599s
 	    
@@ -440,15 +420,10 @@ class allsky{
 	    
 	    var com=combuf;
 	    var cmd_checksum=combuf.readUInt8(6);
-	
-	   // console.log("Take image checksum is " + cmd_checksum);
-	   // console.log("Length of com=" + com.length + " should be 7?");
-	    
-	    var timestamp = new Date();
-	    timestamp = timestamp.toISOString();
-	
-	    console.log('EXPOSE: Beginning Exposure!');
-	    var start_time = new Date().getTime(); /// in ms
+	    	
+	    console.log('Beginning Exposure!');
+	    var start_time = 0; /// "E" = Exposure in progress. This is sent approximately every 150ms.
+	    var E_in_progress = 150/1000; ///ms
 	    
 	    var first_data_received=true;
 	    
@@ -460,21 +435,18 @@ class allsky{
 		    
 		    if(cmd_checksum !== firstchar){
 			console.log("Image_data_func Checksum error !!");
-		    }//else console.log("Image_data_func Checksum match !");
+		    }
 			
 		}
 		else{
-		  //  console.log("GetImage received progress data ["+in_data.toString('ascii')+"]");
-
-		    var mid_time = new Date().getTime(); //in ms
-		    var time_elapsed = ((mid_time-start_time)/1000).toFixed(3); /// in s
 		    
 		    if(progress_callback!==undefined)
 			progress_callback({
 	    		    exposure_time : params.exptime, 
-	    		    time_elapsed   : time_elapsed,
+	    		    time_elapsed   : start_time+=E_in_progress,
 	    		    percent        : ((time_elapsed/params.exptime)*100).toFixed(0)
 	    		});
+                    
 		}
 		
 		if(in_data == 'D'){ /// Exposure complete
@@ -489,6 +461,7 @@ class allsky{
 		    var image_data=new Buffer(total_nbytes);
 		    
 		    console.log('Exposure Complete ! Transfering Image : ' + blocks_expected + " blocks to read");
+
 		    sky.transfering=true;
 		    
 		    sky.get_bytes(block_nbytes+1,function(in_data){
@@ -519,7 +492,7 @@ class allsky{
 				ok(image_data);
 			    }).catch(fail);
 			}else{
-			    //console.log("TRANSFER: sky.aborting = " + sky.aborting);
+
 			    if(sky.aborting==true){
 				console.log("TRANSFER: Abort detected! Sending S command to stop transfer");
 				sky.transfering=false;
