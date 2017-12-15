@@ -66,7 +66,7 @@ function do_exposure(params, wss, ws, cb){
 	function exposure_done_cb(fail, ok){
 
 	    if(fail==null){
-		console.log("AUTO_EXPO : Begin exposure " + nexpo + " : " + ok);
+		console.log("AUTO_EXPO : Begin exposure " + nexpo + " params " + JSON.stringify(params) );
 		if(auto_expo==true)
 		    do_exposure(params, ws_server, ws, exposure_done_cb);
 		else{ //stop received!
