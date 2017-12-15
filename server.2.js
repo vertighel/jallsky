@@ -66,7 +66,7 @@ var mod_pack={
 	    schedule.launch(msgjson, wss, connection, cb);
 	} /// do something	    
 	
-	function done_cb(){
+	function done_cb(error, ok){
 	    ntrucs--;
 	    if(ntrucs>0){
 	    	do_something(done_cb);
@@ -84,7 +84,7 @@ var mod_pack={
 
 wss.install_mod(mod_pack);
 
-console.log("WS server installed command pack OK!");
+console.log("WS server: handler pack installed OK!");
 
 wss.on("client_event", function(evt){
     if(evt.type=="join"){
@@ -106,4 +106,4 @@ server.listen(config.ws.port, function(){   /// Same port as client side.
     console.log((new Date()) + ': Server is listening on port '+config.ws.port);
 });
 
-console.log("WS server finished exec OK!");
+//console.log("WS server finished exec OK!");
