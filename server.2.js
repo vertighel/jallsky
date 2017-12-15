@@ -31,8 +31,9 @@ var wss=new ws_mod.server(server);
 var mod_pack={
 
     abort : function(msg, reply){
+	console.log("Abort in progress...");
 	schedule.abort(msg.data, function (){
-	    console.log("Abort doner amd com port closed ! Sending reply ...");
+	    console.log("Abort done and com port closed ! Sending reply ...");
 	    reply({ msg : "Ok abort done !", x : 3.14159 });	   
 	}); 
     },
