@@ -38,14 +38,17 @@ var mod_pack={
     },
 
     start_auto_expo : function(msg, reply){
-	schedule.start_auto_expo(msg.data, function (){
+	var connection = this;
+	
+	schedule.start_auto_expo(msg.data, wss, connection, function (){
 	    console.log("Started auto expos ! Sending reply ...");
 	    reply({ msg : "Ok starting !", x : 3.14159 });	   
 	}); 
     },
 
     stop_auto_expo : function(msg, reply){
-	schedule.stop_auto_expo(msg.data, function (){
+
+	schedule.stop_auto_expo(function (){
 	    console.log("Stopped auto expos ! Sending reply ...");
 	    reply({ msg : "Ok stopping !", x : 3.14159 });	   
 	}); 

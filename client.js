@@ -77,7 +77,7 @@ $("#auto").on("click",function(event){
     var compactdata = {};
     console.log(JSON.stringify(compactdata,undefined,2));
     wsc.query("start_auto_expo", compactdata, function(reply_data){
-	console.log("Automatic exposures. Take esposures until stop : " + JSON.stringify(reply_data) );
+	console.log("Automatic exposures started! Take esposures until stop : " + JSON.stringify(reply_data) );
     });
 });
 
