@@ -1,44 +1,25 @@
-#!/usr/bin/env node
+
 
 /**
  * @file   jallsky.12.js
  * @author Pierre Sprimont and Davide Ricci (davide.ricci82@gmail.com)
- * @date   Sat Apr 22 02:46:46 2017
- * 
+ * @date   Thu Dec 14 11:07:20 2017
+ *
  * @brief  AllSky 340M Camera driver
- * 
- * 
+ *
+ *
  */
 
 "use strict";
 
 var julian = require("julian");     /// Julian Date conversion.
-var fs=require("fs")                /// File stream for node-fits.
-
+var fs=require("fs");                /// File stream for node-fits.
 
 var fits = require('./node-fits/build/Release/fits'); /// Manages fits files.
-var config= require('./config.json')   /// Configuration file.
-//var message = require('./message.js'); /// Websocket meessage functions.
-
+var config= require('./config.json');   /// Configuration file.
 var allsky_mod=require("./allsky_drv.js");
 
 (function(){
-
-    // //    var ws = new WebSocket('ws://localhost:1234', 'echo-protocol'); /// SET SAME PORT ON SERVER SIDE!
-    // //var ws = new WebSocket('ws://192.168.0.6:1234', 'echo-protocol'); /// SET SAME PORT ON SERVER SIDE!
-    // var ws = new WebSocket('ws://79.51.122.224:1234', 'echo-protocol'); /// SET SAME PORT ON SERVER SIDE!
-
-    // var fits_dir="./mnt/fits/";
-    // var png_dir="./mnt/png/";
-
-    // /// CREATE TABLE allskycam (id int auto_increment primary key,
-    // /// fitsname varchar(256), dateobs varchar(23), pngname varchar(256), jd double, exptime float);
-    // var connection = mysql.createConnection({
-    // host     : 'localhost',
-    // user     : 'root',
-    // password : 'password',
-    // database : 'test'
-    // });
 
     var cam = new allsky_mod.allsky();
 
@@ -67,21 +48,19 @@ var allsky_mod=require("./allsky_drv.js");
         console.log("Allsky camera : serial link disconnected.");
     });
 
-
-        /** 
-     * 
-     * 
-     * @param params 
-     * @param cb 
-     * 
-     * @return 
+    /**
+     *
+     *
+     * @param params
+     * @param cb
+     *
+     * @return
      */
     function create_png(params){
 
-        var pngname  = config.png.dir+params.dateobs+".png"
+        var pngname  = config.png.dir+params.dateobs+".png";
 
         return new Promise(function(ok, fail){
-            console.log("create_png: called");
 
             var f = new fits.file(params.fitsname); //The file is automatically opened (for reading) if the file name is specified on constructor.
 
@@ -131,9 +110,9 @@ var allsky_mod=require("./allsky_drv.js");
                                         out.write(image.tile( { tile_coord :  [0,0], zoom :  0, tile_size : [image.width(),image.height()], type : "png" }));
                                         out.end();
 
-                                        console.log("create_png: written")
-                                        ok();
+                                        console.log("create_png: written");
 
+                                        ok();
                                     }
                                 });
                             }else fail("No image returned and no error ?");
@@ -144,26 +123,24 @@ var allsky_mod=require("./allsky_drv.js");
         });//Promise
     }
 
-
-
-        /** 
-     * 
-     * 
-     * @param data 
-     * @param params 
-     * @param cb 
-     * 
-     * @return 
+    /**
+     *
+     *
+     * @param data
+     * @param params
+     * @param cb
+     *
+     * @return
      */
     async function write_fits(data,params){
 
-        console.log("write_fits: routine called. Got image!")
+        console.log("write_fits: routine called. Got image!");
 
         var now      = new Date(); /// Time stamp to be used for file names, DATE-OBS and JD
-        var dateobs  = now.toISOString().slice(0,-5)  /// string
-        var jd       = parseFloat(julian(now))        /// double
+        var dateobs  = now.toISOString().slice(0,-5);  /// string
+        var jd       = parseFloat(julian(now));        /// double
 
-        var fitsname = config.fits.dir+dateobs+".fits"
+        var fitsname = config.fits.dir+dateobs+".fits";
 
         var fifi     = new fits.file(fitsname);
         var M        = new fits.mat_ushort;
@@ -172,17 +149,17 @@ var allsky_mod=require("./allsky_drv.js");
         fifi.file_name;
         fifi.write_image_hdu(M);
 
-        var h=require(config.header.template) /// Loading json containing the header template
+        var h=require(config.header.template); /// Loading json containing the header template
 
         /// Filling variable header keys.
-        h.find(x => x.key === 'DATE-OBS').value = dateobs
-        h.find(x => x.key === 'JD'      ).value = jd
-        h.find(x => x.key === 'EXPTIME' ).value = params.exptime
-        h.find(x => x.key === 'IMAGETYP').value = params.imagetyp
-        h.find(x => x.key === 'FRAMETYP').value = params.frametyp
-        h.find(x => x.key === 'BINNING' ).value = params.frametyp == 'binned' ? parseInt(2) : parseInt(1)
+        h.find(x => x.key === 'DATE-OBS').value = dateobs;
+        h.find(x => x.key === 'JD'      ).value = jd;
+        h.find(x => x.key === 'EXPTIME' ).value = params.exptime;
+        h.find(x => x.key === 'IMAGETYP').value = params.imagetyp;
+        h.find(x => x.key === 'FRAMETYP').value = params.frametyp;
+        h.find(x => x.key === 'BINNING' ).value = params.frametyp == 'binned' ? parseInt(2) : parseInt(1);
         h.find(x => x.key === 'SUBFRAME').value = params.frametyp == 'custom'
-            ? "["+[params.x_start, params.y_start, params.size].toString()+"]" : ''
+            ? "["+[params.x_start, params.y_start, params.size].toString()+"]" : '';
 
         /// Filling fixed header keys.
         // console.log("Setting fits header : " + JSON.stringify(h));
@@ -194,13 +171,13 @@ var allsky_mod=require("./allsky_drv.js");
 
     }
 
-        /** 
-     * 
-     * 
-     * @param params 
-     * @param cb 
-     * 
-     * @return 
+    /**
+     *
+     *
+     * @param params
+     * @param cb
+     *
+     * @return
      */
     async function launch_exposure(params, ws_server, ws){
 
@@ -210,7 +187,6 @@ var allsky_mod=require("./allsky_drv.js");
 
         await cam.send_test();
 
-
         await cam.define_subframe(params);
         console.log("Subframe defined !");
 
@@ -219,14 +195,13 @@ var allsky_mod=require("./allsky_drv.js");
 
         console.log("Shutter opened!");
 
-
         var image_data;
 
         try{
-            image_data= await cam.get_image(params , function(message){ //progress callback
-                //console.log("Progress ! "  + JSON.stringify(message));
-		ws_server.broadcast("image_data_func",message);
-		
+            image_data= await cam.get_image(params , function(message){
+
+		ws_server.broadcast("image_data_func",message); /// To all connected peers!
+
                 // ws.send("image_data_func",message).catch(function(err){
                 //     console.log("Websocket error sending message: "+err);
                 // });
@@ -236,12 +211,11 @@ var allsky_mod=require("./allsky_drv.js");
             await write_fits(image_data, params);
             await create_png(params);
 
-            ws_server.broadcast("create_png",params);
+            ws_server.broadcast("create_png",params);  /// To all connected peers!
 
 	    // 	.catch(function(err){
             //     console.log("Websocket error sending message: "+err);
             // });
-
 
         }
         catch( error){
@@ -256,15 +230,13 @@ var allsky_mod=require("./allsky_drv.js");
 
         console.log("Camera closed!");
 
-
     } /// launch_exposure
 
 
     module.exports = {
         cam                  : cam,
-        launch_exposure      : launch_exposure,
+        launch_exposure      : launch_exposure
     };
-
 
     //FOR TESTING -->
 
@@ -276,6 +248,5 @@ var allsky_mod=require("./allsky_drv.js");
     // }).catch(function(e){
     //     console.log("Exposure : " + e);
     // });
-
 
 }).call(this);
