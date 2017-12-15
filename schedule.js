@@ -36,13 +36,13 @@ function do_exposure(params, wss, ws, cb){
     }
     
     function do_exposure(params, ws_server, ws, cb){
-		jall.launch_exposure(params, ws_server, ws)
+	jall.launch_exposure(params, ws_server, ws)
 	    .then(function(){
 		console.log("schedule: launch expo done OK!");
 		db_obs.enter(params,function(){
 		    cb(null, "*********** done! ***************");		
 		});
-	    
+		
 	    })
 	    .catch (function(err) {
 		var error="Schedule error : launch exposure : " + err;
@@ -64,7 +64,7 @@ function do_exposure(params, wss, ws, cb){
 	
 	function exposure_done_cb(fail, ok){
 
-	    if(fail==null){
+	    if(fail===null){
 		console.log("AUTO_EXPO : Begin exposure " + nexpo + " : " + ok);
 		if(auto_expo==true)
 		    do_exposure(params, ws_server, ws, exposure_done_cb);
@@ -84,7 +84,7 @@ function do_exposure(params, wss, ws, cb){
 	exposure_done_cb();
     }
     
-    exports.stop_auto_expo = function(params, ws_server, ws, cb){
+    exports.stop_auto_expo = function(cb){
 	auto_expo_done_cb=cb;
 	auto_expo=false;
     };
