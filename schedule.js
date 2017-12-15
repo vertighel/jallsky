@@ -82,7 +82,7 @@ function do_exposure(params, wss, ws, cb){
 	    nexpo++;
 	}
 
-	exposure_done_cb();
+	exposure_done_cb(null);
     }
     
     exports.stop_auto_expo = function(cb){
