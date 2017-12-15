@@ -44,7 +44,7 @@ var mod_pack={
 	var connection = this;
 
 	if(auto_expo_on==true){
-	    reply({ msg : "Autoi-expo already running!! Stop first !", x : 3.14159 });
+	    reply({ msg : "Auto-expo already running!! Stop first !", x : 3.14159 });
 	    return;
 	}else{
 	    
