@@ -27,6 +27,8 @@ console.log("HTTP server created!");
 /// 2) Creates a websocket server.
 var wss=new ws_mod.server(server);
 
+var auto_expo_on=false;
+
 /// 3) Creates a listener for connections.
 var mod_pack={
 
@@ -40,17 +42,27 @@ var mod_pack={
 
     start_auto_expo : function(msg, reply){
 	var connection = this;
+
+	if(auto_expo_on==true){
+	    reply({ msg : "Autoi-expo already running!! Stop first !", x : 3.14159 });
+	    return;
+	}
+	
+	auto_expo_on=true;
+	reply({ msg : "Ok starting !", x : 3.14159 });
 	
 	schedule.start_auto_expo(msg.data, wss, connection, function (){
-	    console.log("Started auto expos ! Sending reply ...");
-	    reply({ msg : "Ok starting !", x : 3.14159 });	   
+	    console.log("Auto expo terminated !");
+	    
 	}); 
     },
 
     stop_auto_expo : function(msg, reply){
 
+	
 	schedule.stop_auto_expo(function (){
 	    console.log("Stopped auto expos ! Sending reply ...");
+	    auto_expo_on=false;
 	    reply({ msg : "Ok stopping !", x : 3.14159 });	   
 	}); 
     },
