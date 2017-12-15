@@ -75,7 +75,7 @@ $("#abort").on("click",function(event){
 
 $("#auto").on("click",function(event){
 
-    var normaldata=$(this).serializeArray(); /// Takes all the form parameters.
+    var normaldata=$("form").serializeArray(); /// Takes all the form parameters.
 
     var compactdata = { };                   /// Compacts them in a "key,value" pair:
     $.each(normaldata, function() {          /// on each element...
