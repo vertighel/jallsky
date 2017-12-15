@@ -74,7 +74,20 @@ $("#abort").on("click",function(event){
 
 
 $("#auto").on("click",function(event){
-    var compactdata = {};
+
+    var normaldata=$(this).serializeArray(); /// Takes all the form parameters.
+
+    var compactdata = { };                   /// Compacts them in a "key,value" pair:
+    $.each(normaldata, function() {          /// on each element...
+	compactdata[this.name] = this.value; /// the name is the value.
+    });
+
+    console.log(JSON.stringify(compactdata,undefined,2));
+
+    // console.log("form submit sending command client !");
+    // wsc.send("client", compactdata);
+    // console.log("form submit sending command client DONE!");
+
     console.log(JSON.stringify(compactdata,undefined,2));
     wsc.query("start_auto_expo", compactdata, function(reply_data){
 	console.log("Automatic exposures started! Take esposures until stop : " + JSON.stringify(reply_data) );
