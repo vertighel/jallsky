@@ -44,16 +44,18 @@ var mod_pack={
 	var connection = this;
 
 	if(auto_expo_on==true){
-	    reply({ msg : "Auto-expo already running!! Stop first !", x : 3.14159 });
+	    console.log("AUTO_EXPO: Already Running!!!");
+	    reply({ msg : "Autoi-expo already running!! Stop first !", x : 3.14159 });
 	    return;
 	}else{
 	    
 	    auto_expo_on=true;
 	    reply({ msg : "Ok starting !", x : 3.14159 });
-	    
+
+	    console.log("AUTO_EXPO: Starting!!!");
 	    schedule.start_auto_expo(msg.data, wss, connection, function (){
 		console.log("Auto expo terminated !");
-		
+		auto_expo_on=false;
 	    });
 	}
     },
@@ -63,7 +65,6 @@ var mod_pack={
 	
 	schedule.stop_auto_expo(function (){
 	    console.log("Stopped auto expos ! Sending reply ...");
-	    auto_expo_on=false;
 	    reply({ msg : "Ok stopping !", x : 3.14159 });	   
 	}); 
     },
