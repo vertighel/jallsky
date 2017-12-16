@@ -52,8 +52,8 @@ var mod_pack={
 	    reply({ msg : "Ok starting !", x : 3.14159 });
 
 	    console.log("AUTO_EXPO: Starting!!!");
-	    schedule.start_auto_expo(msg.data, wss, connection, function (){
-		console.log("Auto expo terminated !");
+	    schedule.start_auto_expo(msg.data, wss, connection, function (error){
+		console.log("Auto expo terminated ! error is " + error);
 		auto_expo_on=false;
 	    });
 	}
@@ -70,6 +70,8 @@ var mod_pack={
     
     client : function(msg, reply){
 
+	console.log("CLIENT WS command : strating exposure!");
+	
 	var connection = this;
 	var msgjson=msg.data;
 	
