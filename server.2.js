@@ -22,7 +22,6 @@ var schedule =require('./schedule.js'); /// Launches observations.
 
 /// 1) Create http server and listening.
 var server = http.createServer(function(request, response) {});
-console.log("HTTP server created!");
 
 /// 2) Creates a websocket server.
 var wss=new ws_mod.server(server);
@@ -45,7 +44,7 @@ var mod_pack={
 
 	if(auto_expo_on==true){
 	    console.log("AUTO_EXPO: Already Running!!!");
-	    reply({ msg : "Autoi-expo already running!! Stop first !", x : 3.14159 });
+	    reply({ msg : "Auto-expo already running!! Stop first !", x : 3.14159 });
 	    return;
 	}else{
 	    
