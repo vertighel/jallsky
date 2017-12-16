@@ -398,11 +398,14 @@ class allsky{
 
 	    /// Camera expsosure time works in 100µs units
 	    params.exptime= parseFloat(params.exptime); /// It will be useful several times
-	    var exptime = params.exptime / 100e-6;
+	    //var exptime = params.exptime / 100e-6;
+	    var exptime = params.exptime*10000.0;// :) 
 	    if(exptime > 0x63FFFF) exptime = 0x63FFFF; /// 653.3599s
 
 	    var blocks_expected = (params.width * params.height) / params.blocks;
 	    var block_nbytes=2*params.blocks;
+
+	    var start_time;
 
 	    var exp=Buffer.alloc(4);
 	    exp.writeInt32LE(exptime);  /// Here it will take the given exptime
@@ -445,11 +448,13 @@ class allsky{
 		    if(progress_callback!==undefined){
                         elapsed_time+=E_in_progress;
                         // console.log("Elapsed: "+elapsed_time+" Chopped:"+chopped_exptime+" Original"+params.exptime*1000);
+			var now=new Date();
 		        progress_callback({
                             which_progress: "exposure",
 	    		    exposure_time : chopped_exptime,
 	    		    elapsed_time  : elapsed_time,
 	    		    percent       : ((elapsed_time/chopped_exptime)*100).toFixed(0)
+			    percent2       : ( (now-start_time)/1000.0/params.exptime ).toFixed(0)
 	    		});
                     }
 		}
@@ -521,6 +526,7 @@ class allsky{
 	    };
 
 	    sky.write(com).then(function(){
+		start_time=new Date();
 		//console.log("Comamnd TAKEIMAGE sent ok!");
 	    }).catch(fail);
 	});
