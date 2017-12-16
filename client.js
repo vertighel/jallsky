@@ -90,7 +90,7 @@ $("#auto").on("click",function(event){
 
     console.log(JSON.stringify(compactdata,undefined,2));
     wsc.query("start_auto_expo", compactdata, function(reply_data){
-	console.log("Automatic exposures started! Take esposures until stop : " + JSON.stringify(reply_data) );
+	console.log("Automatic exposures started! Take esposures until stop : ")// + JSON.stringify(reply_data) );
     });
 });
 
@@ -98,7 +98,7 @@ $("#stop").on("click",function(event){
     var compactdata = {};
     console.log(JSON.stringify(compactdata,undefined,2));
     wsc.query("stop_auto_expo", compactdata, function(reply_data){
-	console.log("Stopped taking automatic exposures : " + JSON.stringify(reply_data) );
+	console.log("Stopped taking automatic exposures : ")// + JSON.stringify(reply_data) );
     });
 });
 
@@ -281,19 +281,19 @@ ws.install_mod({
     },
 
     client : function(msg){
-	console.log("Received CLIENT command : unhandled ! implement here :) data is " + JSON.stringify(msg.data));
+//	console.log("Received CLIENT command : unhandled ! implement here :) data is " + JSON.stringify(msg.data));
     },
 
     abort : function(msg){
-	console.log("Received ABORT command : unhandled ! implement here :) data is " + JSON.stringify(msg.data));
+//	console.log("Received ABORT command : unhandled ! implement here :) data is " + JSON.stringify(msg.data));
     },
 
     start_auto_expo : function(msg){
-	console.log("Received AUTO command : unhandled ! implement here :) data is " + JSON.stringify(msg.data));
+//	console.log("Received AUTO command : unhandled ! implement here :) data is " + JSON.stringify(msg.data));
     },
 
     stop_auto_expo : function(msg){
-	console.log("Received STOP command : unhandled ! implement here :) data is " + JSON.stringify(msg.data));
+//	console.log("Received STOP command : unhandled ! implement here :) data is " + JSON.stringify(msg.data));
     }
 
 });
