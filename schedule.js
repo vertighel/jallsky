@@ -64,8 +64,9 @@ var db_obs= require('./db_obs.js');    /// DB functions
 	function exposure_done_cb(fail, ok){
 
 	    if(fail==null){
-		console.log("AUTO_EXPO : Begin exposure " + nexpo + " params " + JSON.stringify(params) );
-		if(auto_expo==true)
+		console.log("AUTO_EXPO : Begin exposure " + nexpo);
+//		console.log("AUTO_EXPO : Begin exposure " + nexpo + " params " + JSON.stringify(params) );
+		if(auto_exop==true)
 		    do_exposure(params, ws_server, ws, exposure_done_cb);
 		else{ //stop received!
 		    cb(null, "AUTO EXPO : terminated !");
