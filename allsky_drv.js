@@ -453,7 +453,7 @@ class allsky{
                             which_progress: "exposure",
 	    		    exposure_time : chopped_exptime,
 	    		    elapsed_time  : elapsed_time,
-	    		    percent       : ((elapsed_time/chopped_exptime)*100).toFixed(0)
+	    		    percent       : ((elapsed_time/chopped_exptime)*100).toFixed(0),
 			    percent2       : ( (now-start_time)/1000.0/params.exptime ).toFixed(0)
 	    		});
                     }
@@ -461,6 +461,17 @@ class allsky{
 
 		if(in_data == 'D'){ /// Exposure complete
 
+		    if(progress_callback!==undefined){
+		        progress_callback({
+                            which_progress: "exposure",
+	    		    exposure_time : chopped_exptime,
+	    		    elapsed_time  : elapsed_time,
+	    		    percent       : 100,
+			    percent2       : 100
+	    		});
+                    }
+
+		    
 		    var blocks_complete = 0;
 		    var total_nbytes=blocks_expected*block_nbytes;
 		    //var data=new ArrayBuffer();
