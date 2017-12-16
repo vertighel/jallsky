@@ -43,7 +43,7 @@ wsc.on("open", function(){
 
 
 /// Retrives form data
-$("form").on("submit",function(event){
+$("#start").on("click",function(event){
     event.preventDefault();                  /// Avoids the page to reload on click.
 
     var normaldata=$(this).serializeArray(); /// Takes all the form parameters.
