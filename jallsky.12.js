@@ -181,19 +181,14 @@ var allsky_mod=require("./allsky_drv.js");
      */
     async function launch_exposure(params, ws_server, ws){
 
+	console.log("launch_exposure: BEGIN, opening cam...");
         await cam.open();
-
-        console.log("Camera opened! Testing...");
 
         await cam.send_test();
 
         await cam.define_subframe(params);
-        console.log("Subframe defined !");
-
-        console.log("Opening shutter...");
         await cam.open_shutter();
-
-        console.log("Shutter opened!");
+        console.log("launch_exposure: Shutter opened, ready to expose!");
 
         var image_data;
 
@@ -207,7 +202,7 @@ var allsky_mod=require("./allsky_drv.js");
                 // });
             });
 
-            console.log("Got image!");
+            console.log("launch_exposure: Got image!");
             await write_fits(image_data, params);
             await create_png(params);
 
@@ -219,16 +214,13 @@ var allsky_mod=require("./allsky_drv.js");
 
         }
         catch( error){
-            console.log("Error Got image or image aborted !");
+            console.log("launch_exposure: Error Got image or image aborted !");
         }
 
-        console.log("Closing shutter....");
         await cam.close_shutter();
-
-        console.log("Closing camera SP....");
         await cam.close();
 
-        console.log("Camera closed!");
+        console.log("launch_exposure: DONE!");
 
     } /// launch_exposure
 
@@ -240,7 +232,7 @@ var allsky_mod=require("./allsky_drv.js");
 
     //FOR TESTING -->
 
-    console.log("Module Ready!");
+//    console.log("Module Ready!");
 
     // launch_exposure()
     // .then(function(){

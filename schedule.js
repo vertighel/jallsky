@@ -16,9 +16,6 @@ var config = require('./config.json');
 var jall = require('./jallsky.12.js'); /// Camera driver
 var db_obs= require('./db_obs.js');    /// DB functions
 
-function do_exposure(params, wss, ws, cb){
-
-}
 
 (function(params){
 
@@ -49,6 +46,7 @@ function do_exposure(params, wss, ws, cb){
     };
 
     exports.launch = function(params, ws_server, ws, cb){
+	console.log("SCHEDULE: launch exposure!");
 	do_exposure(params, ws_server, ws, cb);
     };
 
@@ -76,6 +74,7 @@ function do_exposure(params, wss, ws, cb){
 		}
 	    }else{
 		console.log("AUTO_EXPO : Error in exposure, aborting ! nexpo= " + nexpo + " error : " + fail);
+		auto_expo=false;
 		cb(fail);
 	    }
 

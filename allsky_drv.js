@@ -94,7 +94,7 @@ class allsky{
 
 	return new Promise(function(ok, fail){
 	    if(sky.sp.isOpen==true) ok(); else {
-		console.log("Open...");
+		console.log("Opening SerialPort...");
 		sky.sp.open(function(err){
 		    if(err) fail(err);
 		    else ok();
@@ -478,7 +478,7 @@ class allsky{
 		    var received_bytes=0;
 		    var received_cs_bytes=0;
 		    var block_bytes=0;
-
+1
 		    var image_data=new Buffer(total_nbytes);
 
 		    console.log('Exposure Complete ! Transfering Image : ' + blocks_expected + " blocks to read");
