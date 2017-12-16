@@ -46,7 +46,7 @@ wsc.on("open", function(){
 $("#start").on("click",function(event){
     event.preventDefault();                  /// Avoids the page to reload on click.
 
-    var normaldata=$(this).serializeArray(); /// Takes all the form parameters.
+    var normaldata=$("form").serializeArray(); /// Takes all the form parameters.
 
     var compactdata = { };                   /// Compacts them in a "key,value" pair:
     $.each(normaldata, function() {          /// on each element...

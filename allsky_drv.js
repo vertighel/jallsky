@@ -402,7 +402,7 @@ class allsky{
 
 	    var blocks_expected = (params.width * params.height) / params.blocks;
 	    var block_nbytes=2*params.blocks;
-
+            
 	    var start_time;
 
 	    var exp=Buffer.alloc(4);
@@ -468,7 +468,6 @@ class allsky{
 			    percent2       : 100
 	    		});
                     }
-
 		    
 		    var blocks_complete = 0;
 		    var total_nbytes=blocks_expected*block_nbytes;
@@ -476,7 +475,7 @@ class allsky{
 		    var received_bytes=0;
 		    var received_cs_bytes=0;
 		    var block_bytes=0;
-1
+
 		    var image_data=new Buffer(total_nbytes);
 
 		    console.log('Exposure Complete ! Transfering Image : ' + blocks_expected + " blocks to read");
