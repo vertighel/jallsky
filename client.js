@@ -55,9 +55,9 @@ $("form").on("submit",function(event){
 
     console.log(JSON.stringify(compactdata,undefined,2));
 
-    console.log("form submit sending command client !");
+//    console.log("form submit sending command client !");
     wsc.send("client", compactdata);
-    console.log("form submit sending command client DONE!");
+//    console.log("form submit sending command client DONE!");
 
 });
 
@@ -88,7 +88,7 @@ $("#auto").on("click",function(event){
     // wsc.send("client", compactdata);
     // console.log("form submit sending command client DONE!");
 
-    console.log(JSON.stringify(compactdata,undefined,2));
+//    console.log(JSON.stringify(compactdata,undefined,2));
     wsc.query("start_auto_expo", compactdata, function(reply_data){
 	console.log("Automatic exposures started! Take esposures until stop : ")// + JSON.stringify(reply_data) );
     });
@@ -96,7 +96,7 @@ $("#auto").on("click",function(event){
 
 $("#stop").on("click",function(event){
     var compactdata = {};
-    console.log(JSON.stringify(compactdata,undefined,2));
+//    console.log(JSON.stringify(compactdata,undefined,2));
     wsc.query("stop_auto_expo", compactdata, function(reply_data){
 	console.log("Stopped taking automatic exposures : ")// + JSON.stringify(reply_data) );
     });
@@ -268,7 +268,7 @@ ws.install_mod({
 	    $("#transfer_output").val(msg.data.percent);
             break;
         default:
-            console.log(msg.data.percent);
+//            console.log(msg.data.percent);
         };
     },
 

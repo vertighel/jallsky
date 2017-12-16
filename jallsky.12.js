@@ -96,7 +96,6 @@ var allsky_mod=require("./allsky_drv.js");
                                     if(error)
                                         fail("Histo error : " + error);
                                     else{
-                                        //console.log("HISTO : " + JSON.stringify(histo));
                                         params.histo=histo;
 
                                         var cuts=config.png.cuts; /// [11000,40000] for 25s
@@ -109,8 +108,6 @@ var allsky_mod=require("./allsky_drv.js");
                                         var out = fs.createWriteStream(pngname);
                                         out.write(image.tile( { tile_coord :  [0,0], zoom :  0, tile_size : [image.width(),image.height()], type : "png" }));
                                         out.end();
-
-                                        console.log("create_png: written");
 
                                         ok();
                                     }
@@ -133,8 +130,6 @@ var allsky_mod=require("./allsky_drv.js");
      * @return
      */
     async function write_fits(data,params){
-
-        console.log("write_fits: routine called. Got image!");
 
         var now      = new Date(); /// Time stamp to be used for file names, DATE-OBS and JD
         var dateobs  = now.toISOString().slice(0,-5);  /// string
@@ -162,7 +157,6 @@ var allsky_mod=require("./allsky_drv.js");
             ? "["+[params.x_start, params.y_start, params.size].toString()+"]" : '';
 
         /// Filling fixed header keys.
-        // console.log("Setting fits header : " + JSON.stringify(h));
         fifi.set_header_key(h, err => {if(err!==undefined) console.log("Error setting fits header: "+err);});
 
         var post  = {jd:jd, dateobs:dateobs, exptime:params.exptime, fitsname:fitsname };
@@ -182,13 +176,13 @@ var allsky_mod=require("./allsky_drv.js");
     async function launch_exposure(params, ws_server, ws){
 
 	console.log("launch_exposure: BEGIN, opening cam...");
+
         await cam.open();
-
         await cam.send_test();
-
         await cam.define_subframe(params);
-        await cam.open_shutter();
-        console.log("launch_exposure: Shutter opened, ready to expose!");
+	await cam.open_shutter();
+
+	console.log("launch_exposure: Shutter opened, ready to expose!");
 
         var image_data;
 
@@ -231,8 +225,6 @@ var allsky_mod=require("./allsky_drv.js");
     };
 
     //FOR TESTING -->
-
-//    console.log("Module Ready!");
 
     // launch_exposure()
     // .then(function(){

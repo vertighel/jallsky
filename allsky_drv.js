@@ -153,7 +153,6 @@ class allsky{
 	}
 	com.writeUInt8(cs,cl-1);
 	return String.fromCharCode(cs);
-	//console.log("Checksum buf: ["+com.writeUInt8(cs,cl-1)+"]");
     }
 
     /// Checksum
@@ -164,7 +163,6 @@ class allsky{
             cs = cs ^ csb;
 	}
 	return String.fromCharCode(cs);
-	//console.log("Checksum: ["+String.fromCharCode(cs)+"]");
     }
 
     /// Send command
